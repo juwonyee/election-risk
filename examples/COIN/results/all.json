@@ -1,0 +1,340 @@
+{
+  "company": {
+    "name": "Coinbase Global",
+    "short": "Coinbase",
+    "ticker": "COIN"
+  },
+  "denominator": {
+    "label": "operating profit",
+    "amount": 1435400000,
+    "period": "FY2025",
+    "status": "verified",
+    "source": {
+      "title": "Coinbase 10-K FY2025 (SEC EDGAR)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000015/0001679788-26-000015-index.htm"
+    }
+  },
+  "notes": {
+    "locked_in": [
+      "GENIUS Act (stablecoin law, July 2025) is in force; $1,348.8M of FY2025 stablecoin revenue sits under it",
+      "R&D expensing restored by P.L. 119-21 (below operating profit)",
+      "Nevada already stops sports event contracts (Gaming Control Board action); both governor candidates back that (book p 0.30 each, swing 0), so it is not a link"
+    ],
+    "weak_links": [
+      "Clarity Act +$370M rests on an assumed 10% lift in transaction revenue (range 0-20%); no public estimate of the lift was found (estimated)",
+      "Sports prediction-market link: Coinbase prediction-market revenue ~$100M annualized is a press summary of the Q2 2026 letter, not a filing number; sports share 68-83% from secondary sources",
+      "Book row doubt: US-house/senate-control give the Clarity Act p 0.05 under every majority, while Kalshi prices 21% for law before 2028; the book p and the market disagree by 4x",
+      "Book row doubt: TX-lieutenant-governor Patrick gaming-betting row is an interim study charge (study, then recommend fixes) but is routed 'make: same party, strong' 0.35, while his data-center study charges are 'vague' 0.05; a study charge reads like 'vague'",
+      "Texas link uses Texas's population share (9.2%) for Coinbase's Texas prediction-market revenue; state split not disclosed",
+      "Base is FY2025 operating income $1,435M; H1 2026 was an operating loss, so shares of a 2026 run-rate would be much larger",
+      "Sports-ban market (Polymarket) is thin: $21k volume, 10-25 cent spread"
+    ]
+  },
+  "results": [
+    {
+      "id": "coin-clarity-act",
+      "type": "direct",
+      "hook": "Congress decides whether crypto gets one federal rulebook.",
+      "event_plain": "the Clarity Act (crypto market-structure law) becomes law before 2028",
+      "market": {
+        "source": "Kalshi",
+        "event": "KXCRYPTOSTRUCTURE-26JAN",
+        "yes_ticker": "KXCRYPTOSTRUCTURE-27JAN-28",
+        "question": "Will a crypto market structure bill become law before Jan 1, 2028?",
+        "window": "before Jan 1, 2028",
+        "rules_summary": "Yes if a bill that sets a comprehensive digital-asset framework, splits SEC/CFTC authority and defines when tokens are securities or commodities becomes law before Jan 1, 2028. Stablecoin-only, tax-only bills and agency rules do not count."
+      },
+      "impact": {
+        "central": 370000000,
+        "low": 0,
+        "high": 740000000,
+        "status": "estimated",
+        "formula": "transaction revenue $3,802.5M (consumer $3,322.8M + institutional $479.7M, FY2025) x 10% lift from a federal rulebook (0-20%) x 86% contribution margin (1 - transaction expense $1,020.2M / revenue $7,181.3M) = $327M; + staking: net staking $249.9M ($677.4M - $427.5M rewards fees) x 84% US x ~20% of US population in the 5 states that paused staking (CA, NJ, SC, WI, MD) = $42M; total ~$370M a year",
+        "timing": "from 2028 once SEC/CFTC rules are written",
+        "sources": [
+          {
+            "title": "Coinbase 10-K FY2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000015/0001679788-26-000015-index.htm"
+          },
+          {
+            "title": "H.R.3633 Digital Asset Market Clarity Act (Congress.gov)",
+            "url": "https://www.congress.gov/bill/119th-congress/house-bill/3633"
+          },
+          {
+            "title": "CBS: Senate fails to advance Clarity Act (2026-09)",
+            "url": "https://www.cbsnews.com/news/senate-fails-to-advance-clarity-act-amid-democratic-concerns-about-crypto-bill/"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.2577678695833914,
+        "low": 0.0,
+        "high": 0.5155357391667827
+      },
+      "notes": [],
+      "price": {
+        "venue": "Kalshi",
+        "ticker": "KXCRYPTOSTRUCTURE-27JAN-28",
+        "prob": 0.21,
+        "yes_bid": 0.2,
+        "yes_ask": 0.22,
+        "quote": "mid",
+        "volume": 135650.7,
+        "volume_unit": "contracts",
+        "low_liquidity": false,
+        "event_url": "https://kalshi.com/markets/kxcryptostructure",
+        "as_of": "2026-10-27T03:08:21+00:00"
+      },
+      "cross_check": null,
+      "chance": 0.21,
+      "volume": 7276838.06,
+      "election_swing": 0.05,
+      "meaningful": true
+    },
+    {
+      "id": "coin-sports-pm-ban",
+      "type": "direct",
+      "hook": "A federal ban on sports prediction markets would cut Coinbase's newest business.",
+      "event_plain": "a federal law bans sports contracts on CFTC-regulated prediction markets in 2026",
+      "market": {
+        "source": "Polymarket",
+        "event": "law-banning-sports-prediction-markets-enacted-in-2026",
+        "yes_ticker": "law-banning-sports-prediction-markets-enacted-in-2026",
+        "question": "Law banning sports prediction markets enacted in 2026?",
+        "window": "by Dec 31, 2026",
+        "rules_summary": "Yes if a bill that bars CFTC-regulated prediction markets from offering sports contracts, or puts them under state gambling law, is signed into law (or passes over a veto) by Dec 31, 2026."
+      },
+      "impact": {
+        "central": -65000000,
+        "low": -40000000,
+        "high": -110000000,
+        "status": "estimated",
+        "formula": "prediction-market revenue ~$100M a year (Q2 2026 annualized, range $70-150M) x 75% sports share (68-83%) x 86% contribution margin = ~$65M a year",
+        "timing": "immediately on enactment",
+        "sources": [
+          {
+            "title": "Quartr: Coinbase Q2 2026 results (prediction markets >$100M annualized)",
+            "url": "https://quartr.com/events/coinbase-global-inc-coin-q2-2026_3erzI00Q"
+          },
+          {
+            "title": "Cointelegraph: sports were 83% of Kalshi volume in July 2026",
+            "url": "https://cointelegraph.com/news/kalshi-traffic-soars-regulatory-pressure-mounts"
+          },
+          {
+            "title": "Blockworks Research: sports 68% of Kalshi volume",
+            "url": "https://app.blockworksresearch.com/unlocked/from-betting-to-trading-how-kalshi-is-reshaping-sports-markets"
+          },
+          {
+            "title": "Coinbase 10-K FY2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000015/0001679788-26-000015-index.htm"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": -0.04528354465654173,
+        "low": -0.02786679671171799,
+        "high": -0.07663369095722447
+      },
+      "notes": [],
+      "price": {
+        "venue": "Polymarket",
+        "ticker": "law-banning-sports-prediction-markets-enacted-in-2026",
+        "prob": 0.175,
+        "yes_bid": 0.1,
+        "yes_ask": 0.25,
+        "quote": "mid",
+        "volume": 21034.21,
+        "volume_unit": "USD",
+        "low_liquidity": false,
+        "event_url": "https://polymarket.com/event/law-banning-sports-prediction-markets-enacted-in-2026",
+        "as_of": "2026-10-27T03:08:22+00:00"
+      },
+      "cross_check": null,
+      "chance": 0.175,
+      "volume": 21034.21,
+      "election_swing": 0.0,
+      "meaningful": true
+    },
+    {
+      "id": "coin-tx-ltgov",
+      "type": "race",
+      "hook": "Texas's lieutenant governor sets the Senate agenda on prediction markets.",
+      "event_plain": "Texas moves to shut prediction-market betting as a gambling loophole",
+      "market": {
+        "source": "Kalshi",
+        "event": "KXLTGOVTX-26",
+        "question": "Texas Lieutenant Governor winner?",
+        "rules_summary": "Resolves to the party of the person sworn in as Texas Lieutenant Governor for the term beginning in 2027.",
+        "window": "January 2027 swearing-in",
+        "outcomes": [
+          {
+            "ticker": "KXLTGOVTX-26-GOP",
+            "name": "Dan Patrick",
+            "last": "Patrick",
+            "party": "R",
+            "stance": "interim charge 'Closing Gambling Loopholes': study prediction-market betting as circumventing the Texas gambling ban and recommend fixes",
+            "route": "make: same party, strong",
+            "p_policy": 0.35,
+            "source": "https://www.ltgov.texas.gov/wp-content/uploads/2026/03/2026-Interim-Charges.pdf"
+          },
+          {
+            "ticker": "KXLTGOVTX-26-DEM",
+            "name": "Vikki Goodwin",
+            "last": "Goodwin",
+            "party": "D",
+            "stance": "no stated position",
+            "route": "none",
+            "p_policy": 0.0
+          }
+        ],
+        "cross_check": {
+          "source": "Polymarket",
+          "event": "texas-lieutenant-governor-election-winner-2026",
+          "tickers": {
+            "KXLTGOVTX-26-GOP": "will-the-republican-party-candidate-win-the-2026-texas-lieutenant-governor-election",
+            "KXLTGOVTX-26-DEM": "will-the-democratic-party-candidate-win-the-2026-texas-lieutenant-governor-election"
+          }
+        },
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book TX-lieutenant-governor.md: Patrick row 0.35 (make: same party, strong); Goodwin has no gaming-betting row (0). A state rule may face CFTC preemption litigation."
+      },
+      "impact": {
+        "central": -8000000,
+        "low": -4000000,
+        "high": -15000000,
+        "status": "estimated",
+        "formula": "prediction-market revenue ~$100M a year x 9.2% Texas share of US population (31.3M / 340M) x 86% contribution margin = ~$8M a year",
+        "timing": "from the 2027 session at the earliest",
+        "sources": [
+          {
+            "title": "Texas Lt. Governor 2026 interim charges",
+            "url": "https://www.ltgov.texas.gov/wp-content/uploads/2026/03/2026-Interim-Charges.pdf"
+          },
+          {
+            "title": "Census QuickFacts: Texas",
+            "url": "https://www.census.gov/quickfacts/TX"
+          },
+          {
+            "title": "Quartr: Coinbase Q2 2026 results",
+            "url": "https://quartr.com/events/coinbase-global-inc-coin-q2-2026_3erzI00Q"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": -0.005573359342343598,
+        "low": -0.002786679671171799,
+        "high": -0.010450048766894246
+      },
+      "notes": [],
+      "outcomes": [
+        {
+          "ticker": "KXLTGOVTX-26-GOP",
+          "name": "Dan Patrick",
+          "last": "Patrick",
+          "party": "R",
+          "stance": "interim charge 'Closing Gambling Loopholes': study prediction-market betting as circumventing the Texas gambling ban and recommend fixes",
+          "route": "make: same party, strong",
+          "p_policy": 0.35,
+          "source": "https://www.ltgov.texas.gov/wp-content/uploads/2026/03/2026-Interim-Charges.pdf",
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "KXLTGOVTX-26-GOP",
+            "prob": 0.7079,
+            "yes_bid": 0.71,
+            "yes_ask": 0.72,
+            "quote": "mid",
+            "volume": 23825.4,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/kxltgovtx",
+            "as_of": "2026-10-27T03:08:21+00:00"
+          },
+          "cross_check": {
+            "venue": "Polymarket",
+            "ticker": "will-the-republican-party-candidate-win-the-2026-texas-lieutenant-governor-election",
+            "prob": 0.715,
+            "yes_bid": 0.7,
+            "yes_ask": 0.73,
+            "quote": "mid",
+            "volume": 8999.43,
+            "volume_unit": "USD",
+            "low_liquidity": true,
+            "event_url": "https://polymarket.com/event/texas-lieutenant-governor-election-winner-2026",
+            "as_of": "2026-10-27T03:08:22+00:00"
+          },
+          "if_wins_chance": 0.35
+        },
+        {
+          "ticker": "KXLTGOVTX-26-DEM",
+          "name": "Vikki Goodwin",
+          "last": "Goodwin",
+          "party": "D",
+          "stance": "no stated position",
+          "route": "none",
+          "p_policy": 0.0,
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "KXLTGOVTX-26-DEM",
+            "prob": 0.2921,
+            "yes_bid": 0.29,
+            "yes_ask": 0.3,
+            "quote": "mid",
+            "volume": 24910.53,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/kxltgovtx",
+            "as_of": "2026-10-27T03:08:21+00:00"
+          },
+          "cross_check": {
+            "venue": "Polymarket",
+            "ticker": "will-the-democratic-party-candidate-win-the-2026-texas-lieutenant-governor-election",
+            "prob": 0.285,
+            "yes_bid": 0.27,
+            "yes_ask": 0.3,
+            "quote": "mid",
+            "volume": 12139.91,
+            "volume_unit": "USD",
+            "low_liquidity": false,
+            "event_url": "https://polymarket.com/event/texas-lieutenant-governor-election-winner-2026",
+            "as_of": "2026-10-27T03:08:22+00:00"
+          },
+          "if_wins_chance": 0.0
+        }
+      ],
+      "chance_policy_overall": 0.24776499999999999,
+      "chance": 0.24776499999999999,
+      "election_swing": 0.35,
+      "volume": 48735.93,
+      "meaningful": false
+    }
+  ],
+  "gaps": [],
+  "prices_as_of": [
+    "2026-10-27T03:08:21+00:00",
+    "2026-10-27T03:08:22+00:00"
+  ],
+  "generated_at": "2026-10-27T03:28:37+00:00",
+  "headlines": {
+    "election": null,
+    "policy": {
+      "id": "coin-clarity-act",
+      "text": "Kalshi puts 21% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit)."
+    }
+  },
+  "red_team": [
+    "the Clarity Act (crypto market-structure law) becomes law before 2028: the impact is an estimate, not a reported number.",
+    "a federal law bans sports contracts on CFTC-regulated prediction markets in 2026: the impact is an estimate, not a reported number.",
+    "Texas moves to shut prediction-market betting as a gambling loophole: the impact range is wide (−$4.0M to −$15.0M); read how it was built."
+  ],
+  "book": {
+    "source": "built here",
+    "downloaded_at": null,
+    "built_by": null,
+    "last_edit": "2026-10-27",
+    "files": 197,
+    "fingerprint": "f97e319e0772"
+  },
+  "structure": true,
+  "disclaimer": "Analyst draft for human review. Scenario estimates, not investment advice or a recommendation to trade any security or contract. Prediction-market prices are shown as information only.",
+  "repo": "github.com/juwonyee/election-risk"
+}

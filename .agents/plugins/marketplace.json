@@ -1,0 +1,20 @@
+{
+  "name": "election-risk",
+  "interface": {
+    "displayName": "Election Risk"
+  },
+  "plugins": [
+    {
+      "name": "election-risk",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    }
+  ]
+}

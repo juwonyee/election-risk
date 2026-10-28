@@ -1,0 +1,92 @@
+# UnitedHealth Group (UNH): 2026 election exposure
+Base: FY2025 revenue **$447.6B**, operating income (earnings from operations) **$18.964B** (EDGAR 10-K, accession 0000731766-26-000062: https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/0000731766-26-000062-index.htm). *Verified.*
+Segment FY2025 earnings from operations (10-K, https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm): UnitedHealthcare $9.425B (2.7% margin on $344.9B), Optum Rx $7.193B (4.6% on $154.7B), Optum Insight $2.624B, Optum Health -$0.278B. *Verified.*
+Concentration: CMS premiums = 44% of 2025 revenue. Membership at 2026-06-30 (Q2 2026 8-K, https://www.sec.gov/Archives/edgar/data/0000731766/000073176626000191/earningsrelease2q26_7152.htm): Medicare Advantage 7.565M (8.445M at YE2025), Medicaid 6.78M (7.38M), commercial risk-based 7.655M, ~1M ACA individual-exchange members. 1.2M of the Medicaid members are ACA-expansion adults in 19 states (10-K). UNH holds ~26% of national MA enrollment (KFF 2026). Q2 2026 run-rate is stronger than FY2025 (H1 2026 earnings from operations $16.98B; 2026 adjusted EPS guidance raised to $19.50-20.00). *Verified.*
+
+## Bottom line
+- **In play (expected): about $195M/yr gross, or 1.0% of FY2025 operating income.** Net of signs this is about **-$165M** (the $180M of expected hits from PBM pharmacy divestiture and Medicare Advantage coding curbs outweighs the $15M of expected gains from ACA subsidies or Medicaid relief). **If everything happens: about $3.2B gross (17% of operating income).** Net that is about -$2.8B, almost all from a forced divestiture of Optum's pharmacies.
+- **Locked in regardless:** OBBBA Medicaid work requirements from 2027-01-01 (about -$105M/yr to UNH at full phase-in, *estimated*). Enhanced ACA credits expired in 2025: national exchange enrollment fell 22.1M to 19.2M, and UNH is rebating its 2026 ACA profits to ~1M members, so its exchange OI is about zero by design. CAA 2026 PBM reforms (Part D delinking from 2028, commercial transparency; size not found). 2027 MA rate +2.48% (+$13B industry; UNH share at 26% is about +$3.4B of revenue, not OI). IRA Part D redesign and negotiation.
+- **Card fact:** Most of what moves UnitedHealth's profits (Medicaid cuts, lost ACA subsidies, new pharmacy-middleman rules) is already law. The midterms move only about 1% of its operating income in expectation.
+- **Strongest R-vs-D contrast:** Weak. The two items that split by party are small for UNH: ACA subsidy extension (D-driven, ~$110M if enacted) and Medicaid expansion or a softer work-requirement rollout by D governors (<$10M). The big-ticket risks, PBM-pharmacy breakup and MA upcoding curbs, have bipartisan sponsors (Warren/Hawley, Merkley/Cassidy). They are roughly as likely under either House outcome, and the President's signature is required either way.
+
+## Channels in play
+| # | Channel | Race/measure (odds, ticker, volume) | Policy | P(enact\|outcome) | If it happens | Expected | Confidence |
+|---|---|---|---|---|---|---|---|
+| 1 | Pharmacy divestiture (Optum Rx) | Congress 2027-28; Kalshi KXPATIENTSMONOPOLIES-27-JAN04 4.6% before 2027-01-04 (vol 2,233, **thin**) | Patients Before Monopolies Act (S./H.R. 8779): PBM or insurer parents may not own pharmacies; 1-yr divestiture | *Estimated* 6% D sweep / 5% D House+R Senate / 4% R sweep, so 5.6% weighted | **-$2.2B** (range -$1.4B to -$2.9B) | **-$123M** | Low (pharmacy share of Optum Rx OI not disclosed) |
+| 2 | MA risk-coding curbs | Congress 2027-28; no market | No UPCODE Act (S.1105, Cassidy-Merkley); CBO option saves $124B over 10 yr | *Estimated* 8% / 6% / 4%, so 7.1% weighted | **-$0.8B** (range -$0.3B to -$1.6B) | **-$57M** | Low-medium |
+| 3 | ACA enhanced PTC reinstated | House (D ~90%) and Senate; Kalshi KXACAEXT-26JAN-27 5.5% before 2027 (vol 245,468); KXACAEXT-26JAN-28 bid 0.06/ask 0.15, mid 10.5%, before 2028 (vol 0, **thin**) | Reinstate the 2021-25 enhanced credits | Market: 10.5% unconditional (≈11.7% \| D House, ≈0 \| R House) | **+$110M** (range $50-180M) | **+$12M** | Medium |
+| 4 | Federal rollback of OBBBA Medicaid cuts | Balance of power: D sweep 61% | Repeal or delay work requirements | *Estimated* 3% D sweep / 1% split / 0% R sweep, so 2.1% weighted | **+$105M** | **+$2M** | Low-medium |
+| 5 | Governors: work-requirement rollout and expansion | GOVPARTYNV-26 D 51.5% (vol 961,504); GOVPARTYOH-26 D 68.5% (vol 1,079,799); GOVPARTYKS-27 D 25.5% (vol 62,483) | D governors: broader exemptions and ex-parte checks, 2028 extensions; KS D candidate favors expansion | *Estimated*: rollout swing applies \| winner; KS expansion 5% \| D (R supermajority legislature) | **+$8M** | **<$1M** | Low |
+| 6 | Ballot measures | SD Amendment I (KXSTATEBALLOTMEASURE-SD-AI, 20%, vol 8, **thin**): expansion ends if FMAP < 90% | Trigger only; FMAP unchanged by OBBBA; UNH not found as SD Medicaid plan | n/a | ~$0 | ~$0 | Medium |
+| | **Total** | | | | **gross $3.2B; net -$2.8B** | **gross $195M; net -$165M** | |
+
+Weights used for balance of power (brief): D sweep 61%, D House + R Senate 30%, R sweep 11%.
+
+### 1. PBM-pharmacy vertical integration (Optum Rx pharmacies)
+- **Election/odds:** Kalshi KXPATIENTSMONOPOLIES-27-JAN04: bid 0.03, ask 0.07, mid 0.05 (last 0.046), volume 2,233 (**thin**), checked 2026-10-14. The market covers the lame duck only, so it is not election-dependent. No 2027-28 market was found.
+- **Policy:** The Patients Before Monopolies Act was reintroduced 2026-05-13 by Sens. Warren (D) and Hawley (R), with Fetterman (D) and Marshall (R) in the Senate. In the House (H.R. 8779) the sponsors are Auchincloss (D) and Harshbarger (R). It bars a PBM or insurer parent from owning a pharmacy, gives 1 year to divest, adds a private right of action, and includes Part D delinking (https://www.hawley.senate.gov/hawley-warren-reintroduce-bipartisan-legislation-to-limit-pbms-put-patients-first/ ; https://auchincloss.house.gov/media/press-releases/release-auchincloss-warren-harshbarger-hawley-reintroduce-bipartisan-legislation-to-rein-in-pharmacy-benefit-managers-pbms-cut-drug-costs ; https://www.mintz.com/insights-center/viewpoints/2146/2026-05-27-latest-pbm-reform-developments-keep-vertical-integration). The broader Break Up Big Medicine Act has stalled in committee (Mintz). Arkansas's state ban is enjoined, with an appeal pending in the 8th Circuit (Mintz).
+- **Enactment (estimated):** 6% under a D sweep, 5% under D House + R Senate, 4% under an R sweep. Sponsors come from both parties, but Congress just legislated PBM reform in CAA 2026 (signed 2026-02-03) and left vertical integration out. The bill has had no markup, industry opposition is heavy, and it needs the President's signature. Weighted: 0.61×6% + 0.30×5% + 0.11×4% = 5.6%.
+- **Size/exposure:** Optum Rx FY2025 earnings from operations were $7.193B (*verified*, 10-K). Optum Rx runs home-delivery, specialty, and infusion pharmacies; the share of segment OI earned by owned pharmacies is **not found** in filings. *Estimated* at 20-40%.
+- **Dollars:** `$7.193B × 20-40% = $1.4-2.9B lost OI (mid $2.2B)`, starting about 1 year after enactment (2028+). Sale proceeds are not counted. **Expected:** `$2.2B × 5.6% = $123M`. The lame-duck path, not election-dependent, adds `$2.2B × 4.6% = $101M` and is excluded from the in-play total.
+
+### 2. Medicare Advantage risk-coding legislation
+- **Election/odds:** Chamber control (brief). No market found.
+- **Policy:** The No UPCODE Act (S.1105, Cassidy R / Merkley D, reintroduced 2025-03-25) would exclude diagnoses from chart reviews and HRAs and use 2 years of diagnosis data. Sponsors cite a CBO budget option of $124B over 10 years (https://www.merkley.senate.gov/cassidy-merkley-introduce-bill-to-stop-overpayments-in-the-medicare-advantage-program/). It was left out of the 2025 reconciliation bill (https://www.beckerspayer.com/policy-updates/lawmakers-backtrack-on-medicare-advantage-changes-in-budget-bill/). No 2026 committee action was found. A D House adds oversight hearings but no direct P&L channel. MA rates themselves are set administratively by CMS through 2028: the final 2027 notice was +2.48%, or +4.98% including risk-score trend (https://homehealthcarenews.com/2026/04/cms-finalizes-2-48-medicare-advantage-payment-increase-for-2027/).
+- **Enactment (estimated):** 8% D sweep / 6% split / 4% R sweep, so 7.1% weighted. The bill has bipartisan sponsors and the savings could fund other priorities such as ACA credits, but insurers oppose it and it has stalled since 2023.
+- **Exposure:** UNH holds ~26% of MA enrollment in 2026 (KFF, https://kff.org/medicare/issue-brief/medicare-advantage-enrollment-update-and-key-trends). *Verified (secondary rendering of KFF).*
+- **Dollars:** `$124B / 10 yr = $12.4B/yr × 26% UNH share = $3.2B revenue × 25% not offset by benefit and bid changes in year 1 (estimated; range 10-50%) = $0.8B` (range $0.3-1.6B). **Expected:** `$0.8B × 7.1% = $57M`.
+
+### 3. ACA enhanced premium tax credits
+- **Election/odds:** Kalshi KXACAEXT-26JAN-27 (before 2027): bid 0.051, ask 0.060, mid 5.5%, volume 245,468. KXACAEXT-26JAN-28 (before 2028): bid 0.06, ask 0.15, mid 10.5%, volume 0 (**thin**). Both checked 2026-10-14. Polymarket "aca-credits-extended-house-winner-2026" prices "not extended & D House" at 0.915 and "extended & either House" at about 0. But it resolves on extension **by 2025-12-31**, which already failed, so it only restates House odds and does not inform post-election odds.
+- **Policy:** Reinstate the 2021-2025 enhanced credits. They expired, and average enrollee payments rose 114% (https://www.kff.org/quick-insights/aca-marketplace-enrollment-is-down-by-3-million-after-big-jump-in-premium-payments/). Effectuated enrollment fell from 22.1M to 19.2M (Feb 2025 to Feb 2026; KFF, https://www.kff.org/affordable-care-act/how-has-aca-marketplace-enrollment-changed-across-states-in-2026/). Kalshi KXACAENROLLMENT-27FEB28 prices a further >15% decline by Feb 2027 at ~63% (thin, under 1,000 contracts).
+- **Enactment:** From the market. 10.5% unconditional. Conditional on a D House that is ≈0.105/0.90 ≈ 11.7%, and ≈0 conditional on an R House. The President's signature is required.
+- **Exposure:** ~1M ACA members, and UNH is "voluntarily eliminating and rebating profits" from 2026 ACA offerings (Q2 2026 8-K). *Verified.* That is ~5% of the 19.2M national total.
+- **Dollars:** First, regained members: `2.9M national loss × 5% share = ~150k × ~$7,000 premium × 0-3% margin = $0-30M`. Second, a better risk pool on the existing book: `1M × $7,000 = $7B × 1-2 pp margin = $70-140M`. **If it happens: ~$110M** (range $50-180M; premium and margins *estimated*). **Expected:** `$110M × 10.5% = $12M`.
+
+### 4. Federal rollback of OBBBA Medicaid provisions
+- **Policy:** OBBBA (P.L. 119-21) cuts federal Medicaid spending about $793B over 10 years. Work requirements account for $326B; 5.2M fewer enrollees in 2034, of 18.5M subject (CBO via https://www.factcheck.org/2025/06/assessing-medicaid-coverage-losses-under-house-reconciliation-bill/ and https://www.techtarget.com/healthcarepayers/news/366629225/Breaking-down-uninsured-numbers-under-Trumps-spending-law). The work requirements start 2027-01-01, with good-faith extensions possible to the end of 2028 (CMS interim final rule 2026-06-01; https://www.healthcaredive.com/news/medicaid-work-requirements-state-implementation-macpac/760531/). Democrats campaign on repeal; there is no bill with a path past a veto.
+- **Enactment (estimated):** 3% D sweep, 1% split, 0% R sweep, so 2.1%. The President would have to sign a reversal of his signature law.
+- **Dollars (see the locked-in calculation):** If repealed, UNH avoids the ~$105M/yr hit. **Expected:** `$105M × 2.1% = $2M`.
+
+### 5. Governors: work-requirement implementation and Medicaid expansion
+- **Odds (Kalshi, 2026-10-14):** GOVPARTYNV-26 D 51.5% (vol 961,504); GOVPARTYOH-26 D 68.5% (vol 1,079,799); GOVPARTYKS-27 D 25.5% (Holscher; vol 62,483); GOVPARTYGA-26 D 45.5% (vol 634,926).
+- **Policy:** Governors decide on ex-parte data matching, the breadth of medical-frailty exemptions, and whether to seek extensions to 2028. Nevada officials estimate ~70,000 Nevadans could lose coverage (https://lasvegassun.com/news/2026/jul/08/affordable-healthcare-emerges-as-a-voter-priority/). The D candidates in Kansas and Georgia favor expansion, but both legislatures are R-controlled.
+- **Exposure:** UNH runs Medicaid plans in Nevada (Health Plan of Nevada), Ohio, and Kansas (KanCare). UNH member counts by state were **not found**. UNH is not found among Georgia Medicaid plans, so Georgia is not sized.
+- **Dollars (all estimated):**
+  - NV: `70k × 20% rollout swing × 25% UNH share × $7,000 × 2% margin = $0.5M`
+  - OH: `~190k projected losses × 20% × 15% × $7,000 × 2% = $0.8M`
+  - KS expansion: `~150k newly eligible × 1/3 UNH share × $7,000 × 2% = $7M`, enacted with 5% probability \| D governor
+  - Total if everything happens: ~$8M. Expected: <$1M.
+
+### 6. Ballot measures
+South Dakota Amendment I conditions expansion on FMAP ≥ 90% (KXSTATEBALLOTMEASURE-SD-AI mid 20%, volume 8, **thin**). OBBBA did not change the 90% expansion FMAP, so the measure has no near-term effect, and SD Medicaid is not a UNH managed-care market (not found). Oklahoma's August 2026 trigger measures were decided before this election; the result was not confirmed. No other Medicaid ballot measures were found for 2026-11-03.
+
+## Locked in regardless
+- **OBBBA Medicaid work requirements and 6-month redeterminations (from 2027):** `UNH 1.2M expansion members × ~25% disenrolled (CBO 5.2M/~20M expansion adults, estimated) = 300k × $7,000 × 2% margin = $42M`, plus an acuity drag on the remaining book of `900k × $7,000 × 1 pp = $63M`, for **≈ -$105M/yr** at full phase-in (*estimated*). Provider-tax limits phase down from FY2028; they pressure state rates but the effect on UNH is not sized. UNH Medicaid membership already fell from 7.38M to 6.78M in H1 2026, partly because of the Louisiana exit (Q2 8-K).
+- **Enhanced ACA credits expired:** UNH is rebating its 2026 ACA profits, so OI is ≈ $0 by design.
+- **CAA 2026 PBM reform (signed 2026-02-03):** Part D delinking and a spread-pricing ban effective 2028, plus commercial transparency and rebate pass-through (https://www.ajmc.com/view/pbm-reforms-signed-into-law-reshaping-medicare-part-d-drug-pricing-transparency). Optum Rx moved to a fee-based model in May 2026. The OI impact is not found.
+- **MA 2027 final rate +2.48% (+$13B industry):** About +$3.4B of revenue to UNH at a 26% share, but this is not an OI change.
+- **IRA drug pricing:** Negotiated prices for the first 10 drugs took effect 2026-01-01 and 15 more follow in 2027. The Part D redesign shifted risk to plans (10-K). A D Congress expanding negotiation would need the President's signature, and the net effect on UNH is ambiguous (lower plan costs against lower PBM rebates), so it is not sized.
+
+## Biggest uncertainties
+1. **Share of Optum Rx OI earned by owned pharmacies.** It is not disclosed, and the 20-40% estimate drives about 70% of the "if everything happens" total.
+2. **2027-28 enactment odds for PBMA and No UPCODE** are estimated, with no markets. Both bills are bipartisan, so the outcome depends more on presidential posture and floor time than on which party wins.
+3. **Margins:** Medicaid (2%) and ACA (0-3%) margins are estimated; UNH does not disclose them by product.
+4. **KXACAREPEAL-29** (19.5% mid, volume 9,068, thin) prices a partial ACA repeal before 2029 that could hit UNH's expansion and exchange books. It is not sized because the resolution criteria are broad and the path under a D House is unclear.
+5. **Pending enforcement:** The DOJ probes of UNH MA billing and the FTC Optum Rx matter could cost far more than the election channels, and neither depends on the election.
+
+## Sources
+- UNH FY2025 10-K: https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm ; EDGAR index: https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/0000731766-26-000062-index.htm
+- UNH Q2 2026 earnings release (8-K): https://www.sec.gov/Archives/edgar/data/0000731766/000073176626000191/earningsrelease2q26_7152.htm
+- Kalshi API (2026-10-14): KXACAEXT-26JAN, KXACAENROLLMENT-27FEB28, KXACAREPEAL-29, KXPATIENTSMONOPOLIES-27, GOVPARTY{NV,OH,KS-27,GA,AZ,MI,PA,NY,WI,FL,TX,IA}, KXSTATEBALLOTMEASURE-SD
+- Polymarket aca-credits-extended-house-winner-2026 (gamma API, 2026-10-14)
+- KFF ACA enrollment 2026: https://www.kff.org/affordable-care-act/how-has-aca-marketplace-enrollment-changed-across-states-in-2026/ ; https://www.kff.org/quick-insights/aca-marketplace-enrollment-is-down-by-3-million-after-big-jump-in-premium-payments/
+- KFF MA 2026: https://kff.org/medicare/issue-brief/medicare-advantage-enrollment-update-and-key-trends
+- 2027 MA rate notice: https://homehealthcarenews.com/2026/04/cms-finalizes-2-48-medicare-advantage-payment-increase-for-2027/ ; https://kff.org/quick-take/medicare-advantage-insurers-will-see-higher-payments-as-cms-backs-off-a-key-payment-update
+- No UPCODE Act: https://www.merkley.senate.gov/cassidy-merkley-introduce-bill-to-stop-overpayments-in-the-medicare-advantage-program/
+- PBMA: https://www.hawley.senate.gov/hawley-warren-reintroduce-bipartisan-legislation-to-limit-pbms-put-patients-first/ ; https://www.mintz.com/insights-center/viewpoints/2146/2026-05-27-latest-pbm-reform-developments-keep-vertical-integration
+- CAA 2026 PBM reform: https://www.ajmc.com/view/pbm-reforms-signed-into-law-reshaping-medicare-part-d-drug-pricing-transparency ; https://republicans-energycommerce.house.gov/posts/chairman-guthrie-celebrates-long-awaited-pbm-reform-being-signed-into-law
+- OBBBA Medicaid (CBO via): https://www.factcheck.org/2025/06/assessing-medicaid-coverage-losses-under-house-reconciliation-bill/ ; https://www.techtarget.com/healthcarepayers/news/366629225/Breaking-down-uninsured-numbers-under-Trumps-spending-law
+- Work-requirement implementation: https://www.healthcaredive.com/news/medicaid-work-requirements-state-implementation-macpac/760531/ ; https://www.kff.org/medicaid/medicaid-work-requirements-tracker-1115-waivers
+- Nevada: https://lasvegassun.com/news/2026/jul/08/affordable-healthcare-emerges-as-a-voter-priority/
+- Ballot measures: https://www.multistate.us/insider/2026/4/1/states-move-to-revise-voter-approved-medicaid-expansion-through-ballot-measures ; https://theballotbrief.com/measures/south-dakota/constitutional-amendment-i

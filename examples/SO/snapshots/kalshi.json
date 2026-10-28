@@ -1,0 +1,87 @@
+{
+  "venue": "Kalshi",
+  "events": {
+    "KXGA4GW-26AUG": {
+      "venue": "Kalshi",
+      "event": "KXGA4GW-26AUG",
+      "title": "Will Georgia regulators approve 4 more gigawatts of generating capacity?",
+      "ladder": false,
+      "url": "https://kalshi.com/markets/kxga4gw",
+      "markets": [
+        {
+          "yes_bid": 0.59,
+          "yes_ask": 0.61,
+          "last_trade": 0.6,
+          "spread": 0.02,
+          "quote": "mid",
+          "prob": 0.6,
+          "volume": 4000,
+          "volume_unit": "contracts",
+          "low_liquidity": true,
+          "flags": [
+            "low_liquidity"
+          ],
+          "ticker": "KXGA4GW-26AUG-28MAR01",
+          "outcome": "Yes",
+          "title": "Will the Georgia Public Service Commission announce the certification of at least 4,000 MW in aggregate of new generating or energy storage capacity for Georgia Power \u2014 nameplate MW newly approved as supply-side resources under Georgia's integrated resource planning statute, summed across any number of Commission decisions and excluding need findings, RFP approvals, and revisions to previously certified resources before Mar 1, 2028?",
+          "strike": null,
+          "close_time": "2028-03-01T04:59:00Z"
+        }
+      ],
+      "total_volume": 4000,
+      "low_liquidity": true
+    },
+    "GOVPARTYGA-26": {
+      "venue": "Kalshi",
+      "event": "GOVPARTYGA-26",
+      "title": "Georgia Governor winner?",
+      "ladder": false,
+      "url": "https://kalshi.com/markets/govpartyga",
+      "markets": [
+        {
+          "yes_bid": 0.49,
+          "yes_ask": 0.51,
+          "last_trade": 0.5,
+          "spread": 0.02,
+          "quote": "mid",
+          "prob": 0.5,
+          "volume": 500000,
+          "volume_unit": "contracts",
+          "low_liquidity": false,
+          "flags": [
+            "normalized"
+          ],
+          "ticker": "GOVPARTYGA-26-D",
+          "outcome": "Keisha Lance Bottoms",
+          "title": "Will the Democratic party win the governorship in Georgia",
+          "strike": null,
+          "close_time": "2027-11-03T15:00:00Z"
+        },
+        {
+          "yes_bid": 0.49,
+          "yes_ask": 0.51,
+          "last_trade": 0.5,
+          "spread": 0.02,
+          "quote": "mid",
+          "prob": 0.5,
+          "volume": 400000,
+          "volume_unit": "contracts",
+          "low_liquidity": false,
+          "flags": [
+            "normalized"
+          ],
+          "ticker": "GOVPARTYGA-26-R",
+          "outcome": "Rick Jackson",
+          "title": "Will the Republican party win the governorship in Georgia",
+          "strike": null,
+          "close_time": "2027-11-03T15:00:00Z"
+        }
+      ],
+      "total_volume": 900000,
+      "low_liquidity": false
+    }
+  },
+  "fetched_at": "2026-10-15T13:00:24+00:00",
+  "as_of_date": "2026-10-15",
+  "note": "Synthetic prices for the tests. Not market data."
+}

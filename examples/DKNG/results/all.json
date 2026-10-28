@@ -1,0 +1,712 @@
+{
+  "company": {
+    "name": "DraftKings Inc.",
+    "short": "DraftKings",
+    "ticker": "DKNG"
+  },
+  "denominator": {
+    "label": "Adjusted EBITDA",
+    "amount": 620000000,
+    "period": "FY2025",
+    "status": "verified",
+    "source": {
+      "title": "DraftKings 10-K FY2025 (Adjusted EBITDA reconciliation; GAAP operating income was -$15.8M)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1883685/000188368526000013/dkng-20251231.htm"
+    }
+  },
+  "notes": {
+    "locked_in": [
+      "State gaming taxes (~$1.6B a year, estimated) are set by state budget bills; no Nov 3 market prices a tax-rate change in any DraftKings state, and the policy book has no tax-rate rows for NY, PA, NJ, MI, IL or OH",
+      "2025 state tax hikes already enacted: NJ online rate to 19.75%, Illinois per-wager fee (Jul 2025), Maryland to 20%, Louisiana to 21.5%",
+      "Federal wagering excise tax (0.25% of handle, ~-$134M a year, estimated): no market prices repeal",
+      "NJ and VA governors were elected in 2025; Ontario is provincial"
+    ],
+    "weak_links": [
+      "Predictions spend (+$150M if a federal ban forces DraftKings Predictions to close) is derived by subtraction: management's ~$1B 'core' Adjusted EBITDA vs 2026 guidance of $700-900M. The ban would also end a strategic product; long-run value is not netted",
+      "Gambling-loss cap: no public estimate of the handle effect was found (Citizens' analyst calls it negative but unquantified). The 0.5-2% of gaming revenue range is the analyst's assumption, not a source",
+      "iGaming sizes (NY +$125M, OH +$100M, MA +$80M) all use one ratio: PA-like spend per adult x DraftKings' ~17% national iGaming share x ~20-25% EBITDA margin after tax. A new state's tax rate (NY bills have proposed 30%+) could halve these",
+      "Book row doubted: MA-governor.md gives Healey (who opposes iGaming, block: veto) p 0.07 while Minogue, with no row, gets 0. The candidate who blocks the policy ends up with the higher chance of it; the 0.07 swing points the wrong way",
+      "Book row doubted: NY-governor.md gives Hochul and Blakeman the same 0.05 (vague) on iGaming, so the race shows no swing although only Hochul controls the budget she has kept iGaming out of",
+      "Nebraska: the Kalshi ballot-measure market is thin (383 contracts on the regulation initiative); both 440 (constitutional authorization) and 441 (regulation) are needed. Size uses an LB 421 fiscal note and a sponsor-commissioned study (Eilers & Krejcik), not a fiscal note for 441 itself",
+      "New York prediction-market stop: DraftKings' CEO calls the cannibalization 'de minimis'; the impact is small and the federal preemption fight (CFTC v. New York) may decide it rather than the governor"
+    ]
+  },
+  "results": [
+    {
+      "id": "dkng-pm-ban-law",
+      "type": "direct",
+      "hook": "DraftKings is spending roughly $100-300M this year building DraftKings Predictions, its CFTC-regulated sports event contracts.",
+      "event_plain": "Congress bans sports contracts on CFTC-regulated prediction markets in 2026",
+      "market": {
+        "source": "Polymarket",
+        "event": "law-banning-sports-prediction-markets-enacted-in-2026",
+        "yes_ticker": "law-banning-sports-prediction-markets-enacted-in-2026",
+        "question": "Law banning sports prediction markets enacted in 2026?",
+        "window": "by Dec 31, 2026",
+        "rules_summary": "Yes if a law banning CFTC-regulated prediction markets from offering sports contracts, or putting them under state gambling regulation, is signed by Dec 31, 2026."
+      },
+      "impact": {
+        "central": 150000000,
+        "low": 50000000,
+        "high": 300000000,
+        "status": "estimated",
+        "formula": "Management: core business ~$1.0B Adjusted EBITDA in 2026 vs guidance $700-900M, the gap being Predictions spend = $100-300M; a ban closes the sports product and stops most of that spend: ~+$150M central, +$50M if some spend continues on non-sports contracts, +$300M at the top of the gap",
+        "timing": "2027, once the product is wound down",
+        "sources": [
+          {
+            "title": "DraftKings Q2 2026 earnings release (8-K ex. 99.1): FY2026 guidance",
+            "url": "https://www.sec.gov/Archives/edgar/data/1883685/000188368526000027/q226-prx8kexx991.htm"
+          },
+          {
+            "title": "Polymarket market rules",
+            "url": "https://polymarket.com/event/law-banning-sports-prediction-markets-enacted-in-2026"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.24193548387096775,
+        "low": 0.08064516129032258,
+        "high": 0.4838709677419355
+      },
+      "notes": [],
+      "price": {
+        "venue": "Polymarket",
+        "ticker": "law-banning-sports-prediction-markets-enacted-in-2026",
+        "prob": 0.185,
+        "yes_bid": 0.12,
+        "yes_ask": 0.25,
+        "quote": "mid",
+        "volume": 21034.21,
+        "volume_unit": "USD",
+        "low_liquidity": false,
+        "event_url": "https://polymarket.com/event/law-banning-sports-prediction-markets-enacted-in-2026",
+        "as_of": "2026-10-27T03:27:45+00:00"
+      },
+      "cross_check": null,
+      "chance": 0.185,
+      "volume": 21034.21,
+      "election_swing": 0.0,
+      "meaningful": true
+    },
+    {
+      "id": "dkng-gambling-loss-cap",
+      "type": "direct",
+      "hook": "Since 2026 bettors can deduct only 90% of gambling losses, which taxes high-volume players on money they did not win.",
+      "event_plain": "Congress changes or removes the 90% cap on gambling-loss deductions before 2027",
+      "market": {
+        "source": "Kalshi",
+        "event": "KXGAMBLINGREPEAL-26JAN",
+        "yes_ticker": "KXGAMBLINGREPEAL-26JAN-27",
+        "question": "Will the cap on gambling loss deduction be changed?",
+        "window": "before Jan 1, 2027",
+        "rules_summary": "Yes if a bill that removes or changes the gambling tax provision in the One Big Beautiful Bill Act becomes law before Jan 1, 2027 (the most traded rung; later rungs to 2029 trade at 0.21-0.46)."
+      },
+      "impact": {
+        "central": 25000000,
+        "low": 13000000,
+        "high": 51000000,
+        "status": "estimated",
+        "formula": "Gaming revenue $5.63B (Sportsbook $3.83B + iGaming $1.80B) x 1% of play from high-volume bettors restored (range 0.5-2%) = $56M (28-113M) x ~45% flow-through after ~25-30% gaming tax and variable costs = ~$25M a year (13-51M)",
+        "timing": "tax year 2027",
+        "sources": [
+          {
+            "title": "DraftKings 10-K FY2025 (revenue by product)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1883685/000188368526000013/dkng-20251231.htm"
+          },
+          {
+            "title": "Covers: DraftKings CEO criticizes gambling provision in OBBBA (2025-08-07)",
+            "url": "https://www.covers.com/industry/draftkings-ceo-criticizes-gambling-provision-in-trump-obbba-aug-7-2025"
+          },
+          {
+            "title": "Sportico: Trump tax bill gambling losses deduction",
+            "url": "https://www.sportico.com/business/sports-betting/2025/donald-trump-tax-bill-gambling-losses-deductions-1234859009"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.04032258064516129,
+        "low": 0.020967741935483872,
+        "high": 0.08225806451612903
+      },
+      "notes": [],
+      "price": {
+        "venue": "Kalshi",
+        "ticker": "KXGAMBLINGREPEAL-26JAN-27",
+        "prob": 0.19,
+        "yes_bid": 0.18,
+        "yes_ask": 0.2,
+        "quote": "mid",
+        "volume": 377674.27,
+        "volume_unit": "contracts",
+        "low_liquidity": false,
+        "event_url": "https://kalshi.com/markets/kxgamblingrepeal",
+        "as_of": "2026-10-27T03:27:44+00:00"
+      },
+      "cross_check": null,
+      "chance": 0.19,
+      "volume": 416285.89,
+      "election_swing": 0.0,
+      "meaningful": true
+    },
+    {
+      "id": "dkng-ne-osb",
+      "type": "direct",
+      "hook": "Nebraska votes on letting its racetrack casinos offer mobile sports betting through up to two online brands each; DraftKings gave about $7M to the campaign.",
+      "event_plain": "Nebraska voters legalize online sports betting",
+      "market": {
+        "source": "Kalshi",
+        "event": "KXSTATEBALLOTMEASURE-NE26",
+        "yes_ticker": "KXSTATEBALLOTMEASURE-NE26-OSWR",
+        "question": "Will Online Sports Wagering Regulation Initiative pass?",
+        "window": "Nov 3, 2026",
+        "rules_summary": "Yes if Nebraska's Initiative 441 (online sports wagering regulation: two skins per racetrack, 20% tax) passes. The companion constitutional authorization (440, KXSTATEBALLOTMEASURE-NE26-OSWA) trades at about the same price; both are needed."
+      },
+      "impact": {
+        "central": 5000000,
+        "low": 2000000,
+        "high": 10000000,
+        "status": "estimated",
+        "formula": "Fiscal note for the similar LB 421 (20% tax): $20.4M tax in year 4 / 20% = ~$100M online GGR at maturity (sponsor study: $87M tax over 5 years) x DraftKings ~25% national OSB share = $25M revenue x ~20% EBITDA margin after tax, market access and marketing = ~$5M a year (2-10M)",
+        "timing": "launch 2027, mature by 2030",
+        "sources": [
+          {
+            "title": "Nebraska Examiner via 1011 Now: $87M over 5 years study; LB 421 fiscal note (2026-04-27)",
+            "url": "https://www.1011now.com/2026/04/27/report-says-legalizing-online-sports-betting-nebraska-could-generate-87m-over-5-years/"
+          },
+          {
+            "title": "KNEB/Rural Radio: initiatives 440 and 441 on the ballot (2026-08-24)",
+            "url": "https://ruralradio.com/khyy/news/online-sports-betting-initiatives-make-nebraskas-november-ballot/"
+          },
+          {
+            "title": "AGA 2025 industry totals via Covers (OSB share)",
+            "url": "https://www.covers.com/industry/aga-sports-betting-igaming-revenue-surged-over-20-percent-in-2025-may-12-2026"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.008064516129032258,
+        "low": 0.0032258064516129032,
+        "high": 0.016129032258064516
+      },
+      "notes": [],
+      "price": {
+        "venue": "Kalshi",
+        "ticker": "KXSTATEBALLOTMEASURE-NE26-OSWR",
+        "prob": 0.635,
+        "yes_bid": 0.59,
+        "yes_ask": 0.68,
+        "quote": "mid",
+        "volume": 382.74,
+        "volume_unit": "contracts",
+        "low_liquidity": true,
+        "event_url": "https://kalshi.com/markets/kxstateballotmeasure",
+        "as_of": "2026-10-27T03:27:44+00:00"
+      },
+      "cross_check": null,
+      "chance": 0.635,
+      "volume": 3166.17,
+      "election_swing": 0.0,
+      "meaningful": false
+    },
+    {
+      "id": "dkng-ny-igaming",
+      "type": "race",
+      "hook": "New York is DraftKings' biggest sportsbook state, but online casino is not legal there.",
+      "event_plain": "New York legalizes online casino games",
+      "market": {
+        "source": "Kalshi",
+        "event": "GOVPARTYNY-26",
+        "question": "New York Governor winner?",
+        "rules_summary": "Resolves to the party of the person inaugurated as New York governor after the 2026 election.",
+        "window": "January 2027",
+        "outcomes": [
+          {
+            "ticker": "GOVPARTYNY-26-D",
+            "name": "Kathy Hochul",
+            "last": "Hochul",
+            "party": "D",
+            "stance": "has not committed to signing the iGaming bill; left it out of two budgets",
+            "route": "vague",
+            "p_policy": 0.05,
+            "source": "https://www.covers.com/industry/new-york-election-preview-online-casinos-prediction-markets-loom-large-october-21-2026"
+          },
+          {
+            "ticker": "GOVPARTYNY-26-R",
+            "name": "Bruce Blakeman",
+            "last": "Blakeman",
+            "party": "R",
+            "stance": "no statewide iGaming policy",
+            "route": "vague",
+            "p_policy": 0.05,
+            "source": "https://www.covers.com/industry/new-york-election-preview-online-casinos-prediction-markets-loom-large-october-21-2026"
+          }
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book NY-governor.md, gaming-betting iGaming rows copied unchanged (both vague, 0.05)."
+      },
+      "impact": {
+        "central": 125000000,
+        "low": 60000000,
+        "high": 150000000,
+        "status": "estimated",
+        "formula": "New York iGaming at Pennsylvania-like spend per adult ~$3B market x DraftKings ~17-20% iGaming share = $0.5-0.6B revenue x ~25% EBITDA margin after tax and marketing = $100-150M a year at maturity; low case $60M if taxed at 30%+",
+        "timing": "3-4 years after legalization",
+        "sources": [
+          {
+            "title": "AGA 2025 industry totals via Covers (PA iGaming $3.46B; national iGaming $10.73B)",
+            "url": "https://www.covers.com/industry/aga-sports-betting-igaming-revenue-surged-over-20-percent-in-2025-may-12-2026"
+          },
+          {
+            "title": "DraftKings 10-K FY2025 (iGaming revenue $1,805M)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1883685/000188368526000013/dkng-20251231.htm"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.20161290322580644,
+        "low": 0.0967741935483871,
+        "high": 0.24193548387096775
+      },
+      "notes": [],
+      "outcomes": [
+        {
+          "ticker": "GOVPARTYNY-26-D",
+          "name": "Kathy Hochul",
+          "last": "Hochul",
+          "party": "D",
+          "stance": "has not committed to signing the iGaming bill; left it out of two budgets",
+          "route": "vague",
+          "p_policy": 0.05,
+          "source": "https://www.covers.com/industry/new-york-election-preview-online-casinos-prediction-markets-loom-large-october-21-2026",
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "GOVPARTYNY-26-D",
+            "prob": 0.9387,
+            "yes_bid": 0.94,
+            "yes_ask": 0.942,
+            "quote": "mid",
+            "volume": 1104080.74,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/govpartyny",
+            "as_of": "2026-10-27T03:27:44+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.05
+        },
+        {
+          "ticker": "GOVPARTYNY-26-R",
+          "name": "Bruce Blakeman",
+          "last": "Blakeman",
+          "party": "R",
+          "stance": "no statewide iGaming policy",
+          "route": "vague",
+          "p_policy": 0.05,
+          "source": "https://www.covers.com/industry/new-york-election-preview-online-casinos-prediction-markets-loom-large-october-21-2026",
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "GOVPARTYNY-26-R",
+            "prob": 0.0613,
+            "yes_bid": 0.061,
+            "yes_ask": 0.062,
+            "quote": "mid",
+            "volume": 3975085.83,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/govpartyny",
+            "as_of": "2026-10-27T03:27:44+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.05
+        }
+      ],
+      "chance_policy_overall": 0.05,
+      "chance": 0.05,
+      "election_swing": 0.0,
+      "volume": 5079166.57,
+      "meaningful": true
+    },
+    {
+      "id": "dkng-oh-igaming",
+      "type": "race",
+      "hook": "Ohio is a top-six DraftKings sportsbook state with no online casino yet.",
+      "event_plain": "Ohio legalizes online casino games",
+      "market": {
+        "source": "Kalshi",
+        "event": "GOVPARTYOH-26",
+        "question": "Ohio Governor winner?",
+        "rules_summary": "Resolves to the party of the person inaugurated as Ohio governor after the 2026 election.",
+        "window": "January 2027",
+        "outcomes": [
+          {
+            "ticker": "GOVPARTYOH-26-D",
+            "name": "Amy Acton",
+            "last": "Acton",
+            "party": "D",
+            "stance": "open to regulating and taxing online casino games; no bill or rate",
+            "route": "vague",
+            "p_policy": 0.05,
+            "source": "https://www.covers.com/industry/ohio-election-preview-candidate-icasino-support-october-20-2026"
+          },
+          {
+            "ticker": "GOVPARTYOH-26-R",
+            "name": "Vivek Ramaswamy",
+            "last": "Ramaswamy",
+            "party": "R",
+            "stance": "no stated position",
+            "route": "none",
+            "p_policy": 0.0
+          }
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book OH-governor.md: Acton iGaming row vague 0.05; Ramaswamy has no row (0). The Republican legislature would still have to pass it."
+      },
+      "impact": {
+        "central": 100000000,
+        "low": 50000000,
+        "high": 150000000,
+        "status": "estimated",
+        "formula": "Pennsylvania iGaming $3.46B / ~10.4M PA adults = ~$330 per adult x ~9.2M Ohio adults = ~$3.0B market x DraftKings ~17% iGaming share = ~$0.5B revenue x ~20% EBITDA margin after tax and marketing = ~$100M a year at maturity (50-150M)",
+        "timing": "3-4 years after legalization",
+        "sources": [
+          {
+            "title": "AGA 2025 industry totals via Covers (PA iGaming $3.46B)",
+            "url": "https://www.covers.com/industry/aga-sports-betting-igaming-revenue-surged-over-20-percent-in-2025-may-12-2026"
+          },
+          {
+            "title": "US Census QuickFacts, Ohio and Pennsylvania population",
+            "url": "https://www.census.gov/quickfacts/fact/table/OH,PA/PST045224"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.16129032258064516,
+        "low": 0.08064516129032258,
+        "high": 0.24193548387096775
+      },
+      "notes": [],
+      "outcomes": [
+        {
+          "ticker": "GOVPARTYOH-26-D",
+          "name": "Amy Acton",
+          "last": "Acton",
+          "party": "D",
+          "stance": "open to regulating and taxing online casino games; no bill or rate",
+          "route": "vague",
+          "p_policy": 0.05,
+          "source": "https://www.covers.com/industry/ohio-election-preview-candidate-icasino-support-october-20-2026",
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "GOVPARTYOH-26-D",
+            "prob": 0.815,
+            "yes_bid": 0.81,
+            "yes_ask": 0.82,
+            "quote": "mid",
+            "volume": 1839641.74,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/govpartyoh",
+            "as_of": "2026-10-27T03:27:44+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.05
+        },
+        {
+          "ticker": "GOVPARTYOH-26-R",
+          "name": "Vivek Ramaswamy",
+          "last": "Ramaswamy",
+          "party": "R",
+          "stance": "no stated position",
+          "route": "none",
+          "p_policy": 0.0,
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "GOVPARTYOH-26-R",
+            "prob": 0.185,
+            "yes_bid": 0.18,
+            "yes_ask": 0.19,
+            "quote": "mid",
+            "volume": 3063995.81,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/govpartyoh",
+            "as_of": "2026-10-27T03:27:44+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.0
+        }
+      ],
+      "chance_policy_overall": 0.04075,
+      "chance": 0.04075,
+      "election_swing": 0.05,
+      "volume": 4903637.55,
+      "meaningful": false
+    },
+    {
+      "id": "dkng-ma-igaming",
+      "type": "race",
+      "hook": "Massachusetts allows mobile sports betting but not online casino, which the governor opposes.",
+      "event_plain": "Massachusetts legalizes online casino games",
+      "market": {
+        "source": "Kalshi",
+        "event": "GOVPARTYMA-26",
+        "question": "Massachusetts Governor winner?",
+        "rules_summary": "Resolves to the party of the person inaugurated as Massachusetts governor after the 2026 election.",
+        "window": "January 2027",
+        "outcomes": [
+          {
+            "ticker": "GOVPARTYMA-26-D",
+            "name": "Maura Healey",
+            "last": "Healey",
+            "party": "D",
+            "stance": "opposes iGaming (competes with the state's online lottery); p is the chance it still becomes law",
+            "route": "block: veto",
+            "p_policy": 0.07,
+            "source": "https://www.thelines.com/legal-betting/candidates-decided-could-shape-massachusetts-igaming-future/"
+          },
+          {
+            "ticker": "GOVPARTYMA-26-R",
+            "name": "Mike Minogue",
+            "last": "Minogue",
+            "party": "R",
+            "stance": "no stated position",
+            "route": "none",
+            "p_policy": 0.0
+          }
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book MA-governor.md: Healey block: veto 0.07; Minogue has no gaming row (0). Copied unchanged; see weak links."
+      },
+      "impact": {
+        "central": 80000000,
+        "low": 40000000,
+        "high": 120000000,
+        "status": "estimated",
+        "formula": "~$330 iGaming spend per adult (PA) x ~5.6M Massachusetts adults = ~$1.9B market x DraftKings ~17% iGaming share = ~$0.32B revenue x ~25% EBITDA margin = ~$80M a year at maturity (40-120M)",
+        "timing": "3-4 years after legalization",
+        "sources": [
+          {
+            "title": "AGA 2025 industry totals via Covers (PA iGaming $3.46B)",
+            "url": "https://www.covers.com/industry/aga-sports-betting-igaming-revenue-surged-over-20-percent-in-2025-may-12-2026"
+          },
+          {
+            "title": "US Census QuickFacts, Massachusetts population",
+            "url": "https://www.census.gov/quickfacts/fact/table/MA/PST045224"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.12903225806451613,
+        "low": 0.06451612903225806,
+        "high": 0.1935483870967742
+      },
+      "notes": [],
+      "outcomes": [
+        {
+          "ticker": "GOVPARTYMA-26-D",
+          "name": "Maura Healey",
+          "last": "Healey",
+          "party": "D",
+          "stance": "opposes iGaming (competes with the state's online lottery); p is the chance it still becomes law",
+          "route": "block: veto",
+          "p_policy": 0.07,
+          "source": "https://www.thelines.com/legal-betting/candidates-decided-could-shape-massachusetts-igaming-future/",
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "GOVPARTYMA-26-D",
+            "prob": 0.9502,
+            "yes_bid": 0.952,
+            "yes_ask": 0.955,
+            "quote": "mid",
+            "volume": 523467.05,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/govpartyma",
+            "as_of": "2026-10-27T03:27:44+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.07
+        },
+        {
+          "ticker": "GOVPARTYMA-26-R",
+          "name": "Mike Minogue",
+          "last": "Minogue",
+          "party": "R",
+          "stance": "no stated position",
+          "route": "none",
+          "p_policy": 0.0,
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "GOVPARTYMA-26-R",
+            "prob": 0.0498,
+            "yes_bid": 0.048,
+            "yes_ask": 0.052,
+            "quote": "mid",
+            "volume": 1948059.53,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/govpartyma",
+            "as_of": "2026-10-27T03:27:44+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.0
+        }
+      ],
+      "chance_policy_overall": 0.066514,
+      "chance": 0.066514,
+      "election_swing": 0.07,
+      "volume": 2471526.58,
+      "meaningful": true
+    },
+    {
+      "id": "dkng-ny-pm-stop",
+      "type": "race",
+      "hook": "Kalshi and Polymarket sell sports contracts in New York, DraftKings' biggest sportsbook state, and the state is suing both.",
+      "event_plain": "New York stops prediction-market sports contracts in the state",
+      "market": {
+        "source": "Kalshi",
+        "event": "GOVPARTYNY-26",
+        "question": "New York Governor winner?",
+        "rules_summary": "Resolves to the party of the person inaugurated as New York governor after the 2026 election.",
+        "window": "January 2027",
+        "outcomes": [
+          {
+            "ticker": "GOVPARTYNY-26-D",
+            "name": "Kathy Hochul",
+            "last": "Hochul",
+            "party": "D",
+            "stance": "treats prediction-market sports contracts as illegal gambling; state suits against Kalshi and Polymarket",
+            "route": "make: alone",
+            "p_policy": 0.45,
+            "source": "https://www.governor.ny.gov/news/governor-hochul-and-attorney-general-james-announce-lawsuit-against-polymarket-running-illegal"
+          },
+          {
+            "ticker": "GOVPARTYNY-26-R",
+            "name": "Bruce Blakeman",
+            "last": "Blakeman",
+            "party": "R",
+            "stance": "criticized Hochul for rejecting a revenue deal with Kalshi; no row on stopping them",
+            "route": "none",
+            "p_policy": 0.0
+          }
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book NY-governor.md: Hochul make: alone 0.45; Blakeman has no row for this policy (0). The AG race (James 0.70, sue) prices the same channel; not added to avoid double counting."
+      },
+      "impact": {
+        "central": 2500000,
+        "low": 0,
+        "high": 5000000,
+        "status": "estimated",
+        "formula": "DraftKings New York sportsbook revenue ~$625M (estimated, structure.md) x ~1% of play won back from prediction markets (0-2%; CEO calls the effect 'de minimis') = ~$6M x ~40% flow-through after the 51% New York tax = ~$2.5M a year",
+        "timing": "2027 if enforced",
+        "sources": [
+          {
+            "title": "Yahoo Finance: prediction markets vs DraftKings; Robins calls the revenue impact de minimis",
+            "url": "https://finance.yahoo.com/news/prediction-markets-surge-eclipse-draftkings-150349761.html"
+          },
+          {
+            "title": "LSR 2025 state pace",
+            "url": "https://www.legalsportsreport.com/239399/sports-betting-pace-for-2025/"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.004032258064516129,
+        "low": 0.0,
+        "high": 0.008064516129032258
+      },
+      "notes": [],
+      "outcomes": [
+        {
+          "ticker": "GOVPARTYNY-26-D",
+          "name": "Kathy Hochul",
+          "last": "Hochul",
+          "party": "D",
+          "stance": "treats prediction-market sports contracts as illegal gambling; state suits against Kalshi and Polymarket",
+          "route": "make: alone",
+          "p_policy": 0.45,
+          "source": "https://www.governor.ny.gov/news/governor-hochul-and-attorney-general-james-announce-lawsuit-against-polymarket-running-illegal",
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "GOVPARTYNY-26-D",
+            "prob": 0.9387,
+            "yes_bid": 0.94,
+            "yes_ask": 0.942,
+            "quote": "mid",
+            "volume": 1104080.74,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/govpartyny",
+            "as_of": "2026-10-27T03:27:44+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.45
+        },
+        {
+          "ticker": "GOVPARTYNY-26-R",
+          "name": "Bruce Blakeman",
+          "last": "Blakeman",
+          "party": "R",
+          "stance": "criticized Hochul for rejecting a revenue deal with Kalshi; no row on stopping them",
+          "route": "none",
+          "p_policy": 0.0,
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "GOVPARTYNY-26-R",
+            "prob": 0.0613,
+            "yes_bid": 0.061,
+            "yes_ask": 0.062,
+            "quote": "mid",
+            "volume": 3975085.83,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/govpartyny",
+            "as_of": "2026-10-27T03:27:44+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.0
+        }
+      ],
+      "chance_policy_overall": 0.422415,
+      "chance": 0.422415,
+      "election_swing": 0.45,
+      "volume": 5079166.57,
+      "meaningful": false
+    }
+  ],
+  "gaps": [],
+  "prices_as_of": [
+    "2026-10-27T03:27:44+00:00",
+    "2026-10-27T03:27:45+00:00"
+  ],
+  "generated_at": "2026-10-27T03:28:39+00:00",
+  "headlines": {
+    "election": null,
+    "policy": {
+      "id": "dkng-pm-ban-law",
+      "text": "Polymarket puts 18% on: Congress bans sports contracts on CFTC-regulated prediction markets in 2026. For DraftKings: +$150M a year (+24.2% of profit)."
+    }
+  },
+  "red_team": [
+    "Congress bans sports contracts on CFTC-regulated prediction markets in 2026: the impact range is wide (+$50.0M to +$300M); read how it was built.",
+    "Congress bans sports contracts on CFTC-regulated prediction markets in 2026: the impact is an estimate, not a reported number.",
+    "Congress changes or removes the 90% cap on gambling-loss deductions before 2027: the impact range is wide (+$13.0M to +$51.0M); read how it was built.",
+    "Congress changes or removes the 90% cap on gambling-loss deductions before 2027: the impact is an estimate, not a reported number.",
+    "Nebraska voters legalize online sports betting: thin market (3,166); one trader can move the price.",
+    "Nebraska voters legalize online sports betting: the impact range is wide (+$2.0M to +$10.0M); read how it was built.",
+    "New York legalizes online casino games: the impact is an estimate, not a reported number.",
+    "Massachusetts legalizes online casino games: the impact is an estimate, not a reported number."
+  ],
+  "book": {
+    "source": "built here",
+    "downloaded_at": null,
+    "built_by": null,
+    "last_edit": "2026-10-27",
+    "files": 197,
+    "fingerprint": "f97e319e0772"
+  },
+  "structure": true,
+  "disclaimer": "Analyst draft for human review. Scenario estimates, not investment advice or a recommendation to trade any security or contract. Prediction-market prices are shown as information only.",
+  "repo": "github.com/juwonyee/election-risk"
+}

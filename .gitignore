@@ -1,0 +1,8 @@
+election-risk-out/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Raw market prices stay out of the repo (venue terms); SO holds synthetic test prices.
+examples/*/snapshots/
+!examples/SO/snapshots/

@@ -1,0 +1,140 @@
+{
+  "schema": "election-risk/markets@2",
+  "company": {"name": "Starbucks Corporation", "short": "Starbucks", "ticker": "SBUX"},
+  "denominator": {
+    "label": "operating profit", "amount": 2936600000, "period": "FY2025 (GAAP operating income)", "status": "verified",
+    "source": {"title": "Starbucks 10-K FY2025 (fiscal year ended Sep 28, 2025)", "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm"}
+  },
+  "notes": {
+    "locked_in": [
+      "California fast-food minimum wage of $20/hr (AB 1228, since Apr 2024); further raises go through the Fast Food Council, which no Nov 3 market prices",
+      "Coffee is exempt from both 2026 Section 301 tariff actions (10-12.5% on 60 economies; 25% on Brazil) and from the Nov 2025 reciprocal tariffs, so tariff races and markets barely reach Starbucks' biggest input",
+      "NLRB: the Senate confirmed a 3-1 Republican Board majority in Aug 2026; who wins the Senate on Nov 3 changes only the vacant seat, not the current majority",
+      "Starbucks' own US wage floor of $15/hr (since 2022): state minimum-wage pledges of $15 or less (Pennsylvania, Georgia, Iowa) do not bind and are left out",
+      "China moved to a 40%-owned JV in Apr 2026: royalties and equity income, not segment profit"
+    ],
+    "weak_links": [
+      "PRO Act impact (-$120M) assumes union coverage reaching ~20% of US store labor at a ~8% union premium; Starbucks discloses only that ~6% of company-operated stores are unionized (estimated)",
+      "Federal $17 by 2030 impact (-$100M) assumes ~30% of barista hours still below $17 in 2030 at a ~$1 average gap, doubled for wage compression; Starbucks does not disclose its pay distribution (estimated, from job-posting and pay-survey averages)",
+      "NYC $30 impact uses ~250 NYC stores (Manhattan 160+ after the Sep 2025 closures, plus the outer boroughs: estimated) and the national average of ~27,700 store labor hours per store",
+      "NYC cannot set its own minimum wage under state preemption; a $30 NYC wage would need Albany, and the policy book has no Hochul or NY-legislature row on it, so the Nov 3 New York races cannot be tied to this market (book gap)",
+      "Book row US-senate-control 'Republicans: keep confirming Trump labor nominees' (appoint, 0.70) prices a confirmation, not a labor-cost policy; the Board majority is already seated, so it is left out here rather than used as a race link",
+      "Wisconsin: Crowley's row bundles '$15 now' (no effect on Starbucks) with '$20 by 2030' (the part that matters); Tiffany's block-veto 0.07 applies to the $20 row"
+    ]
+  },
+  "entries": [
+    {
+      "id": "sbux-house-pro-act", "type": "race",
+      "hook": "Which party runs the House decides whether the PRO Act, which makes union organizing easier, gets a vote.",
+      "event_plain": "the PRO Act (easier union organizing, first-contract arbitration) becomes law",
+      "market": {
+        "source": "Kalshi", "event": "CONTROLH-2026",
+        "question": "Which party will win the U.S. House?",
+        "rules_summary": "Resolves to the party that wins control of the House in 2026 (media consensus, else the Speaker's party on Feb 1, 2027).",
+        "outcomes": [
+          {"ticker": "CONTROLH-2026-D", "name": "Democratic Party", "last": "Democrats", "party": "D",
+           "stance": "PRO Act (H.R. 20): strengthen workers' right to organize; passed the House in 2020 and 2021", "route": "federal: partisan",
+           "p_policy": 0.05, "source": "https://bobbyscott.house.gov/media-center/in-the-news/democrats-reintroduce-sweeping-bill-strengthen-unions"},
+          {"ticker": "CONTROLH-2026-R", "name": "Republican Party", "last": "Republicans", "party": "R",
+           "stance": "no stated position", "route": "none", "p_policy": 0.0}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book US-house-control.md: PRO Act row, federal: partisan 0.05 (needs the Senate and the President's signature). No Republican row, so 0."
+      },
+      "impact": {
+        "central": -120000000, "low": -40000000, "high": -300000000, "status": "estimated",
+        "formula": "US store labor ~$7.5B (214,000 employees x ~1,300 h x ~$27-30/h pay and benefits) x ~20% of stores under union contracts at run-rate (from ~6% today) x ~8% union pay-and-benefit premium = ~$120M a year. Low: 10% coverage x 5% = ~$40M. High: 40% coverage x 10% = ~$300M",
+        "timing": "phased over several years after enactment, as stores organize and first contracts are set",
+        "sources": [
+          {"title": "Starbucks 10-K FY2025 (Item 1 employees, Item 1A unionized stores)", "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm"},
+          {"title": "PRO Act reintroduced (Rep. Bobby Scott, 2025)", "url": "https://bobbyscott.house.gov/media-center/in-the-news/democrats-reintroduce-sweeping-bill-strengthen-unions"},
+          {"title": "BLS: Union members, earnings of union vs non-union workers", "url": "https://www.bls.gov/news.release/union2.nr0.htm"}
+        ]
+      }
+    },
+    {
+      "id": "sbux-house-17-wage", "type": "race",
+      "hook": "Which party runs the House decides whether a $17 federal minimum wage gets a vote.",
+      "event_plain": "the federal minimum wage rises to $17 by 2030 (Raise the Wage Act)",
+      "market": {
+        "source": "Kalshi", "event": "CONTROLH-2026",
+        "question": "Which party will win the U.S. House?",
+        "rules_summary": "Resolves to the party that wins control of the House in 2026 (media consensus, else the Speaker's party on Feb 1, 2027).",
+        "outcomes": [
+          {"ticker": "CONTROLH-2026-D", "name": "Democratic Party", "last": "Democrats", "party": "D",
+           "stance": "Raise the Wage Act of 2025: $17 federal minimum by 2030 (142 House cosponsors; not in the leadership agenda)", "route": "federal: partisan",
+           "p_policy": 0.05, "source": "https://www.yahoo.com/news/democrats-unveil-legislation-raising-federal-200034864.html"},
+          {"ticker": "CONTROLH-2026-R", "name": "Republican Party", "last": "Republicans", "party": "R",
+           "stance": "no stated position", "route": "none", "p_policy": 0.0}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book US-house-control.md: Raise the Wage Act row, federal: partisan 0.05. No Republican row, so 0."
+      },
+      "impact": {
+        "central": -100000000, "low": -40000000, "high": -250000000, "status": "estimated",
+        "formula": "~278M US store hours x ~85% barista hours x ~30% still below $17 in 2030 (floor $15 since 2022, national barista average ~$17-18 today) x ~$1.00 average gap = ~$71M, plus wage compression for shift supervisors and baristas just above $17 (~+40%) = ~$100M a year. Low: 15% of hours, $0.75 gap, little compression. High: 50% of hours, $1.50 gap, full compression",
+        "timing": "phased to 2030",
+        "sources": [
+          {"title": "Starbucks 10-K FY2025 (Item 1: US company-operated store employees)", "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm"},
+          {"title": "Gridwise: Starbucks pay (2026; $15 floor since 2022, barista average ~$17-18)", "url": "https://gridwise.io/blog/starbucks-pay"},
+          {"title": "Indeed: Starbucks barista hourly pay (2026 postings, average ~$15.93)", "url": "https://www.indeed.com/salaries/Barista-Salaries-at-Starbucks"},
+          {"title": "The Hill: Democrats unveil Raise the Wage Act ($17 by 2030)", "url": "https://www.yahoo.com/news/democrats-unveil-legislation-raising-federal-200034864.html"}
+        ]
+      }
+    },
+    {
+      "id": "sbux-wi-governor", "type": "race",
+      "hook": "Wisconsin's governor race decides whether the state floor climbs to $20 by 2030.",
+      "event_plain": "Wisconsin raises its minimum wage to $20 by 2030",
+      "market": {
+        "source": "Kalshi", "event": "GOVPARTYWI-26",
+        "question": "Wisconsin Governor winner?",
+        "rules_summary": "Resolves to the party that wins Wisconsin's governorship in 2026.",
+        "outcomes": [
+          {"ticker": "GOVPARTYWI-26-D", "name": "David Crowley", "last": "Crowley", "party": "D",
+           "stance": "minimum wage $15 immediately, $20 by 2030", "route": "make: same party, narrow",
+           "p_policy": 0.25, "source": "https://urbanmilwaukee.com/pressrelease/crowley-releases-badger-basics-a-governing-framework-built-on-affordability-care-and-opportunity/"},
+          {"ticker": "GOVPARTYWI-26-R", "name": "Tom Tiffany", "last": "Tiffany", "party": "R",
+           "stance": "opposes a $20 minimum wage; p is the chance it still becomes law", "route": "block: veto",
+           "p_policy": 0.07, "source": "https://cbs58.com/news/gubernatorial-candidates-court-wisconsin-workers-with-competing-labor-plans"}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book WI-governor.md: Crowley 0.25 (same party, narrow: needs both chambers); Tiffany block: veto 0.07."
+      },
+      "impact": {
+        "central": -8000000, "low": -4000000, "high": -14000000, "status": "estimated",
+        "formula": "~100 company-operated Wisconsin stores (~145 total incl. licensed) x ~27,700 labor hours per store (278M h / 10,047 US stores) x ~85% barista hours x ~$3.00 average gap to $20 in 2030 = ~$7M, plus compression = ~$8M a year",
+        "timing": "phased to 2030",
+        "sources": [
+          {"title": "Starbucks 10-K FY2025 (stores and employees)", "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm"},
+          {"title": "1440 WROK: 145 Starbucks in Wisconsin (undated)", "url": "https://1440wrok.com/ixp/784/p/new-open-door-policy-wisconsin-starbucks/"},
+          {"title": "Crowley 'Badger Basics' ($15 now, $20 by 2030)", "url": "https://urbanmilwaukee.com/pressrelease/crowley-releases-badger-basics-a-governing-framework-built-on-affordability-care-and-opportunity/"}
+        ]
+      }
+    },
+    {
+      "id": "sbux-nyc-30-wage", "type": "direct",
+      "hook": "New York City's mayor wants a $30 minimum wage by 2030; Starbucks runs about 250 stores in the city.",
+      "event_plain": "New York City enacts a $30 minimum wage by 2030",
+      "market": {
+        "source": "Kalshi", "event": "KXNYCMINWAGE-27JAN01", "yes_ticker": "KXNYCMINWAGE-27JAN01",
+        "question": "Will Mamdani raise the minimum wage to $30 before 2027?",
+        "window": "before Jan 1, 2027",
+        "rules_summary": "Yes if a law setting a New York City minimum wage of at least $30/hr, in effect by 2030 or earlier, is fully enacted before Jan 1, 2027. Matches the policy; the only rung, so a later enactment is not priced.",
+        "cross_check": {"source": "Polymarket", "event": "will-mamdani-raise-the-minimum-wage-to-30-before-2027",
+          "tickers": {"KXNYCMINWAGE-27JAN01": "will-mamdani-raise-the-minimum-wage-to-30-before-2027"}}
+      },
+      "impact": {
+        "central": -60000000, "low": -35000000, "high": -100000000, "status": "estimated",
+        "formula": "~250 NYC stores x ~27,700 labor hours per store = ~6.9M h; x ~85% barista hours x ~$9.00 average gap in 2030 ($30 vs ~$21 Starbucks NYC pay by then) = ~$53M, plus supervisor compression (~15% of hours x ~$5) = ~$5M, = ~$60M a year",
+        "timing": "phased to 2030",
+        "sources": [
+          {"title": "West Side Spirit: Starbucks closing 25 Manhattan stores, 160+ remain (Sep 2025)", "url": "https://www.westsidespirit.com/home/starbucks-closing-25-manhattan-stores-six-on-uws-XA5130880"},
+          {"title": "Starbucks 10-K FY2025 (stores and employees)", "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm"},
+          {"title": "City & State: Mamdani's $30 minimum wage by 2030", "url": "https://www.cityandstateny.com/policy/2025/02/mamdani-unveils-30-30-minimum-wage-push-part-mayoral-campaign/403015/"},
+          {"title": "Gridwise: Starbucks pay (high-cost markets $20-23+)", "url": "https://gridwise.io/blog/starbucks-pay"}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Profit structure"
+  short_description: "Where a company's profit comes from, and which lines a government can move"
+  default_prompt: "Use $profit-structure to show which of Ford's profit lines a government decision can move."

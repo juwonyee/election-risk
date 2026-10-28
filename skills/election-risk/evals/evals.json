@@ -1,0 +1,29 @@
+{
+  "skill_name": "election-risk",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What does the midterm election mean for Southern Company? Which prediction markets move its profit?",
+      "expected_output": "A table of markets with price, yearly profit change and share of profit, built from markets.json via erisk; report.html written",
+      "files": [],
+      "assertions": [
+        "Uses erisk validate, snapshot and compute rather than hand-computed numbers",
+        "Each row shows a market price with venue and volume, and thin markets are flagged",
+        "Every impact has a formula, verified/estimated status and a source URL",
+        "No buy/sell/hold language or position sizing; ends with the disclaimer",
+        "Channels without a market are not shown as rows"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "hyundai motor - how exposed is it to the us elections? i hold some in my korean account",
+      "expected_output": "Non-US company handled: base from DART or the annual report with a stated FX rate; channels via US tariffs, credits, US plants",
+      "files": [],
+      "assertions": [
+        "Denominator in USD with currency, amount_local and fx recorded",
+        "Explains which channels have a market and leaves out those without",
+        "Lists anything unreachable (e.g. a missing DART key) under Not included with a fix"
+      ]
+    }
+  ]
+}

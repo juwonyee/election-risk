@@ -1,0 +1,124 @@
+{
+  "schema": "election-risk/markets@2",
+  "company": {
+    "name": "General Motors",
+    "short": "GM",
+    "ticker": "GM"
+  },
+  "denominator": {
+    "label": "EBIT-adjusted",
+    "amount": 12747000000,
+    "period": "FY2025",
+    "status": "verified",
+    "source": {
+      "title": "GM Q4 and full-year 2025 earnings release (8-K Ex. 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000011/gmq42025pressreleaseandfin.htm"
+    }
+  },
+  "notes": {
+    "locked_in": [
+      "P.L. 119-21: consumer EV credits (30D/45W) ended 2025-09-30, CAFE civil penalties set to $0, 45X phase-down; repeal needs the President's signature through Jan 2029",
+      "Section 232 auto (15-25%) and metals tariffs and Section 301 tariffs in force; GM guides -$2.5B to -$3.5B gross tariff cost for 2026; Congress has no disapproval route",
+      "UAW contract runs to 2028"
+    ],
+    "weak_links": [
+      "USMCA withdrawal impact: 0.69M GM vehicles from Mexico/Canada (Inovev, 2024) x ~$40,000 customs value (estimated) x 25% tariff x ~25% US content that becomes dutiable (estimated) = ~$1.7B; parts exposure not sized. Both the $40,000 and the 25% US-content share are my estimates.",
+      "KXUSMCA-26 resolves on a withdrawal NOTICE; withdrawal takes effect 6 months later and a notice can be a bargaining step, so the impact assumes the notice leads to loss of USMCA treatment (rules only partly match).",
+      "Tariff-repeal impact uses GM's 2026 gross tariff guide midpoint ($3.0B) as if all of it went away; part is metals and Korea tariffs that a narrower law might leave in place.",
+      "Book row doubt (US-house-control.md): the Republican tariffs-trade row ('block: veto', p 0.07) prices keeping the tariffs, not repealing them; I set Republicans' p for a repeal law to 0 because no Republican row proposes it.",
+      "Book row doubt (US-house-control.md): Democrats 'bring tariff-disapproval resolutions to the floor' is 'make: alone' p 0.45, but Section 232/301 tariffs have no disapproval route (policy.md), so it cannot move GM's tariff bill; not used.",
+      "Book row doubt (MI-governor.md): Benson 'subnational agreements with Canada' is 'make: alone' p 0.45 although the row itself says its effect on federal tariffs is unclear; a governor has no tariff lever, so it is not linked."
+    ]
+  },
+  "entries": [
+    {
+      "id": "gm-usmca-exit",
+      "type": "direct",
+      "hook": "GM builds a large share of its US trucks and SUVs in Mexico and Canada; USMCA is what keeps most of them out of the full auto tariff.",
+      "event_plain": "the US sends notice to leave USMCA",
+      "market": {
+        "source": "Kalshi",
+        "event": "KXUSMCA-26",
+        "yes_ticker": "KXUSMCA-26-27",
+        "question": "Will Trump try to leave the USMCA before 2027?",
+        "window": "before Jan 1, 2027",
+        "rules_summary": "Yes if the United States submits a notice of withdrawal from the USMCA before Jan 1, 2027."
+      },
+      "impact": {
+        "central": -1700000000,
+        "low": -1000000000,
+        "high": -3500000000,
+        "status": "estimated",
+        "formula": "0.69M GM vehicles from Mexico/Canada x ~$40,000 customs value = ~$27.6B x 25% Sec. 232 auto tariff x ~25% US content that loses its USMCA deduction = ~$1.7B a year more tariff. Low: GM offsets ~40% (as on 2025 tariffs) = ~$1.0B. High: adds 25% on Mexican/Canadian parts now USMCA-exempt, roughly the size of GM's $2B Korea exposure = ~$3.5B.",
+        "timing": "6 months after a notice, if withdrawal goes ahead",
+        "sources": [
+          {
+            "title": "Inovev: GM, Ford and Stellantis would be heavily impacted by Mexico-Canada import taxes (GM 0.69M units, 2024)",
+            "url": "https://inovev.com/index.php/en/market-analyses/category-blog/21372-2025-09-1"
+          },
+          {
+            "title": "Argus: GM cuts guidance on up to $5bn tariff exposure ($2bn Korea; >80% of supply chain USMCA compliant)",
+            "url": "https://www.argusmedia.com/news-and-insights/latest-market-news/2684195-gm-cuts-guidance-on-up-to-5bn-tariff-exposure"
+          },
+          {
+            "title": "GM 10-K FY2025 (2025 gross tariff cost $3.1B, >40% offset)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gm-house-tariff-repeal",
+      "type": "race",
+      "hook": "Tariffs are GM's biggest government-set cost; a Democratic House has said it would pass laws to overturn them, though the President can veto.",
+      "event_plain": "Congress passes a law overturning the President's tariffs",
+      "market": {
+        "source": "Kalshi",
+        "event": "CONTROLH-2026",
+        "question": "Which party will win the U.S. House?",
+        "rules_summary": "Resolves to the party that wins control of the U.S. House in the 2026 elections.",
+        "outcomes": [
+          {
+            "ticker": "CONTROLH-2026-D",
+            "name": "Democratic Party",
+            "last": "Democrats",
+            "party": "D",
+            "stance": "pass laws to overturn the President's tariffs",
+            "route": "federal: partisan",
+            "p_policy": 0.05,
+            "source": "https://www.pbs.org/newshour/politics/heres-whats-on-house-democrats-agenda-if-they-sweep-to-power-in-midterm-elections"
+          },
+          {
+            "ticker": "CONTROLH-2026-R",
+            "name": "Republican Party",
+            "last": "Republicans",
+            "party": "R",
+            "stance": "keep the administration's tariffs (no repeal proposed)",
+            "route": "none",
+            "p_policy": 0.0
+          }
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book US-house-control.md: a repeal law needs the Senate and the President's signature or a two-thirds override (federal: partisan, 0.05). No Republican row proposes repeal. Book updated 2026-10-27: a Republican House blocking repeal is block: majority, p 0."
+      },
+      "impact": {
+        "central": 3000000000,
+        "low": 1500000000,
+        "high": 3500000000,
+        "status": "estimated",
+        "formula": "GM 2026 gross tariff cost guide $2.5B to $3.5B, midpoint $3.0B, goes away. Low: only auto/parts tariffs repealed and half the saving given back in price = ~$1.5B. High: top of the guide, $3.5B.",
+        "timing": "from the law's effective date",
+        "sources": [
+          {
+            "title": "GM 10-K FY2025 (2025 gross tariff cost $3.1B)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm"
+          },
+          {
+            "title": "GM 2026 tariff guidance after the IEEPA ruling",
+            "url": "https://finance.yahoo.com/markets/article/gm-earnings-preview-tariffs-weaker-consumer-may-weigh-on-q1-results-143121448.html"
+          }
+        ]
+      }
+    }
+  ]
+}

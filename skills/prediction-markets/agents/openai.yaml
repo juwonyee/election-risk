@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prediction markets"
+  short_description: "Every Kalshi and Polymarket market for the Nov 3 elections and US policy, priced"
+  default_prompt: "Use $prediction-markets to list the markets on data-center moratoriums and their odds."

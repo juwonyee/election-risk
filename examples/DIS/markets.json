@@ -1,0 +1,68 @@
+{
+  "schema": "election-risk/markets@2",
+  "company": {"name": "The Walt Disney Company", "short": "Disney", "ticker": "DIS"},
+  "denominator": {
+    "label": "segment operating income", "amount": 17551000000, "period": "FY2025", "status": "verified",
+    "source": {"title": "Walt Disney 10-K FY2025 (segment note)", "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/dis-20250927.htm"}
+  },
+  "notes": {
+    "locked_in": [
+      "P.L. 119-21: 21% federal rate and FDDEI through 2028 (below operating income)",
+      "Florida minimum wage reached $15 on Sep 30, 2026 under the 2020 amendment; already in the cost base",
+      "Section 301 (10-12.5%) and 232 tariffs in force since 2026-07-24; Congress has no disapproval route",
+      "California's $750M/yr film and TV credit (2025 expansion) is already law"
+    ],
+    "weak_links": [
+      "Federal film credit ~$400M: assumes ~half of the $24B content budget is entertainment, 60% of it produced (not licensed), 55% filmed mostly in the US, 50% of that is US labor (all estimated); competitors get the same credit, so some may be competed away into talent costs",
+      "Film credit market window ends Jan 1, 2027 (26%); the Jul 1, 2027 contract is 52% but trades only 400 contracts. The bill (Schiff/Scott, introduced Sep 2026) has no CBO score or cap found",
+      "Florida Amendment 3 ~$10M: Disney's Florida non-school property tax (~$200M a year) is estimated from 2020-2022 press figures; the cap only helps if Disney's assessments would rise more than 5% a year, and counties may raise millage on non-homestead property to replace the ~$11.9B homestead loss",
+      "Book row FL-ballot.md Amendment 3 gives p 0.70 ('voters: referral' base rate). For a self-executing measure the market price already is the chance, so this file uses it as a direct entry and does not use the 0.70",
+      "Checked, no sizable market: ABC licence review (KXFCCLICENSECASE-ABC27, Yes = court blocks the FCC; loss of licences has no disclosed station profit), foreign-film tariff (KXTARIFFSECTOR-27JAN01-FILM, 310 contracts, no tariff design to size), Section 301 at the CIT (rules count a win 'as to any party', so a Yes may not refund Disney), KOSA (Disney+ is not social media), Georgia and New York governors (no film-credit position in the book)"
+    ]
+  },
+  "entries": [
+    {
+      "id": "dis-federal-film-credit", "type": "direct",
+      "hook": "Disney spends about $12B a year making films and shows; a federal credit would pay back part of the US labor in them.",
+      "event_plain": "a federal film and TV production tax credit becomes law",
+      "market": {
+        "source": "Kalshi", "event": "KXFILMTAXCREDIT-26SEP", "yes_ticker": "KXFILMTAXCREDIT-26SEP",
+        "question": "Will a federal film or TV production tax credit become law before Jan 1, 2027?",
+        "window": "before Jan 1, 2027",
+        "rules_summary": "Yes if a federal law signed (or passed over a veto) before Jan 1, 2027 expressly creates a credit against federal tax for qualified film or TV production; deductions, tariffs, grants and state incentives do not count."
+      },
+      "impact": {
+        "central": 400000000, "low": 200000000, "high": 700000000, "status": "estimated",
+        "formula": "$24B FY2026 content spend x ~50% entertainment = $12B x ~60% produced in-house x ~55% filmed mostly in the US x ~50% US labor = ~$2.0B qualifying labor x 20% base credit = ~$400M a year (Disney books production incentives as a cut in production cost, so it reaches operating income as titles amortize). Low: 40% US share, 40% labor; high: work moved home from the UK plus uplifts toward 30%.",
+        "timing": "from productions starting after enactment; full run-rate 2-3 years later",
+        "sources": [
+          {"title": "Disney 10-Q Q3 FY2026: ~$24B FY2026 content spend", "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000057/dis-20260627.htm"},
+          {"title": "WDWNT: $24B content budget split about half sports, half entertainment (CFO)", "url": "https://wdwnt.com/2025/11/disneys-24-billion-content-budget-2026-split-entertainment-sports/"},
+          {"title": "CPA Practice Advisor: 20% federal film credit bill on US labor (Sep 24, 2026)", "url": "https://www.cpapracticeadvisor.com/2026/09/24/hollywood-would-get-20-federal-film-tax-credit-under-proposed-new-bill/190528/"},
+          {"title": "Disney 10-K FY2025 (production incentives, Note 7)", "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/dis-20250927.htm"}
+        ]
+      }
+    },
+    {
+      "id": "dis-fl-amendment-3", "type": "direct",
+      "hook": "Walt Disney World is Central Florida's biggest property taxpayer; Amendment 3 halves how fast commercial assessments may rise.",
+      "event_plain": "Florida voters pass Amendment 3 (5% cap on commercial assessment growth)",
+      "market": {
+        "source": "Kalshi", "event": "KXFLPROPERTYTAX-26NOV03", "yes_ticker": "KXFLPROPERTYTAX-26NOV03",
+        "question": "Will Florida Amendment 3, Increased Homestead Exemption; Lower Cap on Increases in Non-Homestead Property Assessments, pass?",
+        "window": "Nov 3, 2026 vote (needs 60%)",
+        "rules_summary": "Yes if Florida Amendment 3 passes. The amendment raises the homestead exemption and cuts the yearly cap on non-homestead (commercial) assessment increases from 10% to 5%, from 2027 tax bills."
+      },
+      "impact": {
+        "central": 10000000, "low": 0, "high": 25000000, "status": "estimated",
+        "formula": "Disney Florida non-school property tax ~ $200M a year (CFTOD district ~$105-164M + county non-school ~$50M; estimated) x 1-3 points a year of assessment growth above the new 5% cap, building over ~3 years = ~3-9% = ~$6-18M; central ~$10M a year by 2029. Low 0 if counties raise millage to replace homestead losses.",
+        "timing": "first on 2027 tax bills; grows each year the cap binds",
+        "sources": [
+          {"title": "Florida Chamber: 2026 property tax amendment (local revenue loss ~$11.9B a year)", "url": "https://www.flchamber.com/floridas-2026-property-tax-amendment/"},
+          {"title": "NBC: Disney paid over $280M in property taxes to the counties 2015-2020; district ~ $105M a year in general revenue", "url": "https://www.nbclosangeles.com/news/business/money-report/florida-taxpayers-could-face-a-1-billion-disney-debt-bomb-if-its-special-district-status-is-revoked/2875556/"},
+          {"title": "NBC Miami: what a yes or no vote on Amendment 3 would mean", "url": "https://www.nbcmiami.com/news/local/florida-amendment-3-what-a-yes-or-no-vote-would-mean/3873576/"}
+        ]
+      }
+    }
+  ]
+}

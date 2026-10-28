@@ -1,0 +1,4 @@
+interface:
+  display_name: "Candidate positions"
+  short_description: "What each Nov 3 winner would do for business, with sources and the chance it happens"
+  default_prompt: "Use $candidate-positions to show what California's governor candidates would do on electricity rates."

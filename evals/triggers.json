@@ -1,0 +1,86 @@
+{
+  "note": "Trigger evals: each query should load the named skill (null = no skill). Run each 3 times; pass if trigger rate >= 0.5 (or < 0.5 for null).",
+  "queries": [
+    {
+      "query": "what does the georgia governor race mean for southern company's earnings?",
+      "expected_skill": "election-risk"
+    },
+    {
+      "query": "could the ohio governor result change draftkings' profit? rough numbers pls",
+      "expected_skill": "election-risk"
+    },
+    {
+      "query": "how exposed is LG Energy Solution to the US midterms",
+      "expected_skill": "election-risk"
+    },
+    {
+      "query": "should I buy southern company stock before the election?",
+      "expected_skill": "election-risk",
+      "note": "May load election-risk for exposure facts; must not give buy/sell advice"
+    },
+    {
+      "query": "odds on the nevada governor race right now?",
+      "expected_skill": null
+    },
+    {
+      "query": "what was walmart's operating income last year and how many workers in wisconsin",
+      "expected_skill": null
+    },
+    {
+      "query": "how much would florida's amendment 3 cut property tax revenue?",
+      "expected_skill": null
+    },
+    {
+      "query": "I run two pizza places in Milwaukee, does the governor race matter for my labor costs?",
+      "expected_skill": null
+    },
+    {
+      "query": "how do I deposit money into my kalshi account",
+      "expected_skill": null
+    },
+    {
+      "query": "write a python script that scrapes polymarket every minute and places orders",
+      "expected_skill": null
+    },
+    {
+      "query": "who is ahead in the latest NYT/Siena poll for senate in maine?",
+      "expected_skill": null
+    },
+    {
+      "query": "summarize walmart's q3 earnings call for me",
+      "expected_skill": null
+    },
+    {
+      "query": "explain how prediction markets work in simple terms",
+      "expected_skill": null
+    },
+    {
+      "query": "what is the federal minimum wage today",
+      "expected_skill": null
+    },
+    {
+      "query": "which of ford's profit lines could a government decision actually move?",
+      "expected_skill": "profit-structure"
+    },
+    {
+      "query": "break down where costco's operating profit comes from and what's regulated",
+      "expected_skill": "profit-structure"
+    },
+    {
+      "query": "what would the next arizona attorney general do about data centers?",
+      "expected_skill": "candidate-positions"
+    },
+    {
+      "query": "compare the california governor candidates on electricity rates, with sources",
+      "expected_skill": "candidate-positions"
+    },
+    {
+      "query": "what are the odds on a federal ban on sports prediction markets?",
+      "expected_skill": "prediction-markets"
+    },
+    {
+      "query": "list every kalshi market on the nov 3 ballot measures",
+      "expected_skill": "prediction-markets"
+    }
+  ]
+}

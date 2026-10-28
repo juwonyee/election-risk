@@ -1,0 +1,363 @@
+{
+  "company": {
+    "name": "Ford Motor Company",
+    "short": "Ford",
+    "ticker": "F"
+  },
+  "denominator": {
+    "label": "adjusted EBIT",
+    "amount": 6780000000,
+    "period": "FY2025",
+    "status": "verified",
+    "source": {
+      "title": "Ford Motor 10-K FY2025 (SEC EDGAR)",
+      "url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm"
+    }
+  },
+  "notes": {
+    "locked_in": [
+      "CAFE light-duty civil penalty set to $0 by P.L. 119-21 (2025): about $0 a year, no election before 2029 restores it",
+      "Federal consumer EV credits (30D/45W) repealed by P.L. 119-21: the lost demand sits inside Model e's -$4.8B FY2025 loss",
+      "45X battery production credit kept with FEOC limits: +$53M in FY2025",
+      "UAW contract runs to April 2028: the US hourly wage path is fixed regardless of the election",
+      "IEEPA tariffs struck down 2026-02-20: Ford's $974M refund receivable (end-2025) flows regardless; Section 232 auto, parts and metals tariffs continue as executive action"
+    ],
+    "weak_links": [
+      "USMCA withdrawal size (~$2.0B a year) is an estimate: Hermosillo volume annualised from Jan-Jul 2025 US sales, an assumed ~$25k import value and ~50% of value not yet tariffed; the parts share leans on a Reuters-sourced report (via Motor16) that tighter content rules alone cost Ford >= $2B a year. Ford's mitigation (pricing, sourcing shifts) is not netted",
+      "KXUSMCA-26-27 resolves on a withdrawal NOTICE before 2027; withdrawal takes effect 6 months later and a notice can be a negotiating move that is later withdrawn. The same notice trades at 0.175 in KXUSMCAOUTCOMES-27-USW (2.4k contracts) vs 0.085 here (15k contracts): two Kalshi prices for one event",
+      "Book row doubted: US-house-control.md gives a tariff repeal becoming law p 0.07 under a Republican House (block: veto) but only 0.05 under a Democratic House (federal: partisan). A Democratic House should not make repeal less likely; the swing sign is likely an artefact of the probability-table cells, not of politics",
+      "Book row doubted: CA-governor.md has no clean-cars-ev row for Steve Hilton, though another book file notes both candidates oppose the 2035 gas-car ban; Hilton is therefore 0 here",
+      "Book row doubted: MI-governor.md gives Benson's 'subnational agreements with Canada' p 0.45 (make: alone) although a governor cannot change federal tariffs; not used here",
+      "Compliance-credit sizing for California (~$100M) assumes ~15% of Ford's ~$700M credit purchases relate to California/ZEV-state rules; Ford does not split them, and California's ACC II waiver was revoked by Congress in 2025 (in litigation), so the line may already be near zero",
+      "Tariff-repeal impact (+$1.0B) assumes a repeal law would reach Section 232 auto and parts tariffs; Democratic proposals are not specific"
+    ]
+  },
+  "results": [
+    {
+      "id": "f-usmca-withdrawal",
+      "type": "direct",
+      "hook": "About 350,000 Mavericks and Bronco Sports a year come from Ford's Hermosillo, Mexico plant.",
+      "event_plain": "the US gives notice to leave USMCA before 2027",
+      "market": {
+        "source": "Kalshi",
+        "event": "KXUSMCA-26",
+        "yes_ticker": "KXUSMCA-26-27",
+        "question": "Will Trump try to leave the USMCA before 2027?",
+        "window": "before Jan 1, 2027",
+        "rules_summary": "Yes if the United States submits a notice of withdrawal from the USMCA before Jan 1, 2027."
+      },
+      "impact": {
+        "central": -2000000000,
+        "low": -1100000000,
+        "high": -3500000000,
+        "status": "estimated",
+        "formula": "Vehicles: 205,288 Hermosillo Maverick + Bronco Sport US sales Jan-Jul 2025 x 12/7 = ~352k a year x ~$25k import value x 25% Sec. 232 x ~50% of value not tariffed today (USMCA vehicles pay only on non-US content) = ~$1.1B; plus Mexican and Canadian engines and parts losing USMCA treatment: Reuters reports tighter content rules alone would cost Ford >= $2B a year, so withdrawal is taken at ~$2.0B central, up to ~$3.5B before mitigation",
+        "timing": "from about mid-2027 (withdrawal takes effect 6 months after notice)",
+        "sources": [
+          {
+            "title": "Ford U.S. July 2025 sales release (Jan-Jul Bronco Sport 96,777; Maverick 108,511)",
+            "url": "https://s205.q4cdn.com/882619693/files/doc_news/2025/Aug/01/Ford-U-S-July-2025-Sales-Release.pdf"
+          },
+          {
+            "title": "Motor16 (citing Reuters), 2026-08-17: new USMCA rules would cost Ford and GM >= $2B a year each; Ford net tariff impact ~ $1B",
+            "url": "https://www.motor16.com/las-ultimas-noticias/aranceles-usmc-coches-eeuu/"
+          },
+          {
+            "title": "CRS: USMCA joint review (withdrawal on six months' notice)",
+            "url": "https://www.everycrsreport.com/reports/R48787.html"
+          },
+          {
+            "title": "Ford Motor 10-K FY2025 (tariff cost, geographic revenue)",
+            "url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": -0.2949852507374631,
+        "low": -0.16224188790560473,
+        "high": -0.5162241887905604
+      },
+      "notes": [],
+      "price": {
+        "venue": "Kalshi",
+        "ticker": "KXUSMCA-26-27",
+        "prob": 0.0845,
+        "yes_bid": 0.083,
+        "yes_ask": 0.086,
+        "quote": "mid",
+        "volume": 15448.85,
+        "volume_unit": "contracts",
+        "low_liquidity": false,
+        "event_url": "https://kalshi.com/markets/kxusmca",
+        "as_of": "2026-10-27T03:09:51+00:00"
+      },
+      "cross_check": null,
+      "chance": 0.0845,
+      "volume": 15448.85,
+      "election_swing": 0.0,
+      "meaningful": true
+    },
+    {
+      "id": "f-house-tariff-repeal",
+      "type": "race",
+      "hook": "Tariffs cost Ford about $1B net in 2026, and House Democrats say they would overturn the President's tariffs.",
+      "event_plain": "Congress repeals the President's tariffs, including the auto and parts tariffs",
+      "market": {
+        "source": "Kalshi",
+        "event": "CONTROLH-2026",
+        "question": "Which party will win the U.S. House?",
+        "rules_summary": "Resolves to the party that wins control of the House in 2026 (media consensus or party of the majority).",
+        "window": "January 2027",
+        "outcomes": [
+          {
+            "ticker": "CONTROLH-2026-D",
+            "name": "Democratic Party",
+            "last": "Democrats",
+            "party": "D",
+            "stance": "pass laws to overturn the President's tariffs",
+            "route": "federal: partisan",
+            "p_policy": 0.05,
+            "source": "https://www.pbs.org/newshour/politics/heres-whats-on-house-democrats-agenda-if-they-sweep-to-power-in-midterm-elections"
+          },
+          {
+            "ticker": "CONTROLH-2026-R",
+            "name": "Republican Party",
+            "last": "Republicans",
+            "party": "R",
+            "stance": "keep tariff-disapproval votes off the floor; support the tariffs (p = chance a repeal still becomes law)",
+            "route": "block: majority",
+            "p_policy": 0.0,
+            "source": "https://www.nbcnews.com/politics/congress/house-votes-end-trump-tariffs-canada-rcna258661"
+          }
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book US-house-control.md, tariffs-trade rows copied unchanged (D federal: partisan 0.05; R block: veto 0.07). Any repeal also needs the Senate and the President's signature or a two-thirds override. Book updated 2026-10-27: a Republican House blocking repeal is block: majority, p 0."
+      },
+      "impact": {
+        "central": 1000000000,
+        "low": 500000000,
+        "high": 2000000000,
+        "status": "estimated",
+        "formula": "Ford's 2026 net tariff cost is guided at 'better than -$1B' (Q2 2026) and was ~-$2B in 2025 (10-K): repeal returns ~$1.0B a year, range $0.5B (only part of the tariffs repealed) to $2.0B (2025 level)",
+        "timing": "from 2027 if enacted",
+        "sources": [
+          {
+            "title": "Ford Q2 2026 press release",
+            "url": "https://s205.q4cdn.com/882619693/files/doc_financials/2026/q2/Ford-Motor-Company-Q2-2026-Press-Release.pdf"
+          },
+          {
+            "title": "Ford Motor 10-K FY2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.14749262536873156,
+        "low": 0.07374631268436578,
+        "high": 0.2949852507374631
+      },
+      "notes": [],
+      "outcomes": [
+        {
+          "ticker": "CONTROLH-2026-D",
+          "name": "Democratic Party",
+          "last": "Democrats",
+          "party": "D",
+          "stance": "pass laws to overturn the President's tariffs",
+          "route": "federal: partisan",
+          "p_policy": 0.05,
+          "source": "https://www.pbs.org/newshour/politics/heres-whats-on-house-democrats-agenda-if-they-sweep-to-power-in-midterm-elections",
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "CONTROLH-2026-D",
+            "prob": 0.904,
+            "yes_bid": 0.903,
+            "yes_ask": 0.904,
+            "quote": "mid",
+            "volume": 22803020.85,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/controlh",
+            "as_of": "2026-10-27T03:09:51+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.05
+        },
+        {
+          "ticker": "CONTROLH-2026-R",
+          "name": "Republican Party",
+          "last": "Republicans",
+          "party": "R",
+          "stance": "keep tariff-disapproval votes off the floor; support the tariffs (p = chance a repeal still becomes law)",
+          "route": "block: majority",
+          "p_policy": 0.0,
+          "source": "https://www.nbcnews.com/politics/congress/house-votes-end-trump-tariffs-canada-rcna258661",
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "CONTROLH-2026-R",
+            "prob": 0.096,
+            "yes_bid": 0.095,
+            "yes_ask": 0.097,
+            "quote": "mid",
+            "volume": 50455085.59,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/controlh",
+            "as_of": "2026-10-27T03:09:51+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.0
+        }
+      ],
+      "chance_policy_overall": 0.045200000000000004,
+      "chance": 0.045200000000000004,
+      "election_swing": 0.05,
+      "volume": 73258106.44,
+      "meaningful": false
+    },
+    {
+      "id": "f-ca-governor-cars",
+      "type": "race",
+      "hook": "Ford spent about $700M in 2025 buying emissions credits, partly to meet California-style rules.",
+      "event_plain": "California relaxes its 2035 gas-car phase-out",
+      "market": {
+        "source": "Kalshi",
+        "event": "KXGOVCA-26",
+        "question": "California Governor winner? (Person)",
+        "rules_summary": "Resolves to the person elected governor of California in 2026.",
+        "window": "January 2027 inauguration",
+        "outcomes": [
+          {
+            "ticker": "KXGOVCA-26-XBEC",
+            "name": "Xavier Becerra",
+            "last": "Becerra",
+            "party": "D",
+            "stance": "'open to revising' the 2035 gas-car ban if fuel becomes unaffordable",
+            "route": "vague",
+            "p_policy": 0.05,
+            "source": "https://calmatters.org/california-voter-guide-2026/governor/"
+          },
+          {
+            "ticker": "KXGOVCA-26-SHIL",
+            "name": "Steve Hilton",
+            "last": "Hilton",
+            "party": "R",
+            "stance": "no clean-cars row in the policy book",
+            "route": "none",
+            "p_policy": 0.0
+          }
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book CA-governor.md clean-cars-ev row copied unchanged (Becerra vague 0.05); Hilton has no row, so 0."
+      },
+      "impact": {
+        "central": 100000000,
+        "low": 0,
+        "high": 350000000,
+        "status": "estimated",
+        "formula": "~$700M 2025 regulatory-credit expense (10-K) x ~15% assumed share tied to California/ZEV-state rules = ~$100M a year saved; high case half of the expense ($350M); low $0 because the ACC II waiver is already revoked",
+        "timing": "from 2027-2028 if California changes its rules",
+        "sources": [
+          {
+            "title": "Ford Motor 10-K FY2025 (regulatory credit purchases)",
+            "url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm"
+          },
+          {
+            "title": "CalMatters voter guide: governor",
+            "url": "https://calmatters.org/california-voter-guide-2026/governor/"
+          }
+        ]
+      },
+      "impact_pct": {
+        "central": 0.014749262536873156,
+        "low": 0.0,
+        "high": 0.051622418879056046
+      },
+      "notes": [],
+      "outcomes": [
+        {
+          "ticker": "KXGOVCA-26-XBEC",
+          "name": "Xavier Becerra",
+          "last": "Becerra",
+          "party": "D",
+          "stance": "'open to revising' the 2035 gas-car ban if fuel becomes unaffordable",
+          "route": "vague",
+          "p_policy": 0.05,
+          "source": "https://calmatters.org/california-voter-guide-2026/governor/",
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "KXGOVCA-26-XBEC",
+            "prob": 0.9585,
+            "yes_bid": 0.959,
+            "yes_ask": 0.96,
+            "quote": "mid",
+            "volume": 6933110.72,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/kxgovca",
+            "as_of": "2026-10-27T03:09:51+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.05
+        },
+        {
+          "ticker": "KXGOVCA-26-SHIL",
+          "name": "Steve Hilton",
+          "last": "Hilton",
+          "party": "R",
+          "stance": "no clean-cars row in the policy book",
+          "route": "none",
+          "p_policy": 0.0,
+          "price": {
+            "venue": "Kalshi",
+            "ticker": "KXGOVCA-26-SHIL",
+            "prob": 0.0415,
+            "yes_bid": 0.041,
+            "yes_ask": 0.042,
+            "quote": "mid",
+            "volume": 15536186.49,
+            "volume_unit": "contracts",
+            "low_liquidity": false,
+            "event_url": "https://kalshi.com/markets/kxgovca",
+            "as_of": "2026-10-27T03:09:51+00:00"
+          },
+          "cross_check": null,
+          "if_wins_chance": 0.0
+        }
+      ],
+      "chance_policy_overall": 0.047925,
+      "chance": 0.047925,
+      "election_swing": 0.05,
+      "volume": 22469297.21,
+      "meaningful": false
+    }
+  ],
+  "gaps": [],
+  "prices_as_of": [
+    "2026-10-27T03:09:51+00:00"
+  ],
+  "generated_at": "2026-10-27T03:28:36+00:00",
+  "headlines": {
+    "election": null,
+    "policy": {
+      "id": "f-usmca-withdrawal",
+      "text": "Kalshi puts 8% on: the US gives notice to leave USMCA before 2027. For Ford: −$2.00B a year (−29.5% of profit)."
+    }
+  },
+  "red_team": [
+    "the US gives notice to leave USMCA before 2027: the impact range is wide (−$1.10B to −$3.50B); read how it was built.",
+    "the US gives notice to leave USMCA before 2027: the impact is an estimate, not a reported number.",
+    "Congress repeals the President's tariffs, including the auto and parts tariffs: the impact range is wide (+$500M to +$2.00B); read how it was built."
+  ],
+  "book": {
+    "source": "built here",
+    "downloaded_at": null,
+    "built_by": null,
+    "last_edit": "2026-10-27",
+    "files": 197,
+    "fingerprint": "f97e319e0772"
+  },
+  "structure": true,
+  "disclaimer": "Analyst draft for human review. Scenario estimates, not investment advice or a recommendation to trade any security or contract. Prediction-market prices are shown as information only.",
+  "repo": "github.com/juwonyee/election-risk"
+}

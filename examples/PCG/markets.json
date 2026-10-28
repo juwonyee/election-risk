@@ -1,0 +1,94 @@
+{
+  "schema": "election-risk/markets@2",
+  "company": {"name": "PG&E Corporation", "short": "PG&E", "ticker": "PCG"},
+  "denominator": {
+    "label": "operating profit", "amount": 4749000000, "period": "FY2025", "status": "verified",
+    "source": {"title": "PG&E Corporation 10-K FY2025 (SEC EDGAR)",
+               "url": "https://www.sec.gov/Archives/edgar/data/75488/000100498026000009/pcg-20251231.htm"}
+  },
+  "notes": {
+    "locked_in": [
+      "AB 1054 Wildfire Fund and SB 254 (2025) are law: $352M a year fund expense, the disallowance cap at 20% of equity T&D rate base, and the $2.9B fire-mitigation equity exclusion (~-$150M a year)",
+      "2026 cost of capital (9.98% ROE, 52% equity) and the 2026 GRC revenue requirement ($15.4B) are already adopted",
+      "SB 846 keeps Diablo Canyon running to 2029/2030 (~$100M a year fixed payment); neither governor candidate has a stated position on it"
+    ],
+    "weak_links": [
+      "Rate-freeze impact (-$600M): assumes a freeze holds 2027 rates at the 2026 $15.4B instead of the $16.6B requested and that about half of the $1.2B increase is return and depreciation on new plant PG&E cannot cut (estimated; no docket or bill text exists, the pledge is a campaign line)",
+      "Book row CA-governor Becerra rate freeze p 0.30 (route appoint): CPUC commissioners serve staggered six-year terms and a rate freeze on a revenue-decoupled utility needs a CPUC order or statute; 0.30 looks high for a literal freeze, low for a softer 'affordability' cut to the 2027 GRC",
+      "Book row CA-governor Hilton 'break up PG&E' p 0.15 (make: other party): Democrats hold veto-proof supermajorities and the pledge has no mechanism, so 0.15 looks high; the breakup size (-$1.0B = a quarter of the GRC return moving to local owners) is a placeholder share with no source",
+      "Wildfire liability, PG&E's largest state political channel, has no link: both governor candidates are 'vague' at 0.05 and there is no direct market on a liability or Wildfire Fund bill",
+      "Both entries price the same race (KXGOVCA-26); they are alternatives, not additive"
+    ]
+  },
+  "entries": [
+    {
+      "id": "pcg-ca-gov-rate-freeze", "type": "race",
+      "hook": "California's next governor appoints the regulators who set PG&E's rates.",
+      "event_plain": "California freezes PG&E's rates for a year",
+      "market": {
+        "source": "Kalshi", "event": "KXGOVCA-26",
+        "question": "Who will win the governorship in California?",
+        "window": "Nov 3, 2026 election; January 2027 inauguration",
+        "rules_summary": "Each candidate market resolves Yes if that person is elected Governor of California in the 2026 election (accelerated on a media-consensus call).",
+        "outcomes": [
+          {"ticker": "KXGOVCA-26-XBEC", "name": "Xavier Becerra", "last": "Becerra", "party": "D",
+           "stance": "declare a state of emergency to freeze utility rates (needs CPUC action or a statute)",
+           "route": "appoint", "p_policy": 0.30,
+           "source": "https://calmatters.org/california-voter-guide-2026/governor/"},
+          {"ticker": "KXGOVCA-26-SHIL", "name": "Steve Hilton", "last": "Hilton", "party": "R",
+           "stance": "no rate-freeze position (wants to cut bills by ending green-power mandates)",
+           "route": "none", "p_policy": 0.0}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book CA-governor.md (built here, 2026-10-27): Becerra utilities row 'freeze utility rates', route appoint, p 0.30; Hilton has no rate-freeze row, so 0.",
+        "cross_check": {"source": "Polymarket", "event": "california-governor-election-2026",
+          "tickers": {"KXGOVCA-26-XBEC": "will-xavier-becerra-win-the-california-governor-election-in-2026",
+                      "KXGOVCA-26-SHIL": "will-steve-hilton-win-the-california-governor-election-in-2026"}}
+      },
+      "impact": {
+        "central": -600000000, "low": -400000000, "high": -1000000000, "status": "estimated",
+        "formula": "2027 GRC asks $16.6B vs the 2026 $15.4B = $1.2B a year increase; a one-year freeze at 2026 rates blocks it; ~50% of the increase is return and depreciation on new plant PG&E cannot cut = ~-$600M of operating profit in 2027 (low: a third, if part is deferred and recovered later; high: return on the added rate base, ($67.0B - $54.0B) x (52% x 9.98% + 47.5% x 5.04%) = $13.0B x 7.58% = ~$1.0B)",
+        "timing": "2027, while a freeze lasts",
+        "sources": [
+          {"title": "PG&E 10-K FY2025, GRC and cost-of-capital tables (p.65-66)", "url": "https://www.sec.gov/Archives/edgar/data/75488/000100498026000009/pcg-20251231.htm"},
+          {"title": "CalMatters voter guide: California governor 2026", "url": "https://calmatters.org/california-voter-guide-2026/governor/"},
+          {"title": "ABC7/AP: Becerra advances to general election", "url": "https://abc7news.com/post/democrat-xavier-becerra-advances-general-election-race-california-governor/19242965/"}
+        ]
+      }
+    },
+    {
+      "id": "pcg-ca-gov-breakup", "type": "race",
+      "hook": "One governor candidate wants to break up PG&E.",
+      "event_plain": "California breaks up PG&E into locally owned utilities",
+      "market": {
+        "source": "Kalshi", "event": "KXGOVCA-26",
+        "question": "Who will win the governorship in California?",
+        "window": "Nov 3, 2026 election; January 2027 inauguration",
+        "rules_summary": "Each candidate market resolves Yes if that person is elected Governor of California in the 2026 election (accelerated on a media-consensus call).",
+        "outcomes": [
+          {"ticker": "KXGOVCA-26-XBEC", "name": "Xavier Becerra", "last": "Becerra", "party": "D",
+           "stance": "no breakup position", "route": "none", "p_policy": 0.0},
+          {"ticker": "KXGOVCA-26-SHIL", "name": "Steve Hilton", "last": "Hilton", "party": "R",
+           "stance": "break up PG&E's monopoly; locally owned utilities (no mechanism or timeline)",
+           "route": "make: other party", "p_policy": 0.15,
+           "source": "https://stevehiltonforgovernor.com/policy/ending-the-pge-nightmare"}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book CA-governor.md (built here, 2026-10-27): Hilton utilities row 'break up PG&E's monopoly', route make: other party, p 0.15; Becerra has no breakup row, so 0.",
+        "cross_check": {"source": "Polymarket", "event": "california-governor-election-2026",
+          "tickers": {"KXGOVCA-26-XBEC": "will-xavier-becerra-win-the-california-governor-election-in-2026",
+                      "KXGOVCA-26-SHIL": "will-steve-hilton-win-the-california-governor-election-in-2026"}}
+      },
+      "impact": {
+        "central": -1000000000, "low": -400000000, "high": -2000000000, "status": "estimated",
+        "formula": "CPUC rate-base return ~$4.1B a year ($54.0B x 52% x 9.98% + $54.0B x 47.5% x 5.04%); if a quarter of that rate base moves to local owners, PG&E loses ~$4.1B x 25% = ~-$1.0B of operating profit (low 10%, about one large city: -$0.4B; high half: -$2.0B); sale proceeds would cut interest below operating profit and are not counted",
+        "timing": "years after enactment (municipal takeovers run through valuation and condemnation)",
+        "sources": [
+          {"title": "Steve Hilton for Governor: Ending the PG&E nightmare", "url": "https://stevehiltonforgovernor.com/policy/ending-the-pge-nightmare"},
+          {"title": "E&E News: Steve Hilton's populist energy message", "url": "https://www.eenews.net/articles/steve-hiltons-populist-energy-message/"},
+          {"title": "PG&E 10-K FY2025 (rate base, cost of capital)", "url": "https://www.sec.gov/Archives/edgar/data/75488/000100498026000009/pcg-20251231.htm"}
+        ]
+      }
+    }
+  ]
+}

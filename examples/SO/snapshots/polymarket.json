@@ -1,0 +1,57 @@
+{
+  "venue": "Polymarket",
+  "events": {
+    "georgia-governor-winner-2026": {
+      "venue": "Polymarket",
+      "event": "georgia-governor-winner-2026",
+      "title": "Georgia Governor Election Winner",
+      "ladder": false,
+      "url": "https://polymarket.com/event/georgia-governor-winner-2026",
+      "markets": [
+        {
+          "yes_bid": 0.49,
+          "yes_ask": 0.51,
+          "last_trade": 0.5,
+          "spread": 0.02,
+          "quote": "mid",
+          "prob": 0.5,
+          "volume": 100000,
+          "volume_unit": "USD",
+          "low_liquidity": false,
+          "flags": [
+            "normalized"
+          ],
+          "ticker": "will-the-democrats-win-the-georgia-governor-race-in-2026",
+          "outcome": "Keisha Lance Bottoms (D)",
+          "title": "Will the Democrats win the Georgia governor race in 2026?",
+          "strike": null,
+          "close_time": "2026-11-04T04:59:00Z"
+        },
+        {
+          "yes_bid": 0.49,
+          "yes_ask": 0.51,
+          "last_trade": 0.5,
+          "spread": 0.02,
+          "quote": "mid",
+          "prob": 0.5,
+          "volume": 80000,
+          "volume_unit": "USD",
+          "low_liquidity": false,
+          "flags": [
+            "normalized"
+          ],
+          "ticker": "will-the-republicans-win-the-georgia-governor-race-in-2026",
+          "outcome": "Rick Jackson (R)",
+          "title": "Will the Republicans win the Georgia governor race in 2026?",
+          "strike": null,
+          "close_time": "2026-11-04T04:59:00Z"
+        }
+      ],
+      "total_volume": 180000,
+      "low_liquidity": false
+    }
+  },
+  "fetched_at": "2026-10-15T13:00:25+00:00",
+  "as_of_date": "2026-10-15",
+  "note": "Synthetic prices for the tests. Not market data."
+}

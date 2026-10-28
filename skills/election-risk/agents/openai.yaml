@@ -1,0 +1,4 @@
+interface:
+  display_name: "Election risk"
+  short_description: "Which election markets move a company's profit, and by how much"
+  default_prompt: "Use $election-risk to show which election markets move Southern Company's profit."

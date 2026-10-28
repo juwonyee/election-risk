@@ -1,0 +1,119 @@
+{
+  "schema": "election-risk/markets@2",
+  "company": {
+    "name": "Southern Company",
+    "short": "Southern Company",
+    "ticker": "SO"
+  },
+  "denominator": {
+    "label": "operating profit",
+    "amount": 7285000000,
+    "period": "FY2025",
+    "status": "verified",
+    "source": {
+      "title": "Southern Company 10-K FY2025 (SEC EDGAR)",
+      "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000006/0000092122-26-000006-index.htm"
+    }
+  },
+  "notes": {
+    "locked_in": [
+      "Georgia Power base rates frozen through 2028 (allowed return 10.5%)",
+      "The 9,885 MW certified in Dec 2025 (about $16B) is already approved",
+      "P.L. 119-21 cut late wind and solar credits; nuclear credits (45U, 45J) remain"
+    ],
+    "weak_links": [
+      "4 GW to $660M: rate base per GW from the Dec 2025 certification and a ~10% pre-tax return (estimated)",
+      "Chance a Bottoms administration pauses data centers: 10% (estimated; needs the Republican legislature)",
+      "KXGA4GW trades only a few thousand contracts"
+    ]
+  },
+  "entries": [
+    {
+      "id": "so-ga-4gw",
+      "type": "direct",
+      "hook": "Georgia's utility regulators decide how fast Georgia Power grows.",
+      "event_plain": "Georgia approves 4 more gigawatts for Georgia Power",
+      "market": {
+        "source": "Kalshi",
+        "event": "KXGA4GW-26AUG",
+        "yes_ticker": "KXGA4GW-26AUG-28MAR01",
+        "question": "Will Georgia regulators approve 4 more gigawatts of generating capacity before Mar 1, 2028?",
+        "window": "before Mar 1, 2028",
+        "rules_summary": "Yes if the Georgia PSC certifies at least 4,000 MW of new generating or storage capacity for Georgia Power (aggregate, nameplate) before Mar 1, 2028."
+      },
+      "impact": {
+        "central": 660000000,
+        "low": 450000000,
+        "high": 800000000,
+        "status": "estimated",
+        "formula": "4 GW x $1.62B/GW (Dec 2025 certification: $16B / 9.885 GW) = $6.5B rate base x ~10% pre-tax return = ~$660M a year of operating profit at run-rate",
+        "timing": "run-rate around 2030 and later; if No, that growth does not happen",
+        "sources": [
+          {
+            "title": "WRDW: State regulators OK Georgia Power plan to serve data centers (Dec 2025)",
+            "url": "https://www.wrdw.com/2025/12/19/state-regulators-ok-georgia-power-plan-serve-data-centers/"
+          },
+          {
+            "title": "Southern Company 10-K FY2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000006/so-20251231.htm"
+          }
+        ]
+      }
+    },
+    {
+      "id": "so-ga-governor",
+      "type": "race",
+      "hook": "Georgia's governor race and the data-center boom.",
+      "event_plain": "Georgia pauses new data-center construction",
+      "market": {
+        "source": "Kalshi",
+        "event": "GOVPARTYGA-26",
+        "question": "Who will be inaugurated as Georgia's governor?",
+        "outcomes": [
+          {
+            "ticker": "GOVPARTYGA-26-D",
+            "name": "Keisha Lance Bottoms",
+            "last": "Bottoms",
+            "party": "D",
+            "stance": "temporary statewide pause on new data centers",
+            "p_policy": 0.1
+          },
+          {
+            "ticker": "GOVPARTYGA-26-R",
+            "name": "Rick Jackson",
+            "last": "Jackson",
+            "party": "R",
+            "stance": "local approval and cost conditions, no pause",
+            "p_policy": 0.0
+          }
+        ],
+        "cross_check": {
+          "source": "Polymarket",
+          "event": "georgia-governor-winner-2026",
+          "tickers": {
+            "GOVPARTYGA-26-D": "will-the-democrats-win-the-georgia-governor-race-in-2026",
+            "GOVPARTYGA-26-R": "will-the-republicans-win-the-georgia-governor-race-in-2026"
+          }
+        },
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "A pause likely needs the Republican General Assembly, and the executive-order route is legally uncertain.",
+        "rules_summary": "Resolves to the party of the person inaugurated as Georgia's governor after the 2026 election.",
+        "window": "January 2027 inauguration"
+      },
+      "impact": {
+        "central": -130000000,
+        "low": -80000000,
+        "high": -200000000,
+        "status": "estimated",
+        "formula": "pause removes ~2%/yr of Georgia Power retail revenue growth x $11.1B retail revenue x ~60% non-fuel margin = ~$130M a year",
+        "timing": "from 2027 if enacted",
+        "sources": [
+          {
+            "title": "WABE: Debate over data centers in Georgia heats up governor's race",
+            "url": "https://www.wabe.org/debate-over-data-centers-in-georgia-heats-up-governors-race/"
+          }
+        ]
+      }
+    }
+  ]
+}

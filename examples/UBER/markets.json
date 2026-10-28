@@ -1,0 +1,204 @@
+{
+  "schema": "election-risk/markets@2",
+  "company": {"name": "Uber Technologies", "short": "Uber", "ticker": "UBER"},
+  "denominator": {
+    "label": "operating profit", "amount": 5565000000, "period": "FY2025", "status": "verified",
+    "source": {"title": "Uber 10-K FY2025 (income from operations)", "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"}
+  },
+  "notes": {
+    "locked_in": [
+      "California SB 623 (signed 2026-06-25): medical-lien damage limits and rideshare safety rules; both competing November initiatives withdrawn",
+      "California Prop 22 upheld: drivers stay contractors with an earnings floor (120% of state minimum wage)",
+      "Massachusetts 2024 AG settlement (contractors with a pay floor) and the 2024 driver-union ballot law",
+      "NYC TLC driver minimum pay and FHV licence cap",
+      "Federal tax changes in P.L. 119-21 through 2028 (below operating profit)"
+    ],
+    "weak_links": [
+      "California AG suit: Uber's cost scales Lyft's $272.5M settlement by Uber's ~3:1 US rideshare share (2-3x used; no California split published) and spreads it over 4 years like Lyft's; it is a one-off for past conduct (2016-2020), not a permanent yearly change, and Uber may already hold part of it in its legal reserves",
+      "Book row doubt, CA-attorney-general.md: the book says the city attorneys of SF, LA and San Diego are co-plaintiffs whoever is AG, yet Gates has no gig-workers row, so his p is 0 and the race swing is 0.70; the suit would likely continue under Gates, so the real swing is smaller",
+      "Book row doubt, FL-governor.md: Jolly's tort-rollback row is framed around property insurance ('so policyholders can sue insurers'); this entry assumes a rollback would also undo the HB 837 negligence changes that lower Uber's auto-liability claims",
+      "PRO Act impact (5-15% of estimated US Mobility + Delivery EBITDA) is an analyst range with no published estimate; the US state split of Uber's profit is not disclosed (all state numbers are population- or revenue-share estimates)",
+      "Uber's total insurance expense is not disclosed; the Florida entry assumes US Mobility insurance of about $4-6B a year",
+      "Book row doubt, OR-legislature.md: SB 1166 is a 2025 bill whose fate the book says is unconfirmed; with Democrats at 0.97 the race barely moves it",
+      "Not linked: NYC $30 minimum wage (KXNYCMINWAGE-27JAN01) - rules price a city wage law, which does not cover contractor drivers and needs state authority; CA Insurance Commissioner rows are home-insurance only"
+    ]
+  },
+  "entries": [
+    {
+      "id": "uber-ca-ag-suit", "type": "race",
+      "hook": "California's attorney general is suing Uber over driver misclassification; Lyft settled the same case for $272.5M this month.",
+      "event_plain": "California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber",
+      "market": {
+        "source": "Kalshi", "event": "KXCAATTORNEYGENERAL-26",
+        "question": "Who will win the 2026 California Attorney General election?",
+        "rules_summary": "Resolves Yes for the candidate who wins the 2026 California Attorney General election.",
+        "outcomes": [
+          {"ticker": "KXCAATTORNEYGENERAL-26-RBON", "name": "Rob Bonta", "last": "Bonta", "party": "D",
+           "stance": "continue the misclassification and wage-theft suit against Uber; called Uber 'a major violator'",
+           "route": "sue", "p_policy": 0.70,
+           "source": "https://calmatters.org/economy/2026/10/lyft-driver-settlement-california/"},
+          {"ticker": "KXCAATTORNEYGENERAL-26-MGAT", "name": "Michael E. Gates", "last": "Gates", "party": "R",
+           "stance": "no stated position", "route": "none", "p_policy": 0.0}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book CA-attorney-general.md: Bonta row (sue, already filed, resolved within 2 years, table E) 0.70; Gates has no gig-workers row, so 0."
+      },
+      "impact": {
+        "central": -170000000, "low": -100000000, "high": -270000000, "status": "estimated",
+        "formula": "Lyft settlement $272.5M x Uber/Lyft scale 2.5 (Uber ~75% of US rideshare vs Lyft ~25%, haircut for California) = ~$680M, paid over 4 years like Lyft's = ~$170M a year. Low: 2x, $545M less ~$145M already reserved, over 4 years = $100M. High: 3x = $818M over 3 years = $270M",
+        "timing": "one-off for 2016-2020 conduct, paid over about 4 years from 2027",
+        "sources": [
+          {"title": "CalMatters: Lyft to pay $272.5M to settle California misclassification suit (2026-10-01)", "url": "https://calmatters.org/economy/2026/10/lyft-driver-settlement-california/"},
+          {"title": "Bloomberg Second Measure: Uber 76% of US rideshare spending (Mar 2024)", "url": "https://secondmeasure.com/datapoints/rideshare-industry-overview/"},
+          {"title": "California AG press release on the Uber and Lyft suit", "url": "https://www.oag.ca.gov/news/press-releases/attorney-general-bonta-city-attorneys-san-francisco-san-diego-and-los-angeles"}
+        ]
+      }
+    },
+    {
+      "id": "uber-us-house-pro-act", "type": "race",
+      "hook": "The PRO Act would use an ABC test for who counts as an employee under federal labor law, letting app drivers unionise nationwide.",
+      "event_plain": "the PRO Act becomes law and app drivers can bargain collectively nationwide",
+      "market": {
+        "source": "Kalshi", "event": "CONTROLH-2026",
+        "question": "Which party will win the U.S. House?",
+        "rules_summary": "Resolves to the party that wins control of the House in 2026.",
+        "outcomes": [
+          {"ticker": "CONTROLH-2026-D", "name": "Democratic Party", "last": "Democrats", "party": "D",
+           "stance": "PRO Act (H.R. 20): strengthen the right to organise; passed the House in 2020 and 2021",
+           "route": "federal: partisan", "p_policy": 0.05,
+           "source": "https://sykes.house.gov/media/press-releases/rep-sykes-democrats-re-introduce-pro-act-to-improve-the-lives-of-working-peopl"},
+          {"ticker": "CONTROLH-2026-R", "name": "Republican Party", "last": "Republicans", "party": "R",
+           "stance": "no PRO Act; backs a 'significant control' contractor test instead", "route": "none", "p_policy": 0.0}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book US-house-control.md: Democrats' PRO Act row, federal: partisan 0.05 (needs 60 Senate votes and the President); no Republican PRO Act row, so 0."
+      },
+      "impact": {
+        "central": -400000000, "low": -250000000, "high": -750000000, "status": "estimated",
+        "formula": "US Mobility + Delivery adj. EBITDA ~$5.0B (45% of $11.47B segment EBITDA, US revenue share) x 5-15% (bargained driver pay and benefits not passed to riders) = $250-750M; central 8% = $400M a year",
+        "timing": "run-rate several years after enactment, once contracts are bargained",
+        "sources": [
+          {"title": "Uber 10-K FY2025 (segment note 13, geographic revenue)", "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"},
+          {"title": "PRO Act reintroduction (Rep. Sykes)", "url": "https://sykes.house.gov/media/press-releases/rep-sykes-democrats-re-introduce-pro-act-to-improve-the-lives-of-working-peopl"}
+        ]
+      }
+    },
+    {
+      "id": "uber-us-house-contractor-test", "type": "race",
+      "hook": "Republicans' Modern Worker Empowerment Act would write one federal contractor test that keeps app drivers as contractors under federal law.",
+      "event_plain": "a federal 'significant control' contractor test becomes law",
+      "market": {
+        "source": "Kalshi", "event": "CONTROLH-2026",
+        "question": "Which party will win the U.S. House?",
+        "rules_summary": "Resolves to the party that wins control of the House in 2026.",
+        "outcomes": [
+          {"ticker": "CONTROLH-2026-R", "name": "Republican Party", "last": "Republicans", "party": "R",
+           "stance": "Modern Worker Empowerment Act (H.R. 1319): employee only if the business has 'significant control'",
+           "route": "federal: partisan", "p_policy": 0.05,
+           "source": "https://kiley.house.gov/posts/representative-kiley-introduces-two-bills-to-support-independent-contractors"},
+          {"ticker": "CONTROLH-2026-D", "name": "Democratic Party", "last": "Democrats", "party": "D",
+           "stance": "no stated support", "route": "none", "p_policy": 0.0}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book US-house-control.md: Republicans' H.R. 1319 row, federal: partisan 0.05; no Democratic row, so 0."
+      },
+      "impact": {
+        "central": 50000000, "low": 0, "high": 150000000, "status": "estimated",
+        "formula": "Federal test covers FLSA and NLRA only, not state ABC tests; it removes part of the federal piece of the legal and regulatory reserve line ($564M a year) and federal reclassification risk: ~10% of $564M = ~$50M; low 0, high ~25% = ~$150M",
+        "timing": "from enactment",
+        "sources": [
+          {"title": "Rep. Kiley: two bills for independent contractors", "url": "https://kiley.house.gov/posts/representative-kiley-introduces-two-bills-to-support-independent-contractors"},
+          {"title": "Uber 10-K FY2025 (note 13, legal and regulatory reserves)", "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"}
+        ]
+      }
+    },
+    {
+      "id": "uber-fl-tort-rollback", "type": "race",
+      "hook": "Florida's 2023 tort reform cut auto-liability claims costs, a big part of what a rideshare trip costs Uber.",
+      "event_plain": "Florida rolls back its 2022-23 tort reforms",
+      "market": {
+        "source": "Kalshi", "event": "GOVPARTYFL-26",
+        "question": "Florida Governor winner?",
+        "rules_summary": "Resolves to the party of the person inaugurated as Florida governor after the 2026 election.",
+        "outcomes": [
+          {"ticker": "GOVPARTYFL-26-D", "name": "David Jolly", "last": "Jolly", "party": "D",
+           "stance": "roll back the 2022-23 tort reforms", "route": "make: other party", "p_policy": 0.15,
+           "source": "https://floridaphoenix.com/2026/09/16/jolly-and-donalds-clash-on-property-insurance-proposals/"},
+          {"ticker": "GOVPARTYFL-26-R", "name": "Byron Donalds", "last": "Donalds", "party": "R",
+           "stance": "keep the reforms, veto any rollback", "route": "block: veto", "p_policy": 0.07,
+           "source": "https://floridaphoenix.com/2026/09/16/jolly-and-donalds-clash-on-property-insurance-proposals/"}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book FL-governor.md: Jolly 'make: other party' 0.15 (R supermajority legislature); Donalds 'block: veto' 0.07 is the chance a rollback still becomes law."
+      },
+      "impact": {
+        "central": -30000000, "low": -15000000, "high": -60000000, "status": "estimated",
+        "formula": "US Mobility insurance ~$4-6B a year (not disclosed; reserves $12.5B) x Florida ~7% of US trips (population share) = ~$0.35B x reversal of the ~6.5% average auto-rate cut since HB 837 = ~$23M; range 4-15% of $0.35B = $15-60M a year",
+        "timing": "phases in over 1-2 years of claims after repeal",
+        "sources": [
+          {"title": "Uber 10-K FY2025 (insurance reserves, MD&A insurance increase)", "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"},
+          {"title": "Insurance Business: Florida tort reform, carriers cut auto rates (OIR 6.5% average)", "url": "https://www.insurancebusinessmag.com/us/news/auto-motor/florida-tort-reform-delivers-as-carriers-slash-auto-rates-across-the-board-585364.aspx"},
+          {"title": "Florida Phoenix: Jolly and Donalds on insurance (2026-09-16)", "url": "https://floridaphoenix.com/2026/09/16/jolly-and-donalds-clash-on-property-insurance-proposals/"}
+        ]
+      }
+    },
+    {
+      "id": "uber-ca-gov-robofiring", "type": "race",
+      "hook": "California's governor race pits a candidate who would ban automated deactivation of app drivers against one with no such plan.",
+      "event_plain": "California bans automated deactivation of app drivers",
+      "market": {
+        "source": "Kalshi", "event": "KXGOVCA-26",
+        "question": "California Governor winner? (Person)",
+        "rules_summary": "Resolves Yes for the person elected California governor in 2026.",
+        "outcomes": [
+          {"ticker": "KXGOVCA-26-SHIL", "name": "Steve Hilton", "last": "Hilton", "party": "R",
+           "stance": "ban AI or automated decisions to fire or deactivate workers, including app-based workers",
+           "route": "make: other party", "p_policy": 0.15,
+           "source": "https://stevehiltonforgovernor.com/policies/people-not-the-machine-ban-robo-firing"},
+          {"ticker": "KXGOVCA-26-XBEC", "name": "Xavier Becerra", "last": "Becerra", "party": "D",
+           "stance": "no gig-worker position (only AI-use disclosure by developers)", "route": "none", "p_policy": 0.0}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book CA-governor.md: Hilton gig-workers row, make: other party 0.15 (Democratic supermajority); Becerra has no gig-workers row, so 0."
+      },
+      "impact": {
+        "central": -15000000, "low": -7000000, "high": -40000000, "status": "estimated",
+        "formula": "California Mobility EBITDA ~$0.6-0.8B (15-20% of ~$3.8B US Mobility, estimated) x 1-5% (human review of deactivations, slower fraud and safety removals) = $7-40M; central ~2% of $0.7B = $15M a year",
+        "timing": "from the first year after enactment",
+        "sources": [
+          {"title": "Steve Hilton: ban robo-firing", "url": "https://stevehiltonforgovernor.com/policies/people-not-the-machine-ban-robo-firing"},
+          {"title": "Uber 10-K FY2025 (segment note 13)", "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"}
+        ]
+      }
+    },
+    {
+      "id": "uber-or-driver-pay", "type": "race",
+      "hook": "Oregon Democrats have a bill setting per-minute and per-mile pay for Uber and Lyft drivers.",
+      "event_plain": "Oregon sets a per-minute and per-mile minimum pay for rideshare drivers",
+      "market": {
+        "source": "Kalshi", "event": "KXSTATELEG-ORHOUS26",
+        "question": "Who will win the Oregon House?",
+        "rules_summary": "Resolves to the party holding more seats in the Oregon House two weeks after it is seated.",
+        "outcomes": [
+          {"ticker": "KXSTATELEG-ORHOUS26-D", "name": "Democratic party", "last": "Democrats", "party": "D",
+           "stance": "SB 1166: per-minute and per-mile driver minimum pay, just-cause deactivation, sick leave",
+           "route": "make: same party, strong", "p_policy": 0.35,
+           "source": "https://oregoncapitalchronicle.com/2025/04/28/oregon-bill-would-implement-protections-for-uber-lyft-drivers/"},
+          {"ticker": "KXSTATELEG-ORHOUS26-R", "name": "Republican party", "last": "Republicans", "party": "R",
+           "stance": "no stated position", "route": "none", "p_policy": 0.0}
+        ],
+        "p_policy_status": "estimated",
+        "p_policy_rationale": "Policy book OR-legislature.md: Democrats' SB 1166 row 0.35; Republicans have no row, so 0."
+      },
+      "impact": {
+        "central": -15000000, "low": -5000000, "high": -25000000, "status": "estimated",
+        "formula": "Oregon 1.24% of US population x ~$3.8B US Mobility EBITDA = ~$47M x 10-50% net loss after fare pass-through = $5-25M; central ~30% = $15M a year",
+        "timing": "from the first full year after enactment",
+        "sources": [
+          {"title": "Oregon Capital Chronicle: SB 1166 (2025-04-28)", "url": "https://oregoncapitalchronicle.com/2025/04/28/oregon-bill-would-implement-protections-for-uber-lyft-drivers/"},
+          {"title": "Uber 10-K FY2025 (segment note 13)", "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"}
+        ]
+      }
+    }
+  ]
+}
