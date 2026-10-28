@@ -1,6 +1,7 @@
 # Worked example: Ford (F), one direct link and two race links
 
-Full files: the repository's `examples/F/` (structure.md, markets.json, summary.md, report.html, card.svg).
+Full files (structure.md, markets.json, summary.md, report.html, card.svg):
+[`examples/F/`](https://github.com/juwonyee/election-risk/tree/main/examples/F) on GitHub.
 
 1. **Exposure** (`$profit-structure`, written before opening any market list). Base: FY2025 adjusted EBIT
    $6.78B (GAAP operating income was negative because of special items; say which you use). Movable lines,

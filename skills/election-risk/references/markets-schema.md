@@ -1,8 +1,8 @@
 # markets.json
 
 One file per company at `election-risk-out/<TICKER>/markets.json`.
-Complete examples: `examples/SO/markets.json` in the repository (one direct, one race with a Polymarket
-cross-check). Check it with `erisk validate --company <TICKER>`.
+Complete example (one direct, one race with a Polymarket cross-check):
+[`examples/SO/markets.json`](https://github.com/juwonyee/election-risk/blob/main/examples/SO/markets.json) on GitHub. Check it with `erisk validate --company <TICKER>`.
 
 ## Contents
 - Top level

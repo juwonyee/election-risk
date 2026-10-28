@@ -101,6 +101,14 @@ class Compute(unittest.TestCase):
         self.assertIn("+0.45 if", compute.swing_text(r))
         self.assertEqual([s["analyst"] for s in b["signals"]], ["Exposure", "Policy", "Market", "Red Team"])
 
+    def test_one_off_says_once_in_summary(self):
+        ws = self.tmp / "SO"
+        mf = json.loads((ws / "markets.json").read_text(encoding="utf-8"))
+        mf["entries"][0]["impact"]["one_off"] = True
+        (ws / "markets.json").write_text(json.dumps(mf), encoding="utf-8")
+        compute.run(ws)
+        self.assertIn("+$660M once (", (ws / "summary.md").read_text(encoding="utf-8"))
+
     def test_no_market_no_card(self):
         self.assertIsNone(card.build({"board": compute.board([], 0, "X")}))
 

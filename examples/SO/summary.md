@@ -18,7 +18,7 @@ Base: FY2025 operating profit $7.29B (verified).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
-| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
+| Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | Georgia approves 4 more gigawatts for Georgia Power (`KXGA4GW-26AUG`) | 60% Kalshi (thin) | 60% | +$660M (+$450M to +$800M) | +9.1% | 0.00 | no |
 | Georgia pauses new data-center construction: 0% if Bottoms wins, 0% if Jackson wins (`GOVPARTYGA-26`) | Bottoms 50% / Jackson 50% Kalshi · 50% / 50% Polymarket | 0% | −$130M (−$80.0M to −$200M) | -1.8% | 0.00 | no |

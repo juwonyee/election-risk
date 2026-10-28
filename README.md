@@ -24,7 +24,7 @@ The desk board, in the chat and at the top of a local web report (Ford, prices o
 | Analyst | Signal | Why |
 |---|---|---|
 | Exposure | EXPOSED | biggest if it happens: −$2.00B a year (−29.5% of profit) |
-| Policy | WEAK LINK | who wins moves no chance by more than 5 points |
+| Policy | WEAK LINK | for results of 1% of profit or more, who wins moves the chance by 5 points at most |
 | Market | PRICED | 3 markets on Kalshi |
 | Red Team | CAUTION | 10 flags to read |
 

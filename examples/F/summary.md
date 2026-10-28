@@ -7,7 +7,7 @@ Base: FY2025 adjusted EBIT $6.78B (verified).
 | Analyst | Signal | Why |
 |---|---|---|
 | Exposure | EXPOSED | biggest if it happens: −$2.00B a year (−29.5% of profit) |
-| Policy | WEAK LINK | who wins moves no chance by more than 5 points |
+| Policy | WEAK LINK | for results of 1% of profit or more, who wins moves the chance by 5 points at most |
 | Market | PRICED | 3 markets on Kalshi |
 | Red Team | CAUTION | 10 flags to read |
 
@@ -18,7 +18,7 @@ Base: FY2025 adjusted EBIT $6.78B (verified).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
-| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
+| Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | the US gives notice to leave USMCA before 2027 (`KXUSMCA-26`) | 8% Kalshi | 8% | −$2.00B (−$1.10B to −$3.50B) | -29.5% | 0.00 | yes |
 | Congress repeals the President's tariffs, including the auto and parts tariffs: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | +$1.00B (+$500M to +$2.00B) | +14.7% | +0.05 if Democrats win | no |

@@ -18,7 +18,7 @@ Base: FY2025 operating profit $4.75B (verified).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
-| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
+| Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | California breaks up PG&E into locally owned utilities: 0% if Becerra wins, 15% if Hilton wins (`KXGOVCA-26`) | Becerra 96% / Hilton 4% Kalshi · 95% / 3% Polymarket | 1% | −$1.00B (−$400M to −$2.00B) | -21.1% | +0.15 if Hilton wins | no |
 | California freezes PG&E's rates for a year: 30% if Becerra wins, 0% if Hilton wins (`KXGOVCA-26`) | Becerra 96% / Hilton 4% Kalshi · 95% / 3% Polymarket | 29% | −$600M (−$400M to −$1.00B) | -12.6% | +0.30 if Becerra wins | yes |

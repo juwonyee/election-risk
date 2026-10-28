@@ -7,7 +7,7 @@ Base: FY2025 (GAAP operating income) operating profit $2.94B (verified).
 | Analyst | Signal | Why |
 |---|---|---|
 | Exposure | LIMITED | biggest if it happens: −$120M a year (−4.1% of profit) |
-| Policy | WEAK LINK | who wins moves no chance by more than 5 points |
+| Policy | WEAK LINK | for results of 1% of profit or more, who wins moves the chance by 5 points at most |
 | Market | PRICED | 4 markets on Kalshi and Polymarket |
 | Red Team | CAUTION | 10 flags to read |
 
@@ -18,7 +18,7 @@ Base: FY2025 (GAAP operating income) operating profit $2.94B (verified).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
-| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
+| Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | the PRO Act (easier union organizing, first-contract arbitration) becomes law: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$120M (−$40.0M to −$300M) | -4.1% | +0.05 if Democrats win | no |
 | the federal minimum wage rises to $17 by 2030 (Raise the Wage Act): 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$100M (−$40.0M to −$250M) | -3.4% | +0.05 if Democrats win | no |

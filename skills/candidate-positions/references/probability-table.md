@@ -1,7 +1,8 @@
 # Probability table: if this candidate wins, how likely is the policy?
 
 Read this before giving any `p`. Every cell comes from published statistics or research; the full notes,
-numbers and links are in the repository under `research/probability-table/` (Q1 pledges, Q2 legislation,
+numbers and links are on GitHub under
+[`research/probability-table/`](https://github.com/juwonyee/election-risk/tree/main/research/probability-table) (Q1 pledges, Q2 legislation,
 Q3 vetoes, Q4 appointments, Q5 attorneys general and executive orders, Q6 ballot measures and federal).
 
 **Use the table as written. Do not tune a cell for one case.** Your judgment goes into choosing the route

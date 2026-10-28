@@ -7,7 +7,7 @@ Base: FY2025 Adjusted EBITDA $620M (verified).
 | Analyst | Signal | Why |
 |---|---|---|
 | Exposure | EXPOSED | biggest if it happens: +$150M a year (+24.2% of profit) |
-| Policy | WEAK LINK | who wins moves no chance by more than 7 points |
+| Policy | WEAK LINK | for results of 1% of profit or more, who wins moves the chance by 7 points at most |
 | Market | PRICED | 7 markets on Kalshi and Polymarket, 1 thin |
 | Red Team | CAUTION | 15 flags to read |
 
@@ -18,7 +18,7 @@ Base: FY2025 Adjusted EBITDA $620M (verified).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
-| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
+| Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | Congress bans sports contracts on CFTC-regulated prediction markets in 2026 (`law-banning-sports-prediction-markets-enacted-in-2026`) | 18% Polymarket | 18% | +$150M (+$50.0M to +$300M) | +24.2% | 0.00 | yes |
 | New York legalizes online casino games: 5% if Hochul wins, 5% if Blakeman wins (`GOVPARTYNY-26`) | Hochul 94% / Blakeman 6% Kalshi | 5% | +$125M (+$60.0M to +$150M) | +20.2% | 0.00 | yes |

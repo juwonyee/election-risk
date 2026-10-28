@@ -193,7 +193,8 @@ def signals(results: list[dict], flags: int) -> list[dict]:
                                 f"{s['event_plain'].rstrip('.')}{capped}"})
         else:
             out.append({"analyst": "Policy", "signal": "WEAK LINK",
-                        "note": f"who wins moves no chance by more than {s['election_swing'] * 100:.0f} points"
+                        "note": f"for results of 1% of profit or more, who wins moves the chance by "
+                                f"{s['election_swing'] * 100:.0f} points at most"
                         if s["election_swing"] > 0 else "who wins does not move any chance"})
     venues = sorted({q["venue"] for r in results for q in _quotes(r)})
     thin = sum(r["volume"] < THIN for r in results)
@@ -305,10 +306,11 @@ def summary_markdown(mf: dict, results: list[dict], gaps: list[dict], board_data
          f"Base: {d['period']} {d['label']} {fmt_money(d['amount'], signed=False)} ({d['status']}).", ""]
     if board_data:
         L += board_markdown(board_data)
-    L += ["", "| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing "
+    L += ["", "| Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing "
           "| Meaningful |", "|---|---|---|---|---|---|---|"]
     for r in sorted(results, key=lambda r: -abs(r["impact"]["central"])):
-        L.append(f"| {_what_text(r)} | {_price_text(r)} | {r['chance']:.0%} | {fmt_money(r['impact']['central'])} "
+        once = " once" if r["impact"].get("one_off") else ""
+        L.append(f"| {_what_text(r)} | {_price_text(r)} | {r['chance']:.0%} | {fmt_money(r['impact']['central'])}{once} "
                  f"({fmt_money(r['impact']['low'])} to {fmt_money(r['impact']['high'])}) | "
                  f"{r['impact_pct']['central']:+.1%} | {swing_text(r)} | {'yes' if r['meaningful'] else 'no'} |")
     L += ["", "Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = "

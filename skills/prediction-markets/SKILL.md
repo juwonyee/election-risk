@@ -4,7 +4,7 @@ description: Lists and prices every open Kalshi and Polymarket market for the No
 license: MIT
 metadata:
   author: juwonyee
-  version: "2.0.2"
+  version: "2.0.3"
 ---
 
 # Prediction markets
@@ -18,17 +18,18 @@ the user's working directory; output goes to `./election-risk-out/`. Python 3.10
 ## The full list (read it, don't search it)
 
 ```bash
-erisk markets pull            # about 4 minutes the first time each day; then cached
+erisk markets pull            # about 6 minutes the first time each day; then cached
 ```
 
 Writes two plain lists, one line per event (`venue:event | title | volume | close date | top outcomes`):
 - `election-risk-out/_markets/elections.md`: contests decided by the Nov 3 vote (winners, chamber control,
-  ballot measures). Margin, turnout and vote-share side markets are dropped. About 15k tokens: read it whole.
+  ballot measures). Margin, turnout and vote-share side markets are dropped. About 35k tokens: read it whole, in
+  parts if your file reader has a size cap.
 - `election-risk-out/_markets/house-districts.md`: single House districts (they act through House control).
 - `election-risk-out/_markets/policy.md`: markets whose Yes is a policy (bill, tariff, regulator, moratorium,
   court ruling, government deal).
 
-Each list is small enough to read whole. Read the relevant one in full instead of guessing search words: the
+Each list can be read whole. Read the relevant one in full instead of guessing search words: the
 titles are terse and the same thing is often priced under a name you would not search for. The filter is
 keyword-based, so a few off-topic lines get in; skip them.
 
@@ -39,6 +40,9 @@ erisk markets show GOVPARTYGA-26 --venue kalshi                       # prices +
 erisk markets show georgia-governor-winner-2026 --venue polymarket
 erisk markets search "data center" --prices                           # keyword search, both venues
 ```
+
+`rules` in the `show` output is one string when every outcome shares the same text, and an object keyed by
+outcome ticker (or Polymarket slug) when they differ, as in most races.
 
 **Read the rules before using a market.** It counts only if its resolution text matches the question: what
 exactly resolves Yes, by when, and who decides. Similar titles often differ. Details, venue quirks and how

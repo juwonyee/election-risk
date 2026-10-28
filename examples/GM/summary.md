@@ -7,7 +7,7 @@ Base: FY2025 EBIT-adjusted $12.7B (verified).
 | Analyst | Signal | Why |
 |---|---|---|
 | Exposure | EXPOSED | biggest if it happens: +$3.00B a year (+23.5% of profit) |
-| Policy | WEAK LINK | who wins moves no chance by more than 5 points |
+| Policy | WEAK LINK | for results of 1% of profit or more, who wins moves the chance by 5 points at most |
 | Market | PRICED | 2 markets on Kalshi |
 | Red Team | CAUTION | 8 flags to read |
 
@@ -18,7 +18,7 @@ Base: FY2025 EBIT-adjusted $12.7B (verified).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
-| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
+| Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | Congress passes a law overturning the President's tariffs: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | +$3.00B (+$1.50B to +$3.50B) | +23.5% | +0.05 if Democrats win | no |
 | the US sends notice to leave USMCA (`KXUSMCA-26`) | 8% Kalshi | 8% | −$1.70B (−$1.00B to −$3.50B) | -13.3% | 0.00 | yes |

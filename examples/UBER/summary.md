@@ -18,7 +18,7 @@ Base: FY2025 operating profit $5.57B (verified).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
-| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
+| Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | the PRO Act becomes law and app drivers can bargain collectively nationwide: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$400M (−$250M to −$750M) | -7.2% | +0.05 if Democrats win | no |
 | California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins, 0% if Gates wins (`KXCAATTORNEYGENERAL-26`) | Bonta 97% / Gates 3% Kalshi | 68% | −$170M (−$100M to −$270M) | -3.1% | +0.11 if Bonta wins | yes |

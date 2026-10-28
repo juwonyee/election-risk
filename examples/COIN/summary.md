@@ -18,7 +18,7 @@ Base: FY2025 operating profit $1.44B (verified).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
-| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
+| Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | the Clarity Act (crypto market-structure law) becomes law before 2028 (`KXCRYPTOSTRUCTURE-26JAN`) | 21% Kalshi | 21% | +$370M ($0 to +$740M) | +25.8% | 0.05 | yes |
 | a federal law bans sports contracts on CFTC-regulated prediction markets in 2026 (`law-banning-sports-prediction-markets-enacted-in-2026`) | 18% Polymarket | 18% | −$65.0M (−$40.0M to −$110M) | -4.5% | 0.00 | yes |
