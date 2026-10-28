@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif">
+<title>The desk: three analysts feed the Risk Officer, the Red Team checks the work, and every run ends in two verdicts</title>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a8f99"/></marker></defs>
+<rect width="1200" height="430" rx="18" fill="#f7f6f2"/>
+<g stroke="#8a8f99" stroke-width="2" fill="none" marker-end="url(#a)">
+<path d="M158,215 C185,215 185,105 222,105"/><path d="M158,215 L222,215"/><path d="M158,215 C185,215 185,325 222,325"/>
+<path d="M452,105 C490,105 490,215 528,215"/><path d="M452,215 L528,215"/><path d="M452,325 C490,325 490,215 528,215"/>
+<path d="M738,215 L782,215"/><path d="M972,215 C1000,215 1000,165 1022,165"/><path d="M972,215 C1000,215 1000,265 1022,265"/>
+</g>
+<rect x="22" y="180" width="136" height="70" rx="12" fill="#16181d"/>
+<text x="90" y="212" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">A company</text>
+<text x="90" y="235" font-size="14" fill="#c9ccd3" text-anchor="middle">you name it</text>
+<g font-size="14" fill="#626875">
+<rect x="225" y="65" width="225" height="80" rx="12" fill="#fff" stroke="#e3e1da"/>
+<text x="243" y="97" font-size="19" font-weight="700" fill="#16181d">Exposure analyst</text>
+<text x="243" y="120">where profit comes from</text>
+<rect x="225" y="175" width="225" height="80" rx="12" fill="#fff" stroke="#e3e1da"/>
+<text x="243" y="207" font-size="19" font-weight="700" fill="#16181d">Policy analyst</text>
+<text x="243" y="230">what each winner would do</text>
+<rect x="225" y="285" width="225" height="80" rx="12" fill="#fff" stroke="#e3e1da"/>
+<text x="243" y="317" font-size="19" font-weight="700" fill="#16181d">Market analyst</text>
+<text x="243" y="340">Kalshi and Polymarket odds</text>
+<rect x="531" y="170" width="205" height="90" rx="12" fill="#fff" stroke="#16181d" stroke-width="2"/>
+<text x="549" y="205" font-size="19" font-weight="700" fill="#16181d">Risk Officer</text>
+<text x="549" y="228">links and sizes each risk;</text>
+<text x="549" y="247">an engine does the math</text>
+<rect x="785" y="170" width="185" height="90" rx="12" fill="#fff" stroke="#e3e1da"/>
+<text x="803" y="205" font-size="19" font-weight="700" fill="#16181d">Red Team</text>
+<text x="803" y="228">flags weak numbers</text>
+<text x="803" y="247">and missing sources</text>
+</g>
+<rect x="1025" y="140" width="150" height="50" rx="25" fill="#1f7a4d"/>
+<text x="1100" y="161" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">ELECTION RISK</text>
+<text x="1100" y="179" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">LOW</text>
+<rect x="1025" y="240" width="150" height="50" rx="25" fill="#b3372e"/>
+<text x="1100" y="261" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">POLICY RISK</text>
+<text x="1100" y="279" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">HIGH</text>
+<text x="1100" y="320" font-size="13" fill="#626875" text-anchor="middle">+ report and card</text>
+<text x="1100" y="120" font-size="13" fill="#626875" text-anchor="middle">Ford, Oct 27</text>
+</svg>
