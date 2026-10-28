@@ -164,6 +164,16 @@ class Book(unittest.TestCase):
         self.assertFalse(book.SEAT.search("Oregon State House winner?"))
         self.assertEqual(book.info()["source"], "built here")
 
+    def test_maintainers_book_keeps_its_build_date(self):
+        d = book.book_dir()
+        pkg = {"built_by": "election-risk maintainers", "built_on": "2026-01-02", "fingerprint": book.fingerprint()}
+        (d / "SOURCE.json").write_text(json.dumps(pkg), encoding="utf-8")  # unzipped by hand
+        self.assertEqual((book.info()["source"], book.info()["last_edit"]), ("downloaded", "2026-01-02"))
+        (d / "SOURCE.json").write_text(json.dumps({"source": "downloaded", "built_by": pkg}), encoding="utf-8")
+        self.assertEqual(book.info()["last_edit"], "2026-01-02")
+        next(d.glob("*.md")).write_text("| edited |\n", encoding="utf-8")  # re-researched after download
+        self.assertNotEqual(book.info()["last_edit"], "2026-01-02")
+
     def test_download_needs_consent(self):
         self.assertFalse(book.download(False)["ok"])
 

@@ -4,7 +4,7 @@ description: Works like a sell-side risk desk on one listed company - starts fro
 license: MIT
 metadata:
   author: juwonyee
-  version: "2.0.0"
+  version: "2.0.1"
 ---
 
 # Election risk for a company

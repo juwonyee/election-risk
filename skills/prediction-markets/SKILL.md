@@ -4,7 +4,7 @@ description: Lists and prices every open Kalshi and Polymarket market for the No
 license: MIT
 metadata:
   author: juwonyee
-  version: "2.0.0"
+  version: "2.0.1"
 ---
 
 # Prediction markets

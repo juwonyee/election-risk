@@ -111,10 +111,16 @@ def info() -> dict:
     if not files:
         return {"source": None, "files": 0, "note": "No policy book yet. Build it with $candidate-positions, or "
                 "download the maintainers' book with `erisk book download --accept-risk` after the user agrees."}
-    newest = max(p.stat().st_mtime for p in files)
-    return {"source": meta.get("source", "built here"), "downloaded_at": meta.get("downloaded_at"),
-            "built_by": meta.get("built_by"), "last_edit": dt.datetime.fromtimestamp(newest).date().isoformat(),
-            "files": len(files), "fingerprint": fingerprint()}
+    # The maintainers' zip carries its own SOURCE.json: wrapped by `download`, or as is when unzipped by hand.
+    pkg = meta.get("built_by") if isinstance(meta.get("built_by"), dict) else (meta if "built_on" in meta else None)
+    fp = fingerprint()
+    if pkg and pkg.get("fingerprint") == fp and pkg.get("built_on"):
+        last_edit = pkg["built_on"]  # unchanged since it was built; file times only say when it was unpacked
+    else:
+        last_edit = dt.datetime.fromtimestamp(max(p.stat().st_mtime for p in files)).date().isoformat()
+    return {"source": "downloaded" if pkg or meta.get("source") == "downloaded" else meta.get("source", "built here"),
+            "downloaded_at": meta.get("downloaded_at"), "built_by": pkg or meta.get("built_by"),
+            "last_edit": last_edit, "files": len(files), "fingerprint": fp}
 
 
 def download(accept_risk: bool) -> dict:
