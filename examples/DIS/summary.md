@@ -13,7 +13,7 @@ Base: FY2025 segment operating income $17.6B (verified).
 
 **Risk Officer:** Election risk NO MARKET · Policy risk MEDIUM
 
-- **Election risk NO MARKET:** No Nov 3 contest decides anything that moves Disney.
+- **Election risk NO MARKET:** No Nov 3 contest was linked to Disney in this run.
 - **Policy risk MEDIUM:** Kalshi puts 26% on: a federal film and TV production tax credit becomes law. For Disney: +$400M a year (+2.3% of profit).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
@@ -39,7 +39,7 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - Checked, no sizable market: ABC licence review (KXFCCLICENSECASE-ABC27, Yes = court blocks the FCC; loss of licences has no disclosed station profit), foreign-film tariff (KXTARIFFSECTOR-27JAN01-FILM, 310 contracts, no tariff design to size), Section 301 at the CIT (rules count a win 'as to any party', so a Yes may not refund Disney), KOSA (Disney+ is not social media), Georgia and New York governors (no film-credit position in the book)
 
 **Red Team:**
-- a federal film and TV production tax credit becomes law: the impact range is wide (+$200M to +$700M); read how it was built.
+- Policy risk MEDIUM would be LOW at the low end (+$200M) of the impact range for: a federal film and TV production tax credit becomes law. Read how the impact was built.
 - a federal film and TV production tax credit becomes law: the impact is an estimate, not a reported number.
 
 Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.

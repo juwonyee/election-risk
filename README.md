@@ -19,48 +19,52 @@ What does Nov 3 mean for Ford?
 
 ## What you get
 
-The desk board, in the chat and at the top of a local web report (Ford, prices of Oct 27):
+The desk board, in the chat and at the top of a local web report (Ford, prices of Oct 28):
 
 | Analyst | Signal | Why |
 |---|---|---|
-| Exposure | EXPOSED | biggest if it happens: −$2.00B a year (−29.5% of profit) |
+| Exposure | EXPOSED | biggest if it happens: −$1.30B a year (−19.2% of profit) |
 | Policy | WEAK LINK | for results of 1% of profit or more, who wins moves the chance by 5 points at most |
-| Market | PRICED | 3 markets on Kalshi |
-| Red Team | CAUTION | 10 flags to read |
+| Market | PRICED | 3 markets on Kalshi and Polymarket |
+| Red Team | CAUTION | 8 flags to read |
 
-**Risk Officer:** Election risk **LOW** · Policy risk **HIGH**
+**Risk Officer:** Election risk **LOW** · Policy risk **MEDIUM**
 
 - **Election risk LOW:** nothing passes the bar. The biggest is +$1.00B a year if Congress repeals the
-  tariffs, but only 5% even if Democrats win.
-- **Policy risk HIGH:** Kalshi puts 8% on the US giving notice to leave USMCA before 2027. For Ford:
-  −$2.00B a year (−29.5% of profit).
+  Section 232 auto and metals tariffs, but only 5% even if Democrats win.
+- **Policy risk MEDIUM:** Kalshi puts 6% on the US giving notice to leave USMCA before 2027. For Ford:
+  −$1.30B a year (−19.2% of profit).
+- **Red Team:** the USMCA impact is an estimate, and at the high end of its range (−$2.50B) policy risk would
+  be HIGH.
 
 And a card to share (the report saves it as PNG):
 
-<p align="center"><img src="examples/F/card.svg" width="720" alt="Ford, policy risk high: −$2.00B a year if the US gives notice to leave USMCA before 2027; Kalshi 8%"></p>
+<p align="center"><img src="examples/F/card.svg" width="720" alt="Ford, policy risk medium: −$1.30B a year if the US gives notice to leave USMCA before 2027; Kalshi 6%"></p>
 
-## What it found (Oct 27, 2026)
+## What it found (Oct 27–28, 2026)
 
-Eight household names, run end to end. Each links to its full summary, profit structure and sources.
+Eight household names, run end to end (Ford on Oct 28 prices, the rest on Oct 27). Each links to its full
+summary, profit structure and sources.
 
 | Company | Election risk | Policy risk | Biggest risk | Market | Profit, per year |
 |---|---|---|---|---|---|
 | [PG&E](examples/PCG/summary.md) | **High** | none | Becerra wins (96%) → 30% chance of a rate freeze, vs 0% under Hilton | Kalshi | **−$600M** (−12.6%) |
 | [DraftKings](examples/DKNG/summary.md) | Medium | **High** | Congress bans sports contracts on prediction markets in 2026 | Polymarket 18% | **+$150M** (+24.2%) |
-| [Ford](examples/F/summary.md) | Low | **High** | US gives notice to leave USMCA before 2027 | Kalshi 8% | **−$2.0B** (−29.5%) |
 | [Coinbase](examples/COIN/summary.md) | Low | **High** | Clarity Act (crypto market structure) becomes law before 2028 | Kalshi 21% | **+$370M** (+25.8%) |
+| [Ford](examples/F/summary.md) | Low | Medium | US gives notice to leave USMCA before 2027 | Kalshi 6% | **−$1.3B** (−19.2%) |
 | [GM](examples/GM/summary.md) | Low | Medium | Same USMCA notice | Kalshi 8% | **−$1.7B** (−13.3%) |
 | [Disney](examples/DIS/summary.md) | none | Medium | Federal film and TV production tax credit becomes law | Kalshi 26% | **+$400M** (+2.3%) |
 | [Uber](examples/UBER/summary.md) | Low | none | California AG suit ends in a Lyft-sized settlement: 70%, and who wins moves it at most 11 points | Kalshi | **−$170M** (−3.1%) |
 | [Starbucks](examples/SBUX/summary.md) | Low | Low | New York City enacts a $30 minimum wage by 2030 | Kalshi 8% | **−$60M** (−2.0%) |
 
-"none" means no market reaches the company on that side.
+"none" means no market was linked to the company on that side.
 
 **The surprise: who wins on Nov 3 moves these odds less than the headlines suggest.** Only one of the eight
-gets a high election risk. Three get a high policy risk, from markets that price the policy directly (USMCA,
-the Clarity Act, sports contracts) and barely depend on the vote. Where the election does matter, the Red
-Team keeps it honest: research finds a new utility commission moves allowed returns by about 0.15 points, and
-attorneys general of both parties sue companies, so PG&E and Uber carry those flags.
+gets a high election risk. The bigger risks come from markets that price the policy directly and barely
+depend on the vote: the Clarity Act and sports contracts (high), USMCA for Ford and GM (medium). Where the
+election does matter, the Red Team keeps it honest: research finds a new utility commission moves allowed
+returns by about 0.15 points, and attorneys general of both parties sue companies, so PG&E and Uber carry
+those flags.
 
 > **Not investment advice.** Analyst drafts for human review. No recommendation to buy, sell or hold any
 > security or to trade any contract. Markets are shown as information only.
@@ -85,8 +89,9 @@ Four skills, one per desk role. Each works on its own; `election-risk` calls the
   the bar count (at least 1% of profit, volume 10,000, chance 5%); when none does, the board says what came
   closest and why it falls short.
 - **Every impact shows how it was built**: the formula with each number and its source, and a low-high range.
-- **Red Team.** A position with no source link counts as 0. The report flags those, thin markets, wide ranges
-  and estimated impacts.
+- **Red Team.** It checks whether each verdict survives its own range: "Policy risk HIGH ... would be LOW at
+  the low end" means the verdict rests on one estimate. It also flags positions with no source link (counted
+  as 0), thin markets and estimated impacts.
 
 ## Install
 

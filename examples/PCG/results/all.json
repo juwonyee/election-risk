@@ -360,7 +360,7 @@
       {
         "analyst": "Red Team",
         "signal": "CAUTION",
-        "note": "8 flags to read"
+        "note": "7 flags to read"
       }
     ],
     "election": {
@@ -373,7 +373,7 @@
       "level": "no market",
       "id": null,
       "score": 0.0,
-      "text": "No policy market prices anything that moves PG&E."
+      "text": "No direct policy market was linked to PG&E in this run."
     },
     "card": "election"
   },
@@ -386,8 +386,7 @@
   },
   "red_team": [
     "California freezes PG&E's rates for a year: research finds a new commission majority moves allowed returns by about 0.15 percentage points; check the impact is sized on that, not on a promised freeze or cut.",
-    "California freezes PG&E's rates for a year: the impact is an estimate, not a reported number.",
-    "California breaks up PG&E into locally owned utilities: the impact range is wide (−$400M to −$2.00B); read how it was built."
+    "California freezes PG&E's rates for a year: the impact is an estimate, not a reported number."
   ],
   "book": {
     "source": "built here",

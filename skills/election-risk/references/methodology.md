@@ -39,7 +39,8 @@ what the market says about its odds.
 - The election swing is printed with its direction: "+0.30 if Becerra wins".
 
 ## Red Team flags (automatic)
-A race candidate with p > 0 and no source (the engine counts that chance as 0); a thin market; an impact range wider than 3×; a meaningful result
+A verdict whose level changes within its row's impact range ("Policy risk HIGH ... would be LOW at the low end");
+a race candidate with p > 0 and no source (the engine counts that chance as 0); a thin market; a meaningful result
 whose impact is an estimate; an attorney-general (`sue`) swing above the 0.03–0.11 the research supports; a
 meaningful `appoint` result (research: about −0.15 pp of allowed return). The agent adds its own doubts in `notes.weak_links`.
 

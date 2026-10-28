@@ -504,7 +504,7 @@
       {
         "analyst": "Red Team",
         "signal": "CAUTION",
-        "note": "10 flags to read"
+        "note": "7 flags to read"
       }
     ],
     "election": {
@@ -530,9 +530,6 @@
     }
   },
   "red_team": [
-    "the PRO Act (easier union organizing, first-contract arbitration) becomes law: the impact range is wide (−$40.0M to −$300M); read how it was built.",
-    "the federal minimum wage rises to $17 by 2030 (Raise the Wage Act): the impact range is wide (−$40.0M to −$250M); read how it was built.",
-    "Wisconsin raises its minimum wage to $20 by 2030: the impact range is wide (−$4.0M to −$14.0M); read how it was built.",
     "New York City enacts a $30 minimum wage by 2030: the impact is an estimate, not a reported number."
   ],
   "book": {

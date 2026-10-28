@@ -124,7 +124,7 @@ def cmd_compute(a) -> int:
         print(f"Card: {(ws / 'card.svg').resolve()}", file=sys.stderr)
     else:
         (ws / "card.svg").unlink(missing_ok=True)
-        print("Card: none (no market reaches the company, so no card was written)", file=sys.stderr)
+        print("Card: none (no market was linked to the company, so no card was written)", file=sys.stderr)
     if not a.no_report:
         path = ws / "report.html"
         report.write(path, report.build(data), open_it=not a.no_open and not os.environ.get("ERISK_NO_OPEN"))

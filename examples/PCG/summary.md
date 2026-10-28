@@ -9,12 +9,12 @@ Base: FY2025 operating profit $4.75B (verified).
 | Exposure | EXPOSED | biggest if it happens: −$1.00B a year (−21.1% of profit) |
 | Policy | STRONG LINK | Becerra 30% vs Hilton 0%: California freezes PG&E's rates for a year |
 | Market | PRICED | 2 markets on Kalshi and Polymarket |
-| Red Team | CAUTION | 8 flags to read |
+| Red Team | CAUTION | 7 flags to read |
 
 **Risk Officer:** Election risk HIGH · Policy risk NO MARKET
 
 - **Election risk HIGH:** If Becerra wins (96% on Kalshi), the chance that California freezes PG&E's rates for a year is 30%, vs 0% if Hilton wins. For PG&E: −$600M a year (−12.6% of profit).
-- **Policy risk NO MARKET:** No policy market prices anything that moves PG&E.
+- **Policy risk NO MARKET:** No direct policy market was linked to PG&E in this run.
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
@@ -40,7 +40,6 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 **Red Team:**
 - California freezes PG&E's rates for a year: research finds a new commission majority moves allowed returns by about 0.15 percentage points; check the impact is sized on that, not on a promised freeze or cut.
 - California freezes PG&E's rates for a year: the impact is an estimate, not a reported number.
-- California breaks up PG&E into locally owned utilities: the impact range is wide (−$400M to −$2.00B); read how it was built.
 
 Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
 

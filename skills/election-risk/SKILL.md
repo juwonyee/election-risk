@@ -4,7 +4,7 @@ description: Works like a sell-side risk desk on one listed company - starts fro
 license: MIT
 metadata:
   author: juwonyee
-  version: "2.0.3"
+  version: "2.0.4"
 ---
 
 # Election risk for a company
@@ -16,7 +16,8 @@ moves that chance by S."** A risk with a price can be measured. Channels with no
 the user's working directory; everything goes to `./election-risk-out/`. Python 3.10+, standard library only.
 
 **You** research, choose and source every number and write `markets.json`. **The engine** fetches prices and
-does all the math. Never compute or edit a number the engine printed; fix `markets.json` and re-run.
+does all the math. Never compute or edit a number the engine printed, and never edit `summary.md`,
+`report.html` or `card.svg`: put caveats in `notes` in `markets.json` and re-run.
 
 ## The desk
 
@@ -82,7 +83,9 @@ base, where profit comes from, and what a government can move, with an issue tag
   the difference between the two sides' `p`). For date ladders, use the rung that matches the impact's timing
   and say which in `rules_summary`.
 - Read each market's rules (`erisk markets show EVENT --venue ...`) and keep it only if they match.
-- Size the impact on yearly operating profit with a formula in plain numbers, a low-high range and sources:
+- Size the impact on yearly operating profit with a formula in plain numbers, a low-high range and sources.
+  When no filing states the number, build it from sourced inputs and mark it `estimated`; never drop a market
+  whose rules match only because its impact is an estimate (the Red Team flags it instead):
   [references/research-method.md](references/research-method.md), [references/policy.md](references/policy.md).
 - Write `election-risk-out/<TICKER>/markets.json` per
   [references/markets-schema.md](references/markets-schema.md).
@@ -101,7 +104,7 @@ compute if you changed anything.
 2. The table from `summary.md`.
 3. **Locked in regardless**, then **Red Team** (weakest links and flags), with an offer to change them.
 4. The report path and the card path exactly as `compute` printed them (the report has a "Save card as PNG"
-   button; if it printed "Card: none", say no market reaches the company), the policy book line (source, date,
+   button; if it printed "Card: none", say no market was linked), the policy book line (source, date,
    fingerprint), sources, then the disclaimer.
 5. **Not included**, if any source was unreachable.
 
@@ -109,5 +112,5 @@ If no market reaches the company, say so plainly and list the lines you checked.
 
 ## More
 
-- Worked example (Ford: one direct and two race links; election risk Low, policy risk High): [references/example-ford.md](references/example-ford.md)
+- Worked example (Ford: one direct and two race links; election risk Low, policy risk Medium): [references/example-ford.md](references/example-ford.md)
 - How the numbers are computed and shown: [references/methodology.md](references/methodology.md)

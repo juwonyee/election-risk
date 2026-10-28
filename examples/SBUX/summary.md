@@ -9,7 +9,7 @@ Base: FY2025 (GAAP operating income) operating profit $2.94B (verified).
 | Exposure | LIMITED | biggest if it happens: −$120M a year (−4.1% of profit) |
 | Policy | WEAK LINK | for results of 1% of profit or more, who wins moves the chance by 5 points at most |
 | Market | PRICED | 4 markets on Kalshi and Polymarket |
-| Red Team | CAUTION | 10 flags to read |
+| Red Team | CAUTION | 7 flags to read |
 
 **Risk Officer:** Election risk LOW · Policy risk LOW
 
@@ -43,9 +43,6 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - Wisconsin: Crowley's row bundles '$15 now' (no effect on Starbucks) with '$20 by 2030' (the part that matters); Tiffany's block-veto 0.07 applies to the $20 row
 
 **Red Team:**
-- the PRO Act (easier union organizing, first-contract arbitration) becomes law: the impact range is wide (−$40.0M to −$300M); read how it was built.
-- the federal minimum wage rises to $17 by 2030 (Raise the Wage Act): the impact range is wide (−$40.0M to −$250M); read how it was built.
-- Wisconsin raises its minimum wage to $20 by 2030: the impact range is wide (−$4.0M to −$14.0M); read how it was built.
 - New York City enacts a $30 minimum wage by 2030: the impact is an estimate, not a reported number.
 
 Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.

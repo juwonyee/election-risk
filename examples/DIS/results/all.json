@@ -187,7 +187,7 @@
       "level": "no market",
       "id": null,
       "score": 0.0,
-      "text": "No Nov 3 contest decides anything that moves Disney."
+      "text": "No Nov 3 contest was linked to Disney in this run."
     },
     "policy": {
       "level": "medium",
@@ -205,7 +205,7 @@
     }
   },
   "red_team": [
-    "a federal film and TV production tax credit becomes law: the impact range is wide (+$200M to +$700M); read how it was built.",
+    "Policy risk MEDIUM would be LOW at the low end (+$200M) of the impact range for: a federal film and TV production tax credit becomes law. Read how the impact was built.",
     "a federal film and TV production tax credit becomes law: the impact is an estimate, not a reported number."
   ],
   "book": {

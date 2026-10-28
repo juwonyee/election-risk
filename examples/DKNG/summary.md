@@ -9,7 +9,7 @@ Base: FY2025 Adjusted EBITDA $620M (verified).
 | Exposure | EXPOSED | biggest if it happens: +$150M a year (+24.2% of profit) |
 | Policy | WEAK LINK | for results of 1% of profit or more, who wins moves the chance by 7 points at most |
 | Market | PRICED | 7 markets on Kalshi and Polymarket, 1 thin |
-| Red Team | CAUTION | 15 flags to read |
+| Red Team | CAUTION | 14 flags to read |
 
 **Risk Officer:** Election risk MEDIUM · Policy risk HIGH
 
@@ -46,12 +46,11 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - New York prediction-market stop: DraftKings' CEO calls the cannibalization 'de minimis'; the impact is small and the federal preemption fight (CFTC v. New York) may decide it rather than the governor
 
 **Red Team:**
-- Congress bans sports contracts on CFTC-regulated prediction markets in 2026: the impact range is wide (+$50.0M to +$300M); read how it was built.
+- Election risk MEDIUM would be LOW at the low end (+$40.0M) of the impact range for: Massachusetts legalizes online casino games. Read how the impact was built.
+- Policy risk HIGH would be MEDIUM at the low end (+$50.0M) of the impact range for: Congress bans sports contracts on CFTC-regulated prediction markets in 2026. Read how the impact was built.
 - Congress bans sports contracts on CFTC-regulated prediction markets in 2026: the impact is an estimate, not a reported number.
-- Congress changes or removes the 90% cap on gambling-loss deductions before 2027: the impact range is wide (+$13.0M to +$51.0M); read how it was built.
 - Congress changes or removes the 90% cap on gambling-loss deductions before 2027: the impact is an estimate, not a reported number.
 - Nebraska voters legalize online sports betting: thin market (3,166); one trader can move the price.
-- Nebraska voters legalize online sports betting: the impact range is wide (+$2.0M to +$10.0M); read how it was built.
 - New York legalizes online casino games: the impact is an estimate, not a reported number.
 - Massachusetts legalizes online casino games: the impact is an estimate, not a reported number.
 

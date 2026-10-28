@@ -32,9 +32,9 @@
 <rect x="1025" y="140" width="150" height="50" rx="25" fill="#1f7a4d"/>
 <text x="1100" y="161" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">ELECTION RISK</text>
 <text x="1100" y="179" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">LOW</text>
-<rect x="1025" y="240" width="150" height="50" rx="25" fill="#b3372e"/>
+<rect x="1025" y="240" width="150" height="50" rx="25" fill="#a86a00"/>
 <text x="1100" y="261" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">POLICY RISK</text>
-<text x="1100" y="279" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">HIGH</text>
+<text x="1100" y="279" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">MEDIUM</text>
 <text x="1100" y="320" font-size="13" fill="#626875" text-anchor="middle">+ report and card</text>
-<text x="1100" y="120" font-size="13" fill="#626875" text-anchor="middle">Ford, Oct 27</text>
+<text x="1100" y="120" font-size="13" fill="#626875" text-anchor="middle">Ford, Oct 28</text>
 </svg>

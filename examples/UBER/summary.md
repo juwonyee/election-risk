@@ -9,12 +9,12 @@ Base: FY2025 operating profit $5.57B (verified).
 | Exposure | LIMITED | biggest if it happens: −$400M a year (−7.2% of profit) |
 | Policy | STRONG LINK | Bonta 70% vs Gates 0%: California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber (who wins moves it at most 11 points) |
 | Market | PRICED | 6 markets on Kalshi |
-| Red Team | CAUTION | 12 flags to read |
+| Red Team | CAUTION | 10 flags to read |
 
 **Risk Officer:** Election risk LOW · Policy risk NO MARKET
 
 - **Election risk LOW:** California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins (97% on Kalshi); an attorney general of either party would likely pursue it, so who wins moves the chance by at most 11%. For Uber: −$170M a year (−3.1% of profit).
-- **Policy risk NO MARKET:** No policy market prices anything that moves Uber.
+- **Policy risk NO MARKET:** No direct policy market was linked to Uber in this run.
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
@@ -46,11 +46,9 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - Not linked: NYC $30 minimum wage (KXNYCMINWAGE-27JAN01) - rules price a city wage law, which does not cover contractor drivers and needs state authority; CA Insurance Commissioner rows are home-insurance only
 
 **Red Team:**
+- Election risk LOW would be MEDIUM at the high end (−$270M) of the impact range for: California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber. Read how the impact was built.
 - California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: research finds an attorney general's party changes suits against companies by only 3-11 points, so the election swing is capped at 0.11.
 - California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: the impact is an estimate, not a reported number.
-- Florida rolls back its 2022-23 tort reforms: the impact range is wide (−$15.0M to −$60.0M); read how it was built.
-- California bans automated deactivation of app drivers: the impact range is wide (−$7.0M to −$40.0M); read how it was built.
-- Oregon sets a per-minute and per-mile minimum pay for rideshare drivers: the impact range is wide (−$5.0M to −$25.0M); read how it was built.
 
 Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
 

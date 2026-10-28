@@ -17,15 +17,18 @@ Full files (structure.md, markets.json, summary.md, report.html, card.svg):
    (`block: majority`, 0). `erisk book find --tag clean-cars-ev --state CA`: Becerra is "open to revising"
    the 2035 gas-car rule (`vague`, 0.05); Hilton has no row (0).
 4. **Links.**
-   - Direct: USMCA notice before 2027 (the rung matching the impact's timing). Impact: ~352k Mexican-built
-     vehicles a year × ~$25k × the 25% Section 232 rate on the half not yet tariffed, plus parts: −$2.0B
-     (range −$1.1B to −$3.5B), `estimated`, every input sourced.
-   - Race: House control → tariff repeal, +$1.0B if it happens, p 0.05 / 0.
+   - Direct: USMCA notice before 2027 (the rung matching the impact's timing). No filing states the number,
+     so it is built from sourced inputs: ~335k Mexican-built vehicles sold in the US a year × ~$25k × the 25%
+     Section 232 rate × ~50% non-US content, plus ~$0.25B for parts: −$1.3B (range −$0.7B to −$2.5B),
+     `estimated`.
+   - Race: House control → repeal of the Section 232 auto and metals tariffs, +$1.0B if it happens (Ford's
+     own 2026 net tariff cost), p 0.05 / 0.
    - Race: California governor → gas-car rule relaxed, +$100M, p 0.05 / 0.
 5. **Run.** `erisk validate`, `erisk snapshot`, `erisk compute` for `F`.
-6. **Result.** Election risk LOW, policy risk HIGH. Policy: "Kalshi puts 8% on: the US gives notice to leave
-   USMCA before 2027. For Ford: −$2.00B a year (−29.5% of profit)." Election: nothing passes the bar; the
-   biggest is +$1.00B if Congress repeals the tariffs, but only 5% even if Democrats win. Who wins Nov 3 barely
-   changes Ford's odds. That is a finding, not a failure.
-7. **Red Team.** The USMCA impact is an estimate built on an import-value assumption, and a notice can be a
-   negotiating move later withdrawn (Kalshi's other USMCA market prices the same notice at 17%, thin).
+6. **Result** (prices of Oct 28). Election risk LOW, policy risk MEDIUM. Policy: "Kalshi puts 6% on: the US
+   gives notice to leave USMCA before 2027. For Ford: −$1.30B a year (−19.2% of profit)." Election: nothing
+   passes the bar; the biggest is +$1.00B if Congress repeals the tariffs, but only 5% even if Democrats win.
+   Who wins Nov 3 barely changes Ford's odds. That is a finding, not a failure.
+7. **Red Team.** The engine flags that policy risk would be HIGH at the high end of the USMCA range (−$2.50B):
+   the verdict rests on the non-US content share. A notice can also be a negotiating move later withdrawn
+   (Kalshi's thinner USMCA outcomes market prices a US notice at about 13%).

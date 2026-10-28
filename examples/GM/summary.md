@@ -39,7 +39,7 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - Book row doubt (MI-governor.md): Benson 'subnational agreements with Canada' is 'make: alone' p 0.45 although the row itself says its effect on federal tariffs is unclear; a governor has no tariff lever, so it is not linked.
 
 **Red Team:**
-- the US sends notice to leave USMCA: the impact range is wide (−$1.00B to −$3.50B); read how it was built.
+- Policy risk MEDIUM would be HIGH at the high end (−$3.50B) of the impact range for: the US sends notice to leave USMCA. Read how the impact was built.
 - the US sends notice to leave USMCA: the impact is an estimate, not a reported number.
 
 Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.

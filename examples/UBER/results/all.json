@@ -762,7 +762,7 @@
       {
         "analyst": "Red Team",
         "signal": "CAUTION",
-        "note": "12 flags to read"
+        "note": "10 flags to read"
       }
     ],
     "election": {
@@ -775,7 +775,7 @@
       "level": "no market",
       "id": null,
       "score": 0.0,
-      "text": "No policy market prices anything that moves Uber."
+      "text": "No direct policy market was linked to Uber in this run."
     },
     "card": "election"
   },
@@ -787,11 +787,9 @@
     "policy": null
   },
   "red_team": [
+    "Election risk LOW would be MEDIUM at the high end (−$270M) of the impact range for: California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber. Read how the impact was built.",
     "California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: research finds an attorney general's party changes suits against companies by only 3-11 points, so the election swing is capped at 0.11.",
-    "California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: the impact is an estimate, not a reported number.",
-    "Florida rolls back its 2022-23 tort reforms: the impact range is wide (−$15.0M to −$60.0M); read how it was built.",
-    "California bans automated deactivation of app drivers: the impact range is wide (−$7.0M to −$40.0M); read how it was built.",
-    "Oregon sets a per-minute and per-mile minimum pay for rideshare drivers: the impact range is wide (−$5.0M to −$25.0M); read how it was built."
+    "California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: the impact is an estimate, not a reported number."
   ],
   "book": {
     "source": "built here",

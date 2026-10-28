@@ -41,9 +41,9 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - Sports-ban market (Polymarket) is thin: $21k volume, 10-25 cent spread
 
 **Red Team:**
+- Policy risk HIGH would be LOW at the low end ($0) of the impact range for: the Clarity Act (crypto market-structure law) becomes law before 2028. Read how the impact was built.
 - the Clarity Act (crypto market-structure law) becomes law before 2028: the impact is an estimate, not a reported number.
 - a federal law bans sports contracts on CFTC-regulated prediction markets in 2026: the impact is an estimate, not a reported number.
-- Texas moves to shut prediction-market betting as a gambling loophole: the impact range is wide (−$4.0M to −$15.0M); read how it was built.
 
 Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
 

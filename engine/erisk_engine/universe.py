@@ -32,7 +32,8 @@ SIDE = re.compile(r"margin|vote percent|vote share|share of|turnout|drop out|how
                   r"announce|pull the| & |party (will )?wins? (white|latino|young|black|women|men|independ)|"
                   r"favorite on|closer senate|number of rounds|ap call|outright|tossup|safe republican|biden-trump|"
                   r"minority leader|number of republican|core four|any statewide|on a federal|on-time|"
-                  r"independent or 3rd|worst|best tossup|citizenship|leave the|change parties|trickle|senate seat on|"
+                  r"independent or 3rd|worst|best tossup|citizenship|leave (the )?(race|house|senate|party|democratic|republican|office|cabinet|administration|ballot)|"
+                  r"change parties|trickle|senate seat on|"
                   r"supermajorit|premier|older (wo)?men|silver|trump\+|rally|closer governor", re.I)
 # Direct policy markets: the Yes is a law, rule, tariff, regulator or court action, or a government deal.
 POLICY = re.compile(r"tariff|tax|bill|act|law|legislat|regulat|ban|banned|moratorium|"

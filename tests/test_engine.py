@@ -138,6 +138,19 @@ class Compute(unittest.TestCase):
         self.assertTrue(v["below_bar"])
         self.assertIn("only 5% even if Democrats win", v["text"])
 
+    def test_range_flag_only_when_the_verdict_flips(self):
+        def row(central, low, high):
+            return {"id": "d", "type": "direct", "event_plain": "a law passes.", "meaningful": True,
+                    "impact": {"central": central * 1e9, "low": low * 1e9, "high": high * 1e9, "status": "verified"},
+                    "impact_pct": {"central": central, "low": low, "high": high}, "chance": 0.10,
+                    "election_swing": 0, "volume": 1e6, "price": {"venue": "Kalshi", "prob": 0.10}}
+        self.assertEqual(compute.range_flips([row(-0.30, -0.25, -0.90)]), [])  # 3x wide, HIGH throughout
+        flips = compute.range_flips([row(-0.30, -0.10, -0.40)])
+        self.assertEqual(len(flips), 1)
+        self.assertIn("Policy risk HIGH would be MEDIUM at the low end (−$100M) of the impact range for: a law "
+                      "passes.", flips[0])
+        self.assertNotIn("high end", flips[0])
+
     def test_unsourced_chance_counts_as_zero(self):
         data = compute.run(self.tmp / "SO")
         self.assertTrue(any("no source link" in f for f in data["red_team"]))
@@ -159,6 +172,15 @@ class Universe(unittest.TestCase):
         self.assertIsNone(c(self.ev("kalshi:Y", "Bulgarian presidential election winner?", "2027-11-15",
                                     category="Elections")))
         self.assertIsNone(c(self.ev("kalshi:Z", "Tiny race", "2027-11-03", volume=10, category="Elections")))
+
+    def test_leaving_a_trade_deal_is_policy_leaving_a_seat_is_not(self):
+        c = universe.classify
+        self.assertEqual(c(self.ev("kalshi:KXUSMCA-26", "Will Trump try to leave the USMCA?", "2027-01-01",
+                                   category="Politics")), "policy")
+        self.assertIsNone(c(self.ev("kalshi:A", "Will Cory Mills leave the House?", "2026-11-03",
+                                    category="Elections")))
+        self.assertIsNone(c(self.ev("kalshi:B", "Will John Fetterman leave the Democratic party?", "2026-11-03",
+                                    category="Elections")))
 
     def test_policy_needs_a_policy_word(self):
         c = universe.classify

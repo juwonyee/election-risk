@@ -151,17 +151,45 @@ def _score(r: dict, side: str) -> float:
     return abs(r["impact_pct"]["central"]) * (r["election_swing"] if side == "election" else r["chance"])
 
 
+def _level(score: float) -> str:
+    return "high" if score >= RISK_HIGH else "medium" if score >= RISK_MEDIUM else "low"
+
+
+def _top(results: list[dict], side: str) -> dict | None:
+    """The meaningful result a verdict rests on, or None when nothing on that side passes the bar."""
+    ok = [r for r in results if r["meaningful"] and (r["type"] == "race") == (side == "election")]
+    return max(ok, key=lambda r: (_score(r, side), abs(r["impact"]["central"]))) if ok else None
+
+
+def range_flips(results: list[dict]) -> list[str]:
+    """A verdict that changes level somewhere in its row's impact range, with the end that changes it."""
+    out = []
+    for side in ("election", "policy"):
+        r = _top(results, side)
+        if not r:
+            continue
+        mult = r["election_swing"] if side == "election" else r["chance"]
+        level = _level(_score(r, side))
+        ends = sorted(("low", "high"), key=lambda k: abs(r["impact_pct"][k]))
+        alt = [(k, _level(abs(r["impact_pct"][k]) * mult)) for k in ends]
+        alt = [f"{lv.upper()} at the {end} end ({fmt_money(r['impact'][k])})"
+               for (k, lv), end in zip(alt, ("low", "high")) if lv != level]
+        if alt:
+            out.append(f"{side.capitalize()} risk {level.upper()} would be {' and '.join(alt)} of the impact range "
+                       f"for: {r['event_plain'].rstrip('.')}. Read how the impact was built.")
+    return out
+
+
 def verdict(results: list[dict], side: str, company: str) -> dict:
     rows = [r for r in results if (r["type"] == "race") == (side == "election")]
     if not rows:
-        what = "Nov 3 contest decides" if side == "election" else "policy market prices"
-        return {"level": "no market", "id": None, "score": 0.0, "text": f"No {what} anything that moves {company}."}
-    ok = [r for r in rows if r["meaningful"]]
-    if ok:
-        top = max(ok, key=lambda r: (_score(r, side), abs(r["impact"]["central"])))
+        what = "Nov 3 contest" if side == "election" else "direct policy market"
+        return {"level": "no market", "id": None, "score": 0.0,
+                "text": f"No {what} was linked to {company} in this run."}
+    top = _top(results, side)
+    if top:
         s = _score(top, side)
-        level = "high" if s >= RISK_HIGH else "medium" if s >= RISK_MEDIUM else "low"
-        return {"level": level, "id": top["id"], "score": s, "text": headline_text(top, company)}
+        return {"level": _level(s), "id": top["id"], "score": s, "text": headline_text(top, company)}
     top = max(rows, key=lambda r: abs(r["impact"]["central"]))
     return {"level": "low", "id": top["id"], "score": 0.0, "below_bar": True,
             "text": f"Nothing passes the bar. Biggest: {fmt_money(top['impact']['central'])} {per(top['impact'])} "
@@ -171,7 +199,7 @@ def verdict(results: list[dict], side: str, company: str) -> dict:
 def signals(results: list[dict], flags: int) -> list[dict]:
     """One word per analyst, with the fact behind it."""
     if not results:
-        return [{"analyst": a, "signal": "NO MARKET", "note": "no market reaches the company"}
+        return [{"analyst": a, "signal": "NO MARKET", "note": "no market was linked to the company"}
                 for a in ("Exposure", "Policy", "Market", "Red Team")]
     big = max(results, key=lambda r: abs(r["impact_pct"]["central"]))
     out = [{"analyst": "Exposure", "signal": "EXPOSED" if abs(big["impact_pct"]["central"]) >= EXPOSED_SHARE
@@ -250,13 +278,9 @@ def red_team(results: list[dict]) -> list[str]:
                            f"percentage points; check the impact is sized on that, not on a promised freeze or cut.")
         if r["volume"] < THIN:
             out.append(f"{name}: thin market ({r['volume']:,.0f}); one trader can move the price.")
-        lo, hi = sorted(abs(r["impact"][k]) for k in ("low", "high"))
-        if lo and hi / lo > 3:
-            out.append(f"{name}: the impact range is wide ({fmt_money(r['impact']['low'])} to "
-                       f"{fmt_money(r['impact']['high'])}); read how it was built.")
         if r["impact"]["status"] == "estimated" and r["meaningful"]:
             out.append(f"{name}: the impact is an estimate, not a reported number.")
-    return out
+    return range_flips(results) + out
 
 
 def _price_text(r: dict) -> str:
