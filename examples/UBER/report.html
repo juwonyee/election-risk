@@ -32,11 +32,36 @@ border-radius:8px;margin:8px 0;white-space:pre-wrap}
 .box{border-left:3px solid var(--warn);padding:10px 14px;background:var(--card);border-radius:8px;margin:16px 0}
 ul{padding-left:20px}a{color:inherit}
 footer{margin-top:28px;color:var(--mute);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+.sigs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}@media(max-width:640px){.sigs{grid-template-columns:1fr 1fr}}
+.sig{background:var(--chip);border-radius:10px;padding:10px 12px}.sig b{display:block;font-size:15px;margin:2px 0}
+.sig small{color:var(--mute);font-size:12px}
+.lvl{display:inline-block;color:#fff;font-weight:700;font-size:15px;padding:3px 12px;border-radius:99px}
+.high{background:#b3372e}.medium{background:#a86a00}.low{background:#1f7a4d}.no-market{background:#626875}
+.shot svg{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
+button{font:inherit;font-size:14px;padding:6px 14px;border-radius:8px;border:1px solid var(--line);
+background:var(--chip);color:var(--ink);cursor:pointer;margin-top:10px}
 </style></head><body><div class="wrap">
 <div class="kicker">Uber Technologies (UBER) · Election risk desk</div>
 <h1>What Nov 3 could do to Uber's profit</h1>
 <div class="asof">Prices as of 2026-10-27 03:26 UTC</div>
-<div class="lead"><div class="label">Election headline</div>California&#x27;s misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins (97% on Kalshi); an attorney general of either party would likely pursue it, so who wins moves the chance by at most 11%. For Uber: −$170M a year (−3.1% of profit).</div><div class="lead"><div class="label">Policy headline</div>None: no result passes the bar (1% of profit, volume 10,000, chance 5%).</div>
+<section class="card"><div class="label">Desk board</div><div class="sigs"><div class="sig"><small>Exposure analyst</small><b>LIMITED</b><small>biggest if it happens: −$400M a year (−7.2% of profit)</small></div><div class="sig"><small>Policy analyst</small><b>STRONG LINK</b><small>Bonta 70% vs Gates 0%: California&#x27;s misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber (who wins moves it at most 11 points)</small></div><div class="sig"><small>Market analyst</small><b>PRICED</b><small>6 markets on Kalshi</small></div><div class="sig"><small>Red Team</small><b>CAUTION</b><small>12 flags to read</small></div></div><div class="label" style="margin-top:18px">Risk Officer</div><div class="grid"><div><div class="label">Election risk</div><span class="lvl low">LOW</span><div style="margin-top:8px">California&#x27;s misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins (97% on Kalshi); an attorney general of either party would likely pursue it, so who wins moves the chance by at most 11%. For Uber: −$170M a year (−3.1% of profit).</div></div><div><div class="label">Policy risk</div><span class="lvl no-market">NO MARKET</span><div style="margin-top:8px">No policy market prices anything that moves Uber.</div></div></div><div class="sub" style="margin-top:12px;font-size:13px">High = share of profit × chance (policy) or × election swing (election) of at least 2% of profit; Medium at least 0.5%.</div></section><section class="card"><div class="label">Share card</div><div class="shot"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f7f6f2"/>
+<text x="90" y="150" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="72" font-weight="750" fill="#16181d" text-anchor="start">Uber<tspan fill="#626875" font-size="40" font-weight="500">  UBER</tspan></text>
+<rect x="1096" y="92" width="414" height="72" rx="36" fill="#1f7a4d"/>
+<text x="1303.0" y="140" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">ELECTION RISK  LOW</text>
+<text x="90" y="470" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="230" font-weight="800" fill="#b3372e" text-anchor="start">−$170M<tspan fill="#626875" font-size="60" font-weight="500"> a year</tspan></text>
+<text x="90" y="570" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="50" font-weight="500" fill="#2a2d34" text-anchor="start">if Bonta wins and California&#x27;s misclassification suit</text>
+<text x="90" y="634" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="50" font-weight="500" fill="#2a2d34" text-anchor="start">against Uber ends in a Lyft-sized settlement scaled to</text>
+<text x="90" y="714" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="40" font-weight="500" fill="#626875" text-anchor="start">70% if Bonta wins  ·  Bonta 97% to win on Kalshi</text>
+<text x="90" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="400" fill="#626875" text-anchor="start">AI risk desk for the Nov 3 midterms  ·  prices 2026-10-27  ·  not investment advice</text>
+<text x="1510" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="600" fill="#626875" text-anchor="end">github.com/juwonyee/election-risk</text>
+</svg></div><button id="png">Save card as PNG</button></section><script>
+document.getElementById('png').onclick=function(){var s=new XMLSerializer().serializeToString(
+document.querySelector('.shot svg'));var i=new Image();i.onload=function(){var c=document.createElement('canvas');
+c.width=1600;c.height=900;c.getContext('2d').drawImage(i,0,0);c.toBlob(function(b){var a=document.createElement('a');
+a.href=URL.createObjectURL(b);a.download='UBER-election-risk.png';a.click();});};
+i.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s);};
+</script>
 <h2 style="margin:30px 0 4px;font-size:20px">Exposure analyst</h2><div class="sub">Where the profit comes from and what a government can move.</div>
 <section class="card">Base: FY2025 operating profit $5.57B <a href="https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm">source</a> <span class="chip ver">verified</span><br>Full profit structure: <code>structure.md</code> in this folder.</section>
 <section class="card"><div class="label">Locked in regardless of the election</div><ul><li>California SB 623 (signed 2026-06-25): medical-lien damage limits and rideshare safety rules; both competing November initiatives withdrawn</li><li>California Prop 22 upheld: drivers stay contractors with an earnings floor (120% of state minimum wage)</li><li>Massachusetts 2024 AG settlement (contractors with a pay floor) and the 2024 driver-union ballot law</li><li>NYC TLC driver minimum pay and FHV licence cap</li><li>Federal tax changes in P.L. 119-21 through 2028 (below operating profit)</li></ul></section>

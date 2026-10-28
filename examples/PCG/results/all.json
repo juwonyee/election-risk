@@ -340,6 +340,43 @@
     "2026-10-27T03:07:34+00:00"
   ],
   "generated_at": "2026-10-27T03:28:38+00:00",
+  "board": {
+    "signals": [
+      {
+        "analyst": "Exposure",
+        "signal": "EXPOSED",
+        "note": "biggest if it happens: −$1.00B a year (−21.1% of profit)"
+      },
+      {
+        "analyst": "Policy",
+        "signal": "STRONG LINK",
+        "note": "Becerra 30% vs Hilton 0%: California freezes PG&E's rates for a year"
+      },
+      {
+        "analyst": "Market",
+        "signal": "PRICED",
+        "note": "2 markets on Kalshi and Polymarket"
+      },
+      {
+        "analyst": "Red Team",
+        "signal": "CAUTION",
+        "note": "8 flags to read"
+      }
+    ],
+    "election": {
+      "level": "high",
+      "id": "pcg-ca-gov-rate-freeze",
+      "score": 0.037902716361339225,
+      "text": "If Becerra wins (96% on Kalshi), the chance that California freezes PG&E's rates for a year is 30%, vs 0% if Hilton wins. For PG&E: −$600M a year (−12.6% of profit)."
+    },
+    "policy": {
+      "level": "no market",
+      "id": null,
+      "score": 0.0,
+      "text": "No policy market prices anything that moves PG&E."
+    },
+    "card": "election"
+  },
   "headlines": {
     "election": {
       "id": "pcg-ca-gov-rate-freeze",

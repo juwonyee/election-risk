@@ -2,19 +2,32 @@
 
 Base: FY2025 operating profit $5.57B (verified).
 
-**Election headline:** California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins (97% on Kalshi); an attorney general of either party would likely pursue it, so who wins moves the chance by at most 11%. For Uber: −$170M a year (−3.1% of profit).
-**Policy headline:** none (no result passes the bar)
+**Desk board**
+
+| Analyst | Signal | Why |
+|---|---|---|
+| Exposure | LIMITED | biggest if it happens: −$400M a year (−7.2% of profit) |
+| Policy | STRONG LINK | Bonta 70% vs Gates 0%: California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber (who wins moves it at most 11 points) |
+| Market | PRICED | 6 markets on Kalshi |
+| Red Team | CAUTION | 12 flags to read |
+
+**Risk Officer:** Election risk LOW · Policy risk NO MARKET
+
+- **Election risk LOW:** California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins (97% on Kalshi); an attorney general of either party would likely pursue it, so who wins moves the chance by at most 11%. For Uber: −$170M a year (−3.1% of profit).
+- **Policy risk NO MARKET:** No policy market prices anything that moves Uber.
+
+High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
 | Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
-| the PRO Act becomes law and app drivers can bargain collectively nationwide: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$400M (−$250M to −$750M) | -7.2% | 0.05 | no |
-| California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins, 0% if Gates win (`KXCAATTORNEYGENERAL-26`) | Bonta 97% / Gates 3% Kalshi | 68% | −$170M (−$100M to −$270M) | -3.1% | 0.11 | yes |
-| a federal 'significant control' contractor test becomes law: 5% if Republicans win, 0% if Democrats win (`CONTROLH-2026`) | Republicans 10% / Democrats 90% Kalshi | 0% | +$50.0M ($0 to +$150M) | +0.9% | 0.05 | no |
-| Florida rolls back its 2022-23 tort reforms: 15% if Jolly wins, 7% if Donalds win (`GOVPARTYFL-26`) | Jolly 20% / Donalds 80% Kalshi | 9% | −$30.0M (−$15.0M to −$60.0M) | -0.5% | 0.08 | no |
-| California bans automated deactivation of app drivers: 15% if Hilton wins, 0% if Becerra wins (`KXGOVCA-26`) | Hilton 4% / Becerra 96% Kalshi | 1% | −$15.0M (−$7.0M to −$40.0M) | -0.3% | 0.15 | no |
-| Oregon sets a per-minute and per-mile minimum pay for rideshare drivers: 35% if Democrats win, 0% if Republicans win (`KXSTATELEG-ORHOUS26`) | Democrats 98% / Republicans 2% Kalshi | 34% | −$15.0M (−$5.0M to −$25.0M) | -0.3% | 0.35 | no |
+| the PRO Act becomes law and app drivers can bargain collectively nationwide: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$400M (−$250M to −$750M) | -7.2% | +0.05 if Democrats win | no |
+| California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins, 0% if Gates wins (`KXCAATTORNEYGENERAL-26`) | Bonta 97% / Gates 3% Kalshi | 68% | −$170M (−$100M to −$270M) | -3.1% | +0.11 if Bonta wins | yes |
+| a federal 'significant control' contractor test becomes law: 5% if Republicans win, 0% if Democrats win (`CONTROLH-2026`) | Republicans 10% / Democrats 90% Kalshi | 0% | +$50.0M ($0 to +$150M) | +0.9% | +0.05 if Republicans win | no |
+| Florida rolls back its 2022-23 tort reforms: 15% if Jolly wins, 7% if Donalds wins (`GOVPARTYFL-26`) | Jolly 20% / Donalds 80% Kalshi | 9% | −$30.0M (−$15.0M to −$60.0M) | -0.5% | +0.08 if Jolly wins | no |
+| California bans automated deactivation of app drivers: 15% if Hilton wins, 0% if Becerra wins (`KXGOVCA-26`) | Hilton 4% / Becerra 96% Kalshi | 1% | −$15.0M (−$7.0M to −$40.0M) | -0.3% | +0.15 if Hilton wins | no |
+| Oregon sets a per-minute and per-mile minimum pay for rideshare drivers: 35% if Democrats win, 0% if Republicans win (`KXSTATELEG-ORHOUS26`) | Democrats 98% / Republicans 2% Kalshi | 34% | −$15.0M (−$5.0M to −$25.0M) | -0.3% | +0.35 if Democrats win | no |
 
-Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins (chances are upper bounds from historical rates).
+Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
 
 **Locked in regardless:**
 - California SB 623 (signed 2026-06-25): medical-lien damage limits and rideshare safety rules; both competing November initiatives withdrawn

@@ -337,6 +337,44 @@
     "2026-10-27T03:09:51+00:00"
   ],
   "generated_at": "2026-10-27T03:28:36+00:00",
+  "board": {
+    "signals": [
+      {
+        "analyst": "Exposure",
+        "signal": "EXPOSED",
+        "note": "biggest if it happens: −$2.00B a year (−29.5% of profit)"
+      },
+      {
+        "analyst": "Policy",
+        "signal": "WEAK LINK",
+        "note": "who wins moves no chance by more than 5 points"
+      },
+      {
+        "analyst": "Market",
+        "signal": "PRICED",
+        "note": "3 markets on Kalshi"
+      },
+      {
+        "analyst": "Red Team",
+        "signal": "CAUTION",
+        "note": "10 flags to read"
+      }
+    ],
+    "election": {
+      "level": "low",
+      "id": "f-house-tariff-repeal",
+      "score": 0.0,
+      "below_bar": true,
+      "text": "Nothing passes the bar. Biggest: +$1.00B a year (+14.7% of profit) if Congress repeals the President's tariffs, including the auto and parts tariffs, but only 5% even if Democrats win."
+    },
+    "policy": {
+      "level": "high",
+      "id": "f-usmca-withdrawal",
+      "score": 0.024926253687315634,
+      "text": "Kalshi puts 8% on: the US gives notice to leave USMCA before 2027. For Ford: −$2.00B a year (−29.5% of profit)."
+    },
+    "card": "policy"
+  },
   "headlines": {
     "election": null,
     "policy": {

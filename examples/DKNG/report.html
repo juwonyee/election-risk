@@ -32,11 +32,36 @@ border-radius:8px;margin:8px 0;white-space:pre-wrap}
 .box{border-left:3px solid var(--warn);padding:10px 14px;background:var(--card);border-radius:8px;margin:16px 0}
 ul{padding-left:20px}a{color:inherit}
 footer{margin-top:28px;color:var(--mute);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+.sigs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}@media(max-width:640px){.sigs{grid-template-columns:1fr 1fr}}
+.sig{background:var(--chip);border-radius:10px;padding:10px 12px}.sig b{display:block;font-size:15px;margin:2px 0}
+.sig small{color:var(--mute);font-size:12px}
+.lvl{display:inline-block;color:#fff;font-weight:700;font-size:15px;padding:3px 12px;border-radius:99px}
+.high{background:#b3372e}.medium{background:#a86a00}.low{background:#1f7a4d}.no-market{background:#626875}
+.shot svg{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
+button{font:inherit;font-size:14px;padding:6px 14px;border-radius:8px;border:1px solid var(--line);
+background:var(--chip);color:var(--ink);cursor:pointer;margin-top:10px}
 </style></head><body><div class="wrap">
 <div class="kicker">DraftKings Inc. (DKNG) · Election risk desk</div>
 <h1>What Nov 3 could do to DraftKings's profit</h1>
 <div class="asof">Prices as of 2026-10-27 03:27 UTC</div>
-<div class="lead"><div class="label">Election headline</div>None: no result passes the bar (1% of profit, volume 10,000, chance 5%).</div><div class="lead"><div class="label">Policy headline</div>Polymarket puts 18% on: Congress bans sports contracts on CFTC-regulated prediction markets in 2026. For DraftKings: +$150M a year (+24.2% of profit).</div>
+<section class="card"><div class="label">Desk board</div><div class="sigs"><div class="sig"><small>Exposure analyst</small><b>EXPOSED</b><small>biggest if it happens: +$150M a year (+24.2% of profit)</small></div><div class="sig"><small>Policy analyst</small><b>WEAK LINK</b><small>who wins moves no chance by more than 7 points</small></div><div class="sig"><small>Market analyst</small><b>PRICED</b><small>7 markets on Kalshi and Polymarket, 1 thin</small></div><div class="sig"><small>Red Team</small><b>CAUTION</b><small>15 flags to read</small></div></div><div class="label" style="margin-top:18px">Risk Officer</div><div class="grid"><div><div class="label">Election risk</div><span class="lvl medium">MEDIUM</span><div style="margin-top:8px">If Healey wins (95% on Kalshi), the chance that Massachusetts legalizes online casino games is 7%, vs 0% if Minogue wins. For DraftKings: +$80.0M a year (+12.9% of profit).</div></div><div><div class="label">Policy risk</div><span class="lvl high">HIGH</span><div style="margin-top:8px">Polymarket puts 18% on: Congress bans sports contracts on CFTC-regulated prediction markets in 2026. For DraftKings: +$150M a year (+24.2% of profit).</div></div></div><div class="sub" style="margin-top:12px;font-size:13px">High = share of profit × chance (policy) or × election swing (election) of at least 2% of profit; Medium at least 0.5%.</div></section><section class="card"><div class="label">Share card</div><div class="shot"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f7f6f2"/>
+<text x="90" y="150" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="72" font-weight="750" fill="#16181d" text-anchor="start">DraftKings<tspan fill="#626875" font-size="40" font-weight="500">  DKNG</tspan></text>
+<rect x="1115" y="92" width="395" height="72" rx="36" fill="#b3372e"/>
+<text x="1312.5" y="140" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">POLICY RISK  HIGH</text>
+<text x="90" y="470" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="230" font-weight="800" fill="#1f7a4d" text-anchor="start">+$150M<tspan fill="#626875" font-size="60" font-weight="500"> a year</tspan></text>
+<text x="90" y="570" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="50" font-weight="500" fill="#2a2d34" text-anchor="start">if Congress bans sports contracts on CFTC-regulated</text>
+<text x="90" y="634" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="50" font-weight="500" fill="#2a2d34" text-anchor="start">prediction markets in 2026</text>
+<text x="90" y="714" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="40" font-weight="500" fill="#626875" text-anchor="start">Polymarket 18%</text>
+<text x="90" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="400" fill="#626875" text-anchor="start">AI risk desk for the Nov 3 midterms  ·  prices 2026-10-27  ·  not investment advice</text>
+<text x="1510" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="600" fill="#626875" text-anchor="end">github.com/juwonyee/election-risk</text>
+</svg></div><button id="png">Save card as PNG</button></section><script>
+document.getElementById('png').onclick=function(){var s=new XMLSerializer().serializeToString(
+document.querySelector('.shot svg'));var i=new Image();i.onload=function(){var c=document.createElement('canvas');
+c.width=1600;c.height=900;c.getContext('2d').drawImage(i,0,0);c.toBlob(function(b){var a=document.createElement('a');
+a.href=URL.createObjectURL(b);a.download='DKNG-election-risk.png';a.click();});};
+i.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s);};
+</script>
 <h2 style="margin:30px 0 4px;font-size:20px">Exposure analyst</h2><div class="sub">Where the profit comes from and what a government can move.</div>
 <section class="card">Base: FY2025 Adjusted EBITDA $620M <a href="https://www.sec.gov/Archives/edgar/data/1883685/000188368526000013/dkng-20251231.htm">source</a> <span class="chip ver">verified</span><br>Full profit structure: <code>structure.md</code> in this folder.</section>
 <section class="card"><div class="label">Locked in regardless of the election</div><ul><li>State gaming taxes (~$1.6B a year, estimated) are set by state budget bills; no Nov 3 market prices a tax-rate change in any DraftKings state, and the policy book has no tax-rate rows for NY, PA, NJ, MI, IL or OH</li><li>2025 state tax hikes already enacted: NJ online rate to 19.75%, Illinois per-wager fee (Jul 2025), Maryland to 20%, Louisiana to 21.5%</li><li>Federal wagering excise tax (0.25% of handle, ~-$134M a year, estimated): no market prices repeal</li><li>NJ and VA governors were elected in 2025; Ontario is provincial</li></ul></section>

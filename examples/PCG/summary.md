@@ -2,15 +2,28 @@
 
 Base: FY2025 operating profit $4.75B (verified).
 
-**Election headline:** If Becerra wins (96% on Kalshi), the chance that California freezes PG&E's rates for a year is 30%, vs 0% if Hilton wins. For PG&E: −$600M a year (−12.6% of profit).
-**Policy headline:** none (no result passes the bar)
+**Desk board**
+
+| Analyst | Signal | Why |
+|---|---|---|
+| Exposure | EXPOSED | biggest if it happens: −$1.00B a year (−21.1% of profit) |
+| Policy | STRONG LINK | Becerra 30% vs Hilton 0%: California freezes PG&E's rates for a year |
+| Market | PRICED | 2 markets on Kalshi and Polymarket |
+| Red Team | CAUTION | 8 flags to read |
+
+**Risk Officer:** Election risk HIGH · Policy risk NO MARKET
+
+- **Election risk HIGH:** If Becerra wins (96% on Kalshi), the chance that California freezes PG&E's rates for a year is 30%, vs 0% if Hilton wins. For PG&E: −$600M a year (−12.6% of profit).
+- **Policy risk NO MARKET:** No policy market prices anything that moves PG&E.
+
+High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
 | Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
-| California breaks up PG&E into locally owned utilities: 0% if Becerra wins, 15% if Hilton wins (`KXGOVCA-26`) | Becerra 96% / Hilton 4% Kalshi · 95% / 3% Polymarket | 1% | −$1.00B (−$400M to −$2.00B) | -21.1% | 0.15 | no |
-| California freezes PG&E's rates for a year: 30% if Becerra wins, 0% if Hilton wins (`KXGOVCA-26`) | Becerra 96% / Hilton 4% Kalshi · 95% / 3% Polymarket | 29% | −$600M (−$400M to −$1.00B) | -12.6% | 0.30 | yes |
+| California breaks up PG&E into locally owned utilities: 0% if Becerra wins, 15% if Hilton wins (`KXGOVCA-26`) | Becerra 96% / Hilton 4% Kalshi · 95% / 3% Polymarket | 1% | −$1.00B (−$400M to −$2.00B) | -21.1% | +0.15 if Hilton wins | no |
+| California freezes PG&E's rates for a year: 30% if Becerra wins, 0% if Hilton wins (`KXGOVCA-26`) | Becerra 96% / Hilton 4% Kalshi · 95% / 3% Polymarket | 29% | −$600M (−$400M to −$1.00B) | -12.6% | +0.30 if Becerra wins | yes |
 
-Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins (chances are upper bounds from historical rates).
+Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
 
 **Locked in regardless:**
 - AB 1054 Wildfire Fund and SB 254 (2025) are law: $352M a year fund expense, the disallowance cap at 20% of equity T&D rate base, and the $2.9B fire-mitigation equity exclusion (~-$150M a year)

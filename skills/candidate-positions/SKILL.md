@@ -4,7 +4,7 @@ description: Builds a sourced policy book of what each Nov 3, 2026 US election w
 license: MIT
 metadata:
   author: juwonyee
-  version: "2.0.1"
+  version: "2.0.2"
 ---
 
 # Candidate positions (the policy book)

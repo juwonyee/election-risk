@@ -2,16 +2,29 @@
 
 Base: FY2025 operating profit $1.44B (verified).
 
-**Election headline:** none (no result passes the bar)
-**Policy headline:** Kalshi puts 21% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit).
+**Desk board**
+
+| Analyst | Signal | Why |
+|---|---|---|
+| Exposure | EXPOSED | biggest if it happens: +$370M a year (+25.8% of profit) |
+| Policy | WEAK LINK | no Nov 3 contest moves 1% of profit |
+| Market | PRICED | 3 markets on Kalshi and Polymarket |
+| Red Team | CAUTION | 10 flags to read |
+
+**Risk Officer:** Election risk LOW · Policy risk HIGH
+
+- **Election risk LOW:** Nothing passes the bar. Biggest: −$8.0M a year (−0.6% of profit) if Texas moves to shut prediction-market betting as a gambling loophole, but under 1% of profit.
+- **Policy risk HIGH:** Kalshi puts 21% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit).
+
+High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
 | Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | the Clarity Act (crypto market-structure law) becomes law before 2028 (`KXCRYPTOSTRUCTURE-26JAN`) | 21% Kalshi | 21% | +$370M ($0 to +$740M) | +25.8% | 0.05 | yes |
 | a federal law bans sports contracts on CFTC-regulated prediction markets in 2026 (`law-banning-sports-prediction-markets-enacted-in-2026`) | 18% Polymarket | 18% | −$65.0M (−$40.0M to −$110M) | -4.5% | 0.00 | yes |
-| Texas moves to shut prediction-market betting as a gambling loophole: 35% if Patrick wins, 0% if Goodwin wins (`KXLTGOVTX-26`) | Patrick 71% / Goodwin 29% Kalshi · 72% / 28% Polymarket | 25% | −$8.0M (−$4.0M to −$15.0M) | -0.6% | 0.35 | no |
+| Texas moves to shut prediction-market betting as a gambling loophole: 35% if Patrick wins, 0% if Goodwin wins (`KXLTGOVTX-26`) | Patrick 71% / Goodwin 29% Kalshi · 72% / 28% Polymarket | 25% | −$8.0M (−$4.0M to −$15.0M) | -0.6% | +0.35 if Patrick wins | no |
 
-Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins (chances are upper bounds from historical rates).
+Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
 
 **Locked in regardless:**
 - GENIUS Act (stablecoin law, July 2025) is in force; $1,348.8M of FY2025 stablecoin revenue sits under it

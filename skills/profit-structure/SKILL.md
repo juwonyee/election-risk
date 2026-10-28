@@ -4,7 +4,7 @@ description: Writes an equity analyst's first page on a listed company - where i
 license: MIT
 metadata:
   author: juwonyee
-  version: "2.0.1"
+  version: "2.0.2"
 ---
 
 # Profit structure

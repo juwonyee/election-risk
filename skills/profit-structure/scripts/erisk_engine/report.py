@@ -4,6 +4,7 @@ from __future__ import annotations
 import html
 import webbrowser
 
+from . import card
 from .util import fmt_money, fmt_volume
 
 CSS = """
@@ -38,7 +39,23 @@ border-radius:8px;margin:8px 0;white-space:pre-wrap}
 .box{border-left:3px solid var(--warn);padding:10px 14px;background:var(--card);border-radius:8px;margin:16px 0}
 ul{padding-left:20px}a{color:inherit}
 footer{margin-top:28px;color:var(--mute);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+.sigs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}@media(max-width:640px){.sigs{grid-template-columns:1fr 1fr}}
+.sig{background:var(--chip);border-radius:10px;padding:10px 12px}.sig b{display:block;font-size:15px;margin:2px 0}
+.sig small{color:var(--mute);font-size:12px}
+.lvl{display:inline-block;color:#fff;font-weight:700;font-size:15px;padding:3px 12px;border-radius:99px}
+.high{background:#b3372e}.medium{background:#a86a00}.low{background:#1f7a4d}.no-market{background:#626875}
+.shot svg{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
+button{font:inherit;font-size:14px;padding:6px 14px;border-radius:8px;border:1px solid var(--line);
+background:var(--chip);color:var(--ink);cursor:pointer;margin-top:10px}
 """
+
+PNG_JS = """<script>
+document.getElementById('png').onclick=function(){var s=new XMLSerializer().serializeToString(
+document.querySelector('.shot svg'));var i=new Image();i.onload=function(){var c=document.createElement('canvas');
+c.width=1600;c.height=900;c.getContext('2d').drawImage(i,0,0);c.toBlob(function(b){var a=document.createElement('a');
+a.href=URL.createObjectURL(b);a.download=this_name;a.click();});};
+i.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s);};
+</script>"""
 
 e = html.escape
 
@@ -101,6 +118,27 @@ def _card(r: dict, den_label: str) -> str:
     return f'<section class="card">{head}{body}{tags}{notes}{more}</section>'
 
 
+def _board(data: dict) -> str:
+    """The desk board on top: one signal per analyst, the two verdicts, the share card."""
+    b = data.get("board")
+    if not b:
+        return ""
+    sigs = "".join(f'<div class="sig"><small>{e(s["analyst"])}{"" if s["analyst"] == "Red Team" else " analyst"}'
+                   f'</small><b>{e(s["signal"])}</b><small>{e(s["note"])}</small></div>' for s in b["signals"])
+    verdicts = "".join(
+        f'<div><div class="label">{k.capitalize()} risk</div>'
+        f'<span class="lvl {b[k]["level"].replace(" ", "-")}">{e(b[k]["level"].upper())}</span>'
+        f'<div style="margin-top:8px">{e(b[k]["text"])}</div></div>' for k in ("election", "policy"))
+    svg = card.build(data)
+    shot = (f'<section class="card"><div class="label">Share card</div><div class="shot">{svg}</div>'
+            f'<button id="png">Save card as PNG</button></section>'
+            + PNG_JS.replace("this_name", repr(f"{data['company']['ticker']}-election-risk.png")) if svg else "")
+    return (f'<section class="card"><div class="label">Desk board</div><div class="sigs">{sigs}</div>'
+            f'<div class="label" style="margin-top:18px">Risk Officer</div><div class="grid">{verdicts}</div>'
+            f'<div class="sub" style="margin-top:12px;font-size:13px">High = share of profit × chance (policy) or '
+            f'× election swing (election) of at least 2% of profit; Medium at least 0.5%.</div></section>{shot}')
+
+
 def _desk(role: str, what: str) -> str:
     return f'<h2 style="margin:30px 0 4px;font-size:20px">{e(role)}</h2><div class="sub">{e(what)}</div>'
 
@@ -108,11 +146,7 @@ def _desk(role: str, what: str) -> str:
 def build(data: dict) -> str:
     c, d, results = data["company"], data["denominator"], data["results"]
     ranked = sorted(results, key=lambda r: -abs(r["impact"]["central"]))
-    heads = data.get("headlines") or {}
-    lead = "".join(
-        f'<div class="lead"><div class="label">{label}</div>'
-        f'{e(heads[k]["text"]) if heads.get(k) else "None: no result passes the bar (1% of profit, volume 10,000, chance 5%)."}'
-        f'</div>' for k, label in (("election", "Election headline"), ("policy", "Policy headline")))
+    lead = _board(data)
     asof = ", ".join(dict.fromkeys(a.replace("T", " ")[:16] + " UTC" for a in data.get("prices_as_of", []))) or "n/a"
     notes = data.get("notes") or {}
     locked = ""

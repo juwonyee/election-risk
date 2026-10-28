@@ -4,7 +4,7 @@ description: Works like a sell-side risk desk on one listed company - starts fro
 license: MIT
 metadata:
   author: juwonyee
-  version: "2.0.1"
+  version: "2.0.2"
 ---
 
 # Election risk for a company
@@ -96,17 +96,18 @@ compute if you changed anything.
 
 ## Answer format
 
-1. **Election headline** and **Policy headline**, exactly as `summary.md` prints them (or "none").
+1. **Desk board**: the analyst table, the Risk Officer line and both verdicts with their reasons, exactly as
+   `summary.md` prints them.
 2. The table from `summary.md`.
 3. **Locked in regardless**, then **Red Team** (weakest links and flags), with an offer to change them.
-4. The report path and the card path exactly as `compute` printed them (if it printed "Card: none", say
-   there is no card because no headline passed the bar), the policy book line (source, date, fingerprint),
-   sources, then the disclaimer.
+4. The report path and the card path exactly as `compute` printed them (the report has a "Save card as PNG"
+   button; if it printed "Card: none", say no market reaches the company), the policy book line (source, date,
+   fingerprint), sources, then the disclaimer.
 5. **Not included**, if any source was unreachable.
 
 If no market reaches the company, say so plainly and list the lines you checked.
 
 ## More
 
-- Worked example (Ford: one direct and two race links, no election headline): [references/example-ford.md](references/example-ford.md)
+- Worked example (Ford: one direct and two race links; election risk Low, policy risk High): [references/example-ford.md](references/example-ford.md)
 - How the numbers are computed and shown: [references/methodology.md](references/methodology.md)

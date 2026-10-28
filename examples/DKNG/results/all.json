@@ -681,6 +681,43 @@
     "2026-10-27T03:27:45+00:00"
   ],
   "generated_at": "2026-10-27T03:28:39+00:00",
+  "board": {
+    "signals": [
+      {
+        "analyst": "Exposure",
+        "signal": "EXPOSED",
+        "note": "biggest if it happens: +$150M a year (+24.2% of profit)"
+      },
+      {
+        "analyst": "Policy",
+        "signal": "WEAK LINK",
+        "note": "who wins moves no chance by more than 7 points"
+      },
+      {
+        "analyst": "Market",
+        "signal": "PRICED",
+        "note": "7 markets on Kalshi and Polymarket, 1 thin"
+      },
+      {
+        "analyst": "Red Team",
+        "signal": "CAUTION",
+        "note": "15 flags to read"
+      }
+    ],
+    "election": {
+      "level": "medium",
+      "id": "dkng-ma-igaming",
+      "score": 0.00903225806451613,
+      "text": "If Healey wins (95% on Kalshi), the chance that Massachusetts legalizes online casino games is 7%, vs 0% if Minogue wins. For DraftKings: +$80.0M a year (+12.9% of profit)."
+    },
+    "policy": {
+      "level": "high",
+      "id": "dkng-pm-ban-law",
+      "score": 0.044758064516129036,
+      "text": "Polymarket puts 18% on: Congress bans sports contracts on CFTC-regulated prediction markets in 2026. For DraftKings: +$150M a year (+24.2% of profit)."
+    },
+    "card": "policy"
+  },
   "headlines": {
     "election": null,
     "policy": {

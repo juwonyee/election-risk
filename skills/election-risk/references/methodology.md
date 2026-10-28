@@ -19,14 +19,24 @@
 Share of profit = impact / denominator. No expected value is shown: the question is how big the swing is and
 what the market says about its odds.
 
-## Chance, election swing, headlines
+## Chance, election swing
 - **Chance**: direct = market price; race = sum over candidates of (price to win × book `p`).
 - **Election swing**: race = |book `p` of the market leader − the runner-up's|; direct = `election.swing` when a
   Nov 3 contest also decides the policy, else 0.
 - **Meaningful**: |impact| ≥ 1% of the base, market volume ≥ 10,000, chance ≥ 5%.
-- **Election headline**: the biggest meaningful result with a swing ≥ 0.10. **Policy headline**: the biggest
-  meaningful result with a smaller swing. Either can be "none".
 - Book chances are historical rates over a full term, used for about two years: read them as upper bounds.
+
+## Desk board
+- **Signals**: Exposure `EXPOSED` when any result is ≥ 10% of profit if it happens, else `LIMITED`. Policy
+  `STRONG LINK` when a race result of ≥ 1% of profit has a swing ≥ 0.10, else `WEAK LINK` (`NO RACE` with no
+  race links). Market `PRICED` unless every market is thin (`THIN`). Red Team `CAUTION` with any flag or weak
+  link, else `CLEAR`.
+- **Verdicts**: election risk scores race results as share of profit × election swing; policy risk scores
+  direct results as share of profit × chance. Only meaningful results count. High ≥ 2% of profit, Medium ≥
+  0.5%, else Low; a side with no links is "no market". When nothing on a side is meaningful, the verdict is Low
+  and names the biggest result with the reason it misses the bar.
+- **Card**: the number behind the higher verdict (ties: a meaningful result, then the higher score).
+- The election swing is printed with its direction: "+0.30 if Becerra wins".
 
 ## Red Team flags (automatic)
 A race candidate with p > 0 and no source (the engine counts that chance as 0); a thin market; an impact range wider than 3×; a meaningful result

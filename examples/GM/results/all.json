@@ -211,6 +211,44 @@
     "2026-10-27T03:07:54+00:00"
   ],
   "generated_at": "2026-10-27T03:28:37+00:00",
+  "board": {
+    "signals": [
+      {
+        "analyst": "Exposure",
+        "signal": "EXPOSED",
+        "note": "biggest if it happens: +$3.00B a year (+23.5% of profit)"
+      },
+      {
+        "analyst": "Policy",
+        "signal": "WEAK LINK",
+        "note": "who wins moves no chance by more than 5 points"
+      },
+      {
+        "analyst": "Market",
+        "signal": "PRICED",
+        "note": "2 markets on Kalshi"
+      },
+      {
+        "analyst": "Red Team",
+        "signal": "CAUTION",
+        "note": "8 flags to read"
+      }
+    ],
+    "election": {
+      "level": "low",
+      "id": "gm-house-tariff-repeal",
+      "score": 0.0,
+      "below_bar": true,
+      "text": "Nothing passes the bar. Biggest: +$3.00B a year (+23.5% of profit) if Congress passes a law overturning the President's tariffs, but only 5% even if Democrats win."
+    },
+    "policy": {
+      "level": "medium",
+      "id": "gm-usmca-exit",
+      "score": 0.011269318270965719,
+      "text": "Kalshi puts 8% on: the US sends notice to leave USMCA. For GM: −$1.70B a year (−13.3% of profit)."
+    },
+    "card": "policy"
+  },
   "headlines": {
     "election": null,
     "policy": {

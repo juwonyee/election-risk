@@ -32,11 +32,36 @@ border-radius:8px;margin:8px 0;white-space:pre-wrap}
 .box{border-left:3px solid var(--warn);padding:10px 14px;background:var(--card);border-radius:8px;margin:16px 0}
 ul{padding-left:20px}a{color:inherit}
 footer{margin-top:28px;color:var(--mute);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+.sigs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}@media(max-width:640px){.sigs{grid-template-columns:1fr 1fr}}
+.sig{background:var(--chip);border-radius:10px;padding:10px 12px}.sig b{display:block;font-size:15px;margin:2px 0}
+.sig small{color:var(--mute);font-size:12px}
+.lvl{display:inline-block;color:#fff;font-weight:700;font-size:15px;padding:3px 12px;border-radius:99px}
+.high{background:#b3372e}.medium{background:#a86a00}.low{background:#1f7a4d}.no-market{background:#626875}
+.shot svg{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
+button{font:inherit;font-size:14px;padding:6px 14px;border-radius:8px;border:1px solid var(--line);
+background:var(--chip);color:var(--ink);cursor:pointer;margin-top:10px}
 </style></head><body><div class="wrap">
 <div class="kicker">Coinbase Global (COIN) · Election risk desk</div>
 <h1>What Nov 3 could do to Coinbase's profit</h1>
 <div class="asof">Prices as of 2026-10-27 03:08 UTC</div>
-<div class="lead"><div class="label">Election headline</div>None: no result passes the bar (1% of profit, volume 10,000, chance 5%).</div><div class="lead"><div class="label">Policy headline</div>Kalshi puts 21% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit).</div>
+<section class="card"><div class="label">Desk board</div><div class="sigs"><div class="sig"><small>Exposure analyst</small><b>EXPOSED</b><small>biggest if it happens: +$370M a year (+25.8% of profit)</small></div><div class="sig"><small>Policy analyst</small><b>WEAK LINK</b><small>no Nov 3 contest moves 1% of profit</small></div><div class="sig"><small>Market analyst</small><b>PRICED</b><small>3 markets on Kalshi and Polymarket</small></div><div class="sig"><small>Red Team</small><b>CAUTION</b><small>10 flags to read</small></div></div><div class="label" style="margin-top:18px">Risk Officer</div><div class="grid"><div><div class="label">Election risk</div><span class="lvl low">LOW</span><div style="margin-top:8px">Nothing passes the bar. Biggest: −$8.0M a year (−0.6% of profit) if Texas moves to shut prediction-market betting as a gambling loophole, but under 1% of profit.</div></div><div><div class="label">Policy risk</div><span class="lvl high">HIGH</span><div style="margin-top:8px">Kalshi puts 21% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit).</div></div></div><div class="sub" style="margin-top:12px;font-size:13px">High = share of profit × chance (policy) or × election swing (election) of at least 2% of profit; Medium at least 0.5%.</div></section><section class="card"><div class="label">Share card</div><div class="shot"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f7f6f2"/>
+<text x="90" y="150" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="72" font-weight="750" fill="#16181d" text-anchor="start">Coinbase<tspan fill="#626875" font-size="40" font-weight="500">  COIN</tspan></text>
+<rect x="1115" y="92" width="395" height="72" rx="36" fill="#b3372e"/>
+<text x="1312.5" y="140" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">POLICY RISK  HIGH</text>
+<text x="90" y="470" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="230" font-weight="800" fill="#1f7a4d" text-anchor="start">+$370M<tspan fill="#626875" font-size="60" font-weight="500"> a year</tspan></text>
+<text x="90" y="570" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="50" font-weight="500" fill="#2a2d34" text-anchor="start">if the Clarity Act (crypto market-structure law)</text>
+<text x="90" y="634" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="50" font-weight="500" fill="#2a2d34" text-anchor="start">becomes law before 2028</text>
+<text x="90" y="714" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="40" font-weight="500" fill="#626875" text-anchor="start">Kalshi 21%</text>
+<text x="90" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="400" fill="#626875" text-anchor="start">AI risk desk for the Nov 3 midterms  ·  prices 2026-10-27  ·  not investment advice</text>
+<text x="1510" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="600" fill="#626875" text-anchor="end">github.com/juwonyee/election-risk</text>
+</svg></div><button id="png">Save card as PNG</button></section><script>
+document.getElementById('png').onclick=function(){var s=new XMLSerializer().serializeToString(
+document.querySelector('.shot svg'));var i=new Image();i.onload=function(){var c=document.createElement('canvas');
+c.width=1600;c.height=900;c.getContext('2d').drawImage(i,0,0);c.toBlob(function(b){var a=document.createElement('a');
+a.href=URL.createObjectURL(b);a.download='COIN-election-risk.png';a.click();});};
+i.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s);};
+</script>
 <h2 style="margin:30px 0 4px;font-size:20px">Exposure analyst</h2><div class="sub">Where the profit comes from and what a government can move.</div>
 <section class="card">Base: FY2025 operating profit $1.44B <a href="https://www.sec.gov/Archives/edgar/data/1679788/000167978826000015/0001679788-26-000015-index.htm">source</a> <span class="chip ver">verified</span><br>Full profit structure: <code>structure.md</code> in this folder.</section>
 <section class="card"><div class="label">Locked in regardless of the election</div><ul><li>GENIUS Act (stablecoin law, July 2025) is in force; $1,348.8M of FY2025 stablecoin revenue sits under it</li><li>R&amp;D expensing restored by P.L. 119-21 (below operating profit)</li><li>Nevada already stops sports event contracts (Gaming Control Board action); both governor candidates back that (book p 0.30 each, swing 0), so it is not a link</li></ul></section>

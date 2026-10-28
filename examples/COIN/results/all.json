@@ -314,6 +314,44 @@
     "2026-10-27T03:08:22+00:00"
   ],
   "generated_at": "2026-10-27T03:28:37+00:00",
+  "board": {
+    "signals": [
+      {
+        "analyst": "Exposure",
+        "signal": "EXPOSED",
+        "note": "biggest if it happens: +$370M a year (+25.8% of profit)"
+      },
+      {
+        "analyst": "Policy",
+        "signal": "WEAK LINK",
+        "note": "no Nov 3 contest moves 1% of profit"
+      },
+      {
+        "analyst": "Market",
+        "signal": "PRICED",
+        "note": "3 markets on Kalshi and Polymarket"
+      },
+      {
+        "analyst": "Red Team",
+        "signal": "CAUTION",
+        "note": "10 flags to read"
+      }
+    ],
+    "election": {
+      "level": "low",
+      "id": "coin-tx-ltgov",
+      "score": 0.0,
+      "below_bar": true,
+      "text": "Nothing passes the bar. Biggest: −$8.0M a year (−0.6% of profit) if Texas moves to shut prediction-market betting as a gambling loophole, but under 1% of profit."
+    },
+    "policy": {
+      "level": "high",
+      "id": "coin-clarity-act",
+      "score": 0.054131252612512185,
+      "text": "Kalshi puts 21% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit)."
+    },
+    "card": "policy"
+  },
   "headlines": {
     "election": null,
     "policy": {

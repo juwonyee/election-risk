@@ -1,12 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
 <rect width="1600" height="900" fill="#f7f6f2"/>
-<rect x="0" y="0" width="16" height="900" fill="#b3372e"/>
-<text x="90" y="120" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#626875" text-anchor="start">POLICY RISK  ·  NOV 3, 2026</text>
-<text x="90" y="210" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="72" font-weight="750" fill="#16181d" text-anchor="start">Ford (F)</text>
-<text x="90" y="300" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="46" font-weight="500" fill="#2a2d34" text-anchor="start">If the US gives notice to leave USMCA before 2027</text>
-<text x="90" y="470" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="120" font-weight="800" fill="#b3372e" text-anchor="start">−$2.00B a year</text>
-<text x="90" y="535" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="40" font-weight="500" fill="#626875" text-anchor="start">−29.5% of adjusted EBIT</text>
-<text x="90" y="620" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="36" font-weight="500" fill="#16181d" text-anchor="start">Kalshi: 8% chance</text>
-<text x="90" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="400" fill="#626875" text-anchor="start">Kalshi prices as of 2026-10-27 03:09 UTC  ·  scenario estimate, not investment advice</text>
-<text x="1520" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="600" fill="#626875" text-anchor="end">github.com/juwonyee/election-risk</text>
+<text x="90" y="150" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="72" font-weight="750" fill="#16181d" text-anchor="start">Ford<tspan fill="#626875" font-size="40" font-weight="500">  F</tspan></text>
+<rect x="1115" y="92" width="395" height="72" rx="36" fill="#b3372e"/>
+<text x="1312.5" y="140" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">POLICY RISK  HIGH</text>
+<text x="90" y="470" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="230" font-weight="800" fill="#b3372e" text-anchor="start">−$2.00B<tspan fill="#626875" font-size="60" font-weight="500"> a year</tspan></text>
+<text x="90" y="570" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="50" font-weight="500" fill="#2a2d34" text-anchor="start">if the US gives notice to leave USMCA before 2027</text>
+<text x="90" y="650" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="40" font-weight="500" fill="#626875" text-anchor="start">Kalshi 8%</text>
+<text x="90" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="400" fill="#626875" text-anchor="start">AI risk desk for the Nov 3 midterms  ·  prices 2026-10-27  ·  not investment advice</text>
+<text x="1510" y="840" font-family="-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="600" fill="#626875" text-anchor="end">github.com/juwonyee/election-risk</text>
 </svg>

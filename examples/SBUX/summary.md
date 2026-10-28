@@ -2,17 +2,30 @@
 
 Base: FY2025 (GAAP operating income) operating profit $2.94B (verified).
 
-**Election headline:** none (no result passes the bar)
-**Policy headline:** Kalshi puts 8% on: New York City enacts a $30 minimum wage by 2030. For Starbucks: −$60.0M a year (−2.0% of profit).
+**Desk board**
+
+| Analyst | Signal | Why |
+|---|---|---|
+| Exposure | LIMITED | biggest if it happens: −$120M a year (−4.1% of profit) |
+| Policy | WEAK LINK | who wins moves no chance by more than 5 points |
+| Market | PRICED | 4 markets on Kalshi and Polymarket |
+| Red Team | CAUTION | 10 flags to read |
+
+**Risk Officer:** Election risk LOW · Policy risk LOW
+
+- **Election risk LOW:** Nothing passes the bar. Biggest: −$120M a year (−4.1% of profit) if the PRO Act (easier union organizing, first-contract arbitration) becomes law, but only 5% even if Democrats win.
+- **Policy risk LOW:** Kalshi puts 8% on: New York City enacts a $30 minimum wage by 2030. For Starbucks: −$60.0M a year (−2.0% of profit).
+
+High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
 | Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
-| the PRO Act (easier union organizing, first-contract arbitration) becomes law: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$120M (−$40.0M to −$300M) | -4.1% | 0.05 | no |
-| the federal minimum wage rises to $17 by 2030 (Raise the Wage Act): 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$100M (−$40.0M to −$250M) | -3.4% | 0.05 | no |
+| the PRO Act (easier union organizing, first-contract arbitration) becomes law: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$120M (−$40.0M to −$300M) | -4.1% | +0.05 if Democrats win | no |
+| the federal minimum wage rises to $17 by 2030 (Raise the Wage Act): 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$100M (−$40.0M to −$250M) | -3.4% | +0.05 if Democrats win | no |
 | New York City enacts a $30 minimum wage by 2030 (`KXNYCMINWAGE-27JAN01`) | 8% Kalshi · 10% Polymarket | 8% | −$60.0M (−$35.0M to −$100M) | -2.0% | 0.00 | yes |
-| Wisconsin raises its minimum wage to $20 by 2030: 25% if Crowley wins, 7% if Tiffany wins (`GOVPARTYWI-26`) | Crowley 78% / Tiffany 22% Kalshi | 21% | −$8.0M (−$4.0M to −$14.0M) | -0.3% | 0.18 | no |
+| Wisconsin raises its minimum wage to $20 by 2030: 25% if Crowley wins, 7% if Tiffany wins (`GOVPARTYWI-26`) | Crowley 78% / Tiffany 22% Kalshi | 21% | −$8.0M (−$4.0M to −$14.0M) | -0.3% | +0.18 if Crowley wins | no |
 
-Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins (chances are upper bounds from historical rates).
+Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
 
 **Locked in regardless:**
 - California fast-food minimum wage of $20/hr (AB 1228, since Apr 2024); further raises go through the Fast Food Council, which no Nov 3 market prices

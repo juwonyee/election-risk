@@ -484,6 +484,44 @@
     "2026-10-27T03:27:05+00:00"
   ],
   "generated_at": "2026-10-27T03:28:39+00:00",
+  "board": {
+    "signals": [
+      {
+        "analyst": "Exposure",
+        "signal": "LIMITED",
+        "note": "biggest if it happens: −$120M a year (−4.1% of profit)"
+      },
+      {
+        "analyst": "Policy",
+        "signal": "WEAK LINK",
+        "note": "who wins moves no chance by more than 5 points"
+      },
+      {
+        "analyst": "Market",
+        "signal": "PRICED",
+        "note": "4 markets on Kalshi and Polymarket"
+      },
+      {
+        "analyst": "Red Team",
+        "signal": "CAUTION",
+        "note": "10 flags to read"
+      }
+    ],
+    "election": {
+      "level": "low",
+      "id": "sbux-house-pro-act",
+      "score": 0.0,
+      "below_bar": true,
+      "text": "Nothing passes the bar. Biggest: −$120M a year (−4.1% of profit) if the PRO Act (easier union organizing, first-contract arbitration) becomes law, but only 5% even if Democrats win."
+    },
+    "policy": {
+      "level": "low",
+      "id": "sbux-nyc-30-wage",
+      "score": 0.0015323843901110126,
+      "text": "Kalshi puts 8% on: New York City enacts a $30 minimum wage by 2030. For Starbucks: −$60.0M a year (−2.0% of profit)."
+    },
+    "card": "policy"
+  },
   "headlines": {
     "election": null,
     "policy": {

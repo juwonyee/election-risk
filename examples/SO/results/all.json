@@ -232,6 +232,45 @@
     "2026-10-15T13:00:25+00:00"
   ],
   "generated_at": "2026-10-28T01:22:16+00:00",
+  "board": {
+    "signals": [
+      {
+        "analyst": "Exposure",
+        "signal": "LIMITED",
+        "note": "biggest if it happens: +$660M a year (+9.1% of profit)"
+      },
+      {
+        "analyst": "Policy",
+        "signal": "WEAK LINK",
+        "note": "who wins does not move any chance"
+      },
+      {
+        "analyst": "Market",
+        "signal": "PRICED",
+        "note": "2 markets on Kalshi and Polymarket, 1 thin"
+      },
+      {
+        "analyst": "Red Team",
+        "signal": "CAUTION",
+        "note": "5 flags to read"
+      }
+    ],
+    "election": {
+      "level": "low",
+      "id": "so-ga-governor",
+      "score": 0.0,
+      "below_bar": true,
+      "text": "Nothing passes the bar. Biggest: −$130M a year (−1.8% of profit) if Georgia pauses new data-center construction, but 0% whoever wins."
+    },
+    "policy": {
+      "level": "low",
+      "id": "so-ga-4gw",
+      "score": 0.0,
+      "below_bar": true,
+      "text": "Nothing passes the bar. Biggest: +$660M a year (+9.1% of profit) if Georgia approves 4 more gigawatts for Georgia Power, but the market is thin (4,000)."
+    },
+    "card": "election"
+  },
   "headlines": {
     "election": null,
     "policy": null

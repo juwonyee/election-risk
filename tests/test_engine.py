@@ -94,11 +94,41 @@ class Compute(unittest.TestCase):
         self.assertAlmostEqual(r["election_swing"], 0.45)
         self.assertEqual(data["headlines"]["election"]["id"], race["id"])
         self.assertIn("<svg", card.build(data))
-        self.assertIn("Election headline", (ws / "summary.md").read_text(encoding="utf-8"))
+        self.assertIn("Risk Officer", (ws / "summary.md").read_text(encoding="utf-8"))
         self.assertTrue(any("thin market" in f for f in data["red_team"]))
+        b = data["board"]
+        self.assertEqual(b["election"]["id"], race["id"])
+        self.assertIn("+0.45 if", compute.swing_text(r))
+        self.assertEqual([s["analyst"] for s in b["signals"]], ["Exposure", "Policy", "Market", "Red Team"])
 
-    def test_no_headline_no_card(self):
-        self.assertIsNone(card.build({"headlines": {"election": None, "policy": None}}))
+    def test_no_market_no_card(self):
+        self.assertIsNone(card.build({"board": compute.board([], 0, "X")}))
+
+    def test_every_run_ends_in_a_verdict_and_a_card(self):
+        data = compute.run(self.tmp / "SO")
+        b = data["board"]
+        self.assertTrue(all(b[k]["level"] in compute.LEVELS for k in ("election", "policy")))
+        self.assertIsNotNone(b["card"])
+        self.assertIn("<svg", card.build(data))
+        self.assertIn("Save card as PNG", report.build(data))
+
+    def test_verdict_levels_and_reason_below_bar(self):
+        def row(kind, share, chance, swing, meaningful):
+            r = {"id": kind + str(share), "type": kind, "event_plain": "a law passes", "meaningful": meaningful,
+                 "impact": {"central": share * 1e9, "low": 0, "high": 0, "status": "estimated"},
+                 "impact_pct": {"central": share, "low": 0, "high": 0}, "chance": chance,
+                 "election_swing": swing, "volume": 1e6, "price": {"venue": "Kalshi", "prob": chance}}
+            if kind == "race":
+                r["outcomes"] = [{"last": "Democrats", "p_policy": 0.05, "price": {"prob": 0.9}},
+                                 {"last": "Republicans", "p_policy": 0.0, "price": {"prob": 0.1}}]
+            return r
+        self.assertEqual(compute.verdict([row("direct", -0.30, 0.08, 0, True)], "policy", "X")["level"], "high")
+        self.assertEqual(compute.verdict([row("direct", -0.13, 0.08, 0, True)], "policy", "X")["level"], "medium")
+        self.assertEqual(compute.verdict([row("direct", -0.02, 0.08, 0, True)], "policy", "X")["level"], "low")
+        self.assertEqual(compute.verdict([], "election", "X")["level"], "no market")
+        v = compute.verdict([row("race", 0.15, 0.045, 0.05, False)], "election", "X")
+        self.assertTrue(v["below_bar"])
+        self.assertIn("only 5% even if Democrats win", v["text"])
 
     def test_unsourced_chance_counts_as_zero(self):
         data = compute.run(self.tmp / "SO")

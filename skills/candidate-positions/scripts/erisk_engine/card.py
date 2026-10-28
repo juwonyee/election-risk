@@ -1,64 +1,68 @@
-"""One 16:9 share card (card.svg) for the headline: company, the yearly profit change, the market's odds.
+"""One 16:9 share card (card.svg): company, its risk verdict, one number, what it takes, the odds.
 
-Plain SVG, no fonts or images to fetch, so it opens anywhere and converts to PNG with any browser.
-The election headline is used when there is one, else the policy headline; no headline, no card.
+Plain SVG, no fonts or images to fetch, so it opens anywhere and converts to PNG with any browser (the
+report has a button for it). The number is the one behind the higher of the two desk-board verdicts, so
+every run with a market gets a card, a Low one included.
 """
 from __future__ import annotations
 
 import html
 import textwrap
 
+from .compute import sides, why_below, _wins
 from .util import REPO_URL, fmt_money
 
 W, H = 1600, 900
 FONT = "-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif"
+INK, MUTE, BG = "#16181d", "#626875", "#f7f6f2"
+LEVEL_COLOR = {"high": "#b3372e", "medium": "#a86a00", "low": "#1f7a4d", "no market": MUTE}
 
 
-def _text(x, y, s, size, weight=400, fill="#16181d", anchor="start") -> str:
+def _text(x, y, s, size, weight=400, fill=INK, anchor="start", tail="") -> str:
     return (f'<text x="{x}" y="{y}" font-family="{FONT}" font-size="{size}" font-weight="{weight}" '
-            f'fill="{fill}" text-anchor="{anchor}">{html.escape(s)}</text>')
+            f'fill="{fill}" text-anchor="{anchor}">{html.escape(s)}{tail}</text>')
 
 
 def build(data: dict) -> str | None:
-    heads = data.get("headlines") or {}
-    kind = "election" if heads.get("election") else ("policy" if heads.get("policy") else None)
+    b = data.get("board") or {}
+    kind = b.get("card")
     if not kind:
         return None
-    r = next(x for x in data["results"] if x["id"] == heads[kind]["id"])
+    v = b[kind]
+    r = next(x for x in data["results"] if x["id"] == v["id"])
     c, imp = data["company"], r["impact"]
-    up = imp["central"] >= 0
-    color = "#1f7a4d" if up else "#b3372e"
+    date = (data.get("prices_as_of") or [""])[-1][:10]
     if r["type"] == "race":
-        a, b = sorted(r["outcomes"], key=lambda o: -o["price"]["prob"])[:2]
-        hi, lo = (a, b) if a["p_policy"] >= b["p_policy"] else (b, a)
-        odds = [f"{hi['last']} {hi['price']['prob']:.0%} to win  ·  then {hi['p_policy']:.0%} chance it happens",
-                f"{lo['last']} {lo['price']['prob']:.0%} to win  ·  then {lo['p_policy']:.0%}"]
-        venue = hi["price"]["venue"]
-        verb = "win" if hi["last"].endswith("s") else "wins"
-        if_line = f"If {hi['last']} {verb} and {r['event_plain'].rstrip('.')}"
+        hi, _ = sides(r)
+        if_line = f"if {_wins(hi['last'])} and {r['event_plain'].rstrip('.')}"
+        odds = (f"{hi['p_policy']:.0%} if {_wins(hi['last'])}  ·  {hi['last']} {hi['price']['prob']:.0%} to win "
+                f"on {hi['price']['venue']}")
     else:
-        odds = [f"{r['price']['venue']}: {r['price']['prob']:.0%} chance"]
-        venue = r["price"]["venue"]
-        if_line = f"If {r['event_plain'].rstrip('.')}"
-    asof = (data.get("prices_as_of") or [""])[-1].replace("T", " ")[:16]
+        if_line = f"if {r['event_plain'].rstrip('.')}"
+        odds = f"{r['price']['venue']} {r['price']['prob']:.0%}"
+    if v.get("below_bar"):
+        why = why_below(r)
+        odds = why[0].upper() + why[1:]
+    label = f"{kind.upper()} RISK  {v['level'].upper()}"
+    pill_w = len(label) * 19 + 72
+    color = "#1f7a4d" if imp["central"] >= 0 else "#b3372e"
+    per = "once" if imp.get("one_off") else "a year"
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
-             f'<rect width="{W}" height="{H}" fill="#f7f6f2"/>',
-             f'<rect x="0" y="0" width="16" height="{H}" fill="{color}"/>',
-             _text(90, 120, f"{'ELECTION' if kind == 'election' else 'POLICY'} RISK  ·  NOV 3, 2026", 30, 600, "#626875"),
-             _text(90, 210, f"{c['short']} ({c['ticker']})", 72, 750)]
-    y = 300
-    for line in textwrap.wrap(if_line, 52)[:3]:
-        parts.append(_text(90, y, line, 46, 500, "#2a2d34"))
-        y += 60
-    parts.append(_text(90, y + 110, f"{fmt_money(imp['central'])} {'once' if imp.get('one_off') else 'a year'}", 120, 800, color))
-    parts.append(_text(90, y + 175, f"{r['impact_pct']['central']:+.1%} of {data['denominator']['label']}".replace("-", "−", 1), 40, 500,
-                       "#626875"))
-    oy = y + 260
-    for line in odds:
-        parts.append(_text(90, oy, line, 36, 500))
-        oy += 50
-    parts.append(_text(90, H - 60, f"{venue} prices as of {asof} UTC  ·  scenario estimate, not investment advice",
-                       26, 400, "#626875"))
-    parts.append(_text(W - 80, H - 60, REPO_URL, 26, 600, "#626875", "end"))
+             f'<rect width="{W}" height="{H}" fill="{BG}"/>',
+             _text(90, 150, c["short"], 72, 750, tail=f'<tspan fill="{MUTE}" font-size="40" font-weight="500">'
+                                                      f'  {html.escape(c["ticker"])}</tspan>'),
+             f'<rect x="{W - 90 - pill_w}" y="92" width="{pill_w}" height="72" rx="36" '
+             f'fill="{LEVEL_COLOR[v["level"]]}"/>',
+             _text(W - 90 - pill_w / 2, 140, label, 32, 700, "#ffffff", "middle"),
+             _text(90, 470, fmt_money(imp["central"]), 230, 800, color,
+                   tail=f'<tspan fill="{MUTE}" font-size="60" font-weight="500"> {per}</tspan>')]
+    y = 570
+    for line in textwrap.wrap(if_line, 54)[:2]:
+        parts.append(_text(90, y, line, 50, 500, "#2a2d34"))
+        y += 64
+    parts.append(_text(90, y + 16, odds, 40, 500, MUTE))
+    parts.append(_text(90, H - 60, f"AI risk desk for the Nov 3 midterms  ·  prices {date}  ·  not investment advice",
+                       26, 400, MUTE))
+    parts.append(_text(W - 90, H - 60, REPO_URL, 26, 600, MUTE, "end"))
     parts.append("</svg>")
     return "\n".join(parts)

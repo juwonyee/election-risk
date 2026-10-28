@@ -2,20 +2,33 @@
 
 Base: FY2025 Adjusted EBITDA $620M (verified).
 
-**Election headline:** none (no result passes the bar)
-**Policy headline:** Polymarket puts 18% on: Congress bans sports contracts on CFTC-regulated prediction markets in 2026. For DraftKings: +$150M a year (+24.2% of profit).
+**Desk board**
+
+| Analyst | Signal | Why |
+|---|---|---|
+| Exposure | EXPOSED | biggest if it happens: +$150M a year (+24.2% of profit) |
+| Policy | WEAK LINK | who wins moves no chance by more than 7 points |
+| Market | PRICED | 7 markets on Kalshi and Polymarket, 1 thin |
+| Red Team | CAUTION | 15 flags to read |
+
+**Risk Officer:** Election risk MEDIUM · Policy risk HIGH
+
+- **Election risk MEDIUM:** If Healey wins (95% on Kalshi), the chance that Massachusetts legalizes online casino games is 7%, vs 0% if Minogue wins. For DraftKings: +$80.0M a year (+12.9% of profit).
+- **Policy risk HIGH:** Polymarket puts 18% on: Congress bans sports contracts on CFTC-regulated prediction markets in 2026. For DraftKings: +$150M a year (+24.2% of profit).
+
+High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
 | Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
 | Congress bans sports contracts on CFTC-regulated prediction markets in 2026 (`law-banning-sports-prediction-markets-enacted-in-2026`) | 18% Polymarket | 18% | +$150M (+$50.0M to +$300M) | +24.2% | 0.00 | yes |
 | New York legalizes online casino games: 5% if Hochul wins, 5% if Blakeman wins (`GOVPARTYNY-26`) | Hochul 94% / Blakeman 6% Kalshi | 5% | +$125M (+$60.0M to +$150M) | +20.2% | 0.00 | yes |
-| Ohio legalizes online casino games: 5% if Acton wins, 0% if Ramaswamy wins (`GOVPARTYOH-26`) | Acton 82% / Ramaswamy 18% Kalshi | 4% | +$100M (+$50.0M to +$150M) | +16.1% | 0.05 | no |
-| Massachusetts legalizes online casino games: 7% if Healey wins, 0% if Minogue wins (`GOVPARTYMA-26`) | Healey 95% / Minogue 5% Kalshi | 7% | +$80.0M (+$40.0M to +$120M) | +12.9% | 0.07 | yes |
+| Ohio legalizes online casino games: 5% if Acton wins, 0% if Ramaswamy wins (`GOVPARTYOH-26`) | Acton 82% / Ramaswamy 18% Kalshi | 4% | +$100M (+$50.0M to +$150M) | +16.1% | +0.05 if Acton wins | no |
+| Massachusetts legalizes online casino games: 7% if Healey wins, 0% if Minogue wins (`GOVPARTYMA-26`) | Healey 95% / Minogue 5% Kalshi | 7% | +$80.0M (+$40.0M to +$120M) | +12.9% | +0.07 if Healey wins | yes |
 | Congress changes or removes the 90% cap on gambling-loss deductions before 2027 (`KXGAMBLINGREPEAL-26JAN`) | 19% Kalshi | 19% | +$25.0M (+$13.0M to +$51.0M) | +4.0% | 0.00 | yes |
 | Nebraska voters legalize online sports betting (`KXSTATEBALLOTMEASURE-NE26`) | 64% Kalshi (thin) | 64% | +$5.0M (+$2.0M to +$10.0M) | +0.8% | 0.00 | no |
-| New York stops prediction-market sports contracts in the state: 45% if Hochul wins, 0% if Blakeman wins (`GOVPARTYNY-26`) | Hochul 94% / Blakeman 6% Kalshi | 42% | +$2.5M ($0 to +$5.0M) | +0.4% | 0.45 | no |
+| New York stops prediction-market sports contracts in the state: 45% if Hochul wins, 0% if Blakeman wins (`GOVPARTYNY-26`) | Hochul 94% / Blakeman 6% Kalshi | 42% | +$2.5M ($0 to +$5.0M) | +0.4% | +0.45 if Hochul wins | no |
 
-Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins (chances are upper bounds from historical rates).
+Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
 
 **Locked in regardless:**
 - State gaming taxes (~$1.6B a year, estimated) are set by state budget bills; no Nov 3 market prices a tax-rate change in any DraftKings state, and the policy book has no tax-rate rows for NY, PA, NJ, MI, IL or OH

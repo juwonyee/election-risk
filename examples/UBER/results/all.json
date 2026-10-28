@@ -742,6 +742,43 @@
     "2026-10-27T03:26:34+00:00"
   ],
   "generated_at": "2026-10-27T03:28:39+00:00",
+  "board": {
+    "signals": [
+      {
+        "analyst": "Exposure",
+        "signal": "LIMITED",
+        "note": "biggest if it happens: −$400M a year (−7.2% of profit)"
+      },
+      {
+        "analyst": "Policy",
+        "signal": "STRONG LINK",
+        "note": "Bonta 70% vs Gates 0%: California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber (who wins moves it at most 11 points)"
+      },
+      {
+        "analyst": "Market",
+        "signal": "PRICED",
+        "note": "6 markets on Kalshi"
+      },
+      {
+        "analyst": "Red Team",
+        "signal": "CAUTION",
+        "note": "12 flags to read"
+      }
+    ],
+    "election": {
+      "level": "low",
+      "id": "uber-ca-ag-suit",
+      "score": 0.003360287511230908,
+      "text": "California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins (97% on Kalshi); an attorney general of either party would likely pursue it, so who wins moves the chance by at most 11%. For Uber: −$170M a year (−3.1% of profit)."
+    },
+    "policy": {
+      "level": "no market",
+      "id": null,
+      "score": 0.0,
+      "text": "No policy market prices anything that moves Uber."
+    },
+    "card": "election"
+  },
   "headlines": {
     "election": {
       "id": "uber-ca-ag-suit",

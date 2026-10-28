@@ -22,8 +22,9 @@ Full files: the repository's `examples/F/` (structure.md, markets.json, summary.
    - Race: House control → tariff repeal, +$1.0B if it happens, p 0.05 / 0.
    - Race: California governor → gas-car rule relaxed, +$100M, p 0.05 / 0.
 5. **Run.** `erisk validate`, `erisk snapshot`, `erisk compute` for `F`.
-6. **Result.** Policy headline: "Kalshi puts 8% on: the US gives notice to leave USMCA before 2027. For
-   Ford: −$2.00B a year (−29.5% of profit)." Election headline: none. Both race links have a 0.05 swing, below
-   the 0.10 bar: who wins Nov 3 barely changes Ford's odds. That is a finding, not a failure.
+6. **Result.** Election risk LOW, policy risk HIGH. Policy: "Kalshi puts 8% on: the US gives notice to leave
+   USMCA before 2027. For Ford: −$2.00B a year (−29.5% of profit)." Election: nothing passes the bar; the
+   biggest is +$1.00B if Congress repeals the tariffs, but only 5% even if Democrats win. Who wins Nov 3 barely
+   changes Ford's odds. That is a finding, not a failure.
 7. **Red Team.** The USMCA impact is an estimate built on an import-value assumption, and a notice can be a
    negotiating move later withdrawn (Kalshi's other USMCA market prices the same notice at 17%, thin).

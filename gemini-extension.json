@@ -1,6 +1,6 @@
 {
   "name": "election-risk",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "An election risk desk for your agent: four skills that start from how a company makes its profit, map it to every Kalshi and Polymarket market for the Nov 3, 2026 US elections and US policy, and show how much yearly profit changes if each resolves, next to the odds and how much the election moves them. Not investment advice.",
   "contextFileName": "GEMINI.md"
 }

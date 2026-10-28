@@ -3,7 +3,8 @@
   direct: if the market resolves Yes, profit changes by impact          price = market
   race:   if candidate X wins, the policy follows with p_policy(X)      price = market per candidate
 
-No expected values are shown: the answer is the size of the swing and what the market says its odds are.
+No expected values are shown: the answer is the size of the swing and what the market says its odds are
+(size x chance only sorts the verdicts below into High, Medium and Low).
 
 Each result also gets:
   chance          direct: the market price; race: sum over candidates of price to win x p_policy
@@ -12,6 +13,12 @@ Each result also gets:
   meaningful      |impact| >= 1% of the base, market volume >= 10,000, chance >= 5%
 Headlines: the election headline is the biggest meaningful result with a swing of 0.10 or more; the policy
 headline is the biggest meaningful result with a smaller swing. The Red Team list flags weak spots.
+
+The desk board sums it up: one signal per analyst, and two Risk Officer verdicts that every run ends in.
+  election risk  race links: share of profit x election swing (how much who wins moves the chance)
+  policy risk    direct links: share of profit x chance (the market price)
+Only meaningful results count. High at 2% of profit or more, Medium at 0.5%, else Low; a side with no links is
+"no market". When nothing on a side passes the bar, its biggest result is shown with the reason it falls short.
 """
 from __future__ import annotations
 
@@ -25,6 +32,9 @@ HEADLINE_SWING = 0.10
 # Research: an attorney general's party changes suits against companies by 3-11 points (probability table E),
 # so a race decided only through `sue` rows cannot move the chance by more than this.
 SUE_SWING_CAP = 0.11
+RISK_HIGH, RISK_MEDIUM = 0.02, 0.005
+EXPOSED_SHARE = 0.10
+LEVELS = ("no market", "low", "medium", "high")
 
 
 def per(imp: dict) -> str:
@@ -103,12 +113,111 @@ def headlines(results: list[dict]) -> dict:
     return {"election": election["id"] if election else None, "policy": policy["id"] if policy else None}
 
 
+def sides(r: dict) -> tuple[dict, dict]:
+    """Of a race's two front-runners: (the one whose win makes the policy likelier, the other)."""
+    a, b = sorted(r["outcomes"], key=lambda o: -o["price"]["prob"])[:2]
+    return (a, b) if a["p_policy"] >= b["p_policy"] else (b, a)
+
+
+def swing_text(r: dict) -> str:
+    """'+0.30 if Becerra wins': which way who wins moves the chance."""
+    if r["type"] != "race" or r["election_swing"] <= 0:
+        return f"{r['election_swing']:.2f}"
+    return f"+{r['election_swing']:.2f} if {_wins(sides(r)[0]['last'])}"
+
+
+def _pct(r: dict) -> str:
+    return f"{r['impact_pct']['central']:+.1%}".replace("-", "−")
+
+
+def why_below(r: dict) -> str:
+    """Why a result misses the bar, in the words a reader checks first."""
+    if r["chance"] < MEANINGFUL_CHANCE:
+        if r["type"] == "direct":
+            return f"only {r['chance']:.0%} on {r['price']['venue']}"
+        top = max(r["outcomes"], key=lambda o: o["p_policy"])
+        if top["p_policy"] == 0:
+            return "0% whoever wins"
+        if top["p_policy"] <= MEANINGFUL_CHANCE:
+            return f"only {top['p_policy']:.0%} even if {_wins(top['last'])}"
+        are = "are" if _plural(top["last"]) else "is"
+        return f"{top['p_policy']:.0%} if {_wins(top['last'])}, and {top['last']} {are} {top['price']['prob']:.0%} to win"
+    if r["volume"] < THIN:
+        return f"the market is thin ({r['volume']:,.0f})"
+    return "under 1% of profit"
+
+
+def _score(r: dict, side: str) -> float:
+    return abs(r["impact_pct"]["central"]) * (r["election_swing"] if side == "election" else r["chance"])
+
+
+def verdict(results: list[dict], side: str, company: str) -> dict:
+    rows = [r for r in results if (r["type"] == "race") == (side == "election")]
+    if not rows:
+        what = "Nov 3 contest decides" if side == "election" else "policy market prices"
+        return {"level": "no market", "id": None, "score": 0.0, "text": f"No {what} anything that moves {company}."}
+    ok = [r for r in rows if r["meaningful"]]
+    if ok:
+        top = max(ok, key=lambda r: (_score(r, side), abs(r["impact"]["central"])))
+        s = _score(top, side)
+        level = "high" if s >= RISK_HIGH else "medium" if s >= RISK_MEDIUM else "low"
+        return {"level": level, "id": top["id"], "score": s, "text": headline_text(top, company)}
+    top = max(rows, key=lambda r: abs(r["impact"]["central"]))
+    return {"level": "low", "id": top["id"], "score": 0.0, "below_bar": True,
+            "text": f"Nothing passes the bar. Biggest: {fmt_money(top['impact']['central'])} {per(top['impact'])} "
+                    f"({_pct(top)} of profit) if {top['event_plain'].rstrip('.')}, but {why_below(top)}."}
+
+
+def signals(results: list[dict], flags: int) -> list[dict]:
+    """One word per analyst, with the fact behind it."""
+    if not results:
+        return [{"analyst": a, "signal": "NO MARKET", "note": "no market reaches the company"}
+                for a in ("Exposure", "Policy", "Market", "Red Team")]
+    big = max(results, key=lambda r: abs(r["impact_pct"]["central"]))
+    out = [{"analyst": "Exposure", "signal": "EXPOSED" if abs(big["impact_pct"]["central"]) >= EXPOSED_SHARE
+            else "LIMITED", "note": f"biggest if it happens: {fmt_money(big['impact']['central'])} "
+                                    f"{per(big['impact'])} ({_pct(big)} of profit)"}]
+    races = [r for r in results if r["type"] == "race"]
+    linked = [r for r in races if abs(r["impact_pct"]["central"]) >= MEANINGFUL_SHARE]
+    if not races:
+        out.append({"analyst": "Policy", "signal": "NO RACE", "note": "no Nov 3 contest decides a line"})
+    elif not linked:
+        out.append({"analyst": "Policy", "signal": "WEAK LINK", "note": "no Nov 3 contest moves 1% of profit"})
+    else:
+        s = max(linked, key=lambda r: r["election_swing"])
+        if s["election_swing"] >= HEADLINE_SWING:
+            hi, lo = sides(s)
+            capped = f" (who wins moves it at most {SUE_SWING_CAP * 100:.0f} points)" if s.get("swing_capped") else ""
+            out.append({"analyst": "Policy", "signal": "STRONG LINK",
+                        "note": f"{hi['last']} {hi['p_policy']:.0%} vs {lo['last']} {lo['p_policy']:.0%}: "
+                                f"{s['event_plain'].rstrip('.')}{capped}"})
+        else:
+            out.append({"analyst": "Policy", "signal": "WEAK LINK",
+                        "note": f"who wins moves no chance by more than {s['election_swing'] * 100:.0f} points"
+                        if s["election_swing"] > 0 else "who wins does not move any chance"})
+    venues = sorted({q["venue"] for r in results for q in _quotes(r)})
+    thin = sum(r["volume"] < THIN for r in results)
+    out.append({"analyst": "Market", "signal": "PRICED" if thin < len(results) else "THIN",
+                "note": f"{len(results)} market{'s' if len(results) > 1 else ''} on {' and '.join(venues)}"
+                        + (f", {thin} thin" if thin else "")})
+    out.append({"analyst": "Red Team", "signal": "CAUTION" if flags else "CLEAR",
+                "note": f"{flags} flag{'s' if flags != 1 else ''} to read" if flags else "no flags"})
+    return out
+
+
+def board(results: list[dict], flags: int, company: str) -> dict:
+    b = {"signals": signals(results, flags), "election": verdict(results, "election", company),
+         "policy": verdict(results, "policy", company)}
+    rank = {k: (LEVELS.index(b[k]["level"]), not b[k].get("below_bar"), b[k]["score"]) for k in ("election", "policy")}
+    lead = max(rank, key=rank.get)
+    b["card"] = lead if b[lead]["id"] else None
+    return b
+
+
 def headline_text(r: dict, company: str) -> str:
-    pct = f"{r['impact_pct']['central']:+.1%}".replace("-", "−")
-    imp = f"{fmt_money(r['impact']['central'])} {per(r['impact'])} ({pct} of profit)"
+    imp = f"{fmt_money(r['impact']['central'])} {per(r['impact'])} ({_pct(r)} of profit)"
     if r["type"] == "race":
-        a, b = sorted(r["outcomes"], key=lambda o: -o["price"]["prob"])[:2]
-        hi, lo = (a, b) if a["p_policy"] >= b["p_policy"] else (b, a)
+        hi, lo = sides(r)
         if r.get("swing_capped"):
             return (f"{r['event_plain'].rstrip('.')[0].upper()}{r['event_plain'].rstrip('.')[1:]}: "
                     f"{hi['p_policy']:.0%} if {_wins(hi['last'])} ({hi['price']['prob']:.0%} on "
@@ -161,9 +270,14 @@ def _price_text(r: dict) -> str:
     return s
 
 
+def _plural(name: str) -> bool:
+    """Parties are plural ('Democrats win'); people are not, even when the name ends in s ('Bottoms wins')."""
+    return name.endswith(("Democrats", "Republicans", "Independents", "Libertarians", "Greens"))
+
+
 def _wins(name: str) -> str:
     """'Becerra wins', 'Democrats win'."""
-    return f"{name} {'win' if name.endswith('s') else 'wins'}"
+    return f"{name} {'win' if _plural(name) else 'wins'}"
 
 
 def _what_text(r: dict) -> str:
@@ -173,22 +287,33 @@ def _what_text(r: dict) -> str:
     return f"{r['event_plain']}: {chances} (`{r['market']['event']}`)"
 
 
-def summary_markdown(mf: dict, results: list[dict], gaps: list[dict], heads: dict | None = None,
+def board_markdown(b: dict) -> list[str]:
+    L = ["**Desk board**", "", "| Analyst | Signal | Why |", "|---|---|---|"]
+    L += [f"| {s['analyst']} | {s['signal']} | {s['note']} |" for s in b["signals"]]
+    L += ["", f"**Risk Officer:** Election risk {b['election']['level'].upper()} · "
+              f"Policy risk {b['policy']['level'].upper()}", ""]
+    L += [f"- **{k.capitalize()} risk {b[k]['level'].upper()}:** {b[k]['text']}" for k in ("election", "policy")]
+    L += ["", "High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; "
+              "Medium at least 0.5%. Only results that pass the bar count."]
+    return L
+
+
+def summary_markdown(mf: dict, results: list[dict], gaps: list[dict], board_data: dict | None = None,
                      book_info: dict | None = None) -> str:
     c, d = mf["company"], mf["denominator"]
     L = [f"# {c['name']} ({c['ticker']}): what the Nov 3 elections and policy markets could do to its profit", "",
          f"Base: {d['period']} {d['label']} {fmt_money(d['amount'], signed=False)} ({d['status']}).", ""]
-    for key, label in (("election", "Election headline"), ("policy", "Policy headline")):
-        h = (heads or {}).get(key)
-        L.append(f"**{label}:** {h['text'] if h else 'none (no result passes the bar)'}")
+    if board_data:
+        L += board_markdown(board_data)
     L += ["", "| Market (what resolves) | Price | Chance | If it happens, per year | Share of profit | Election swing "
           "| Meaningful |", "|---|---|---|---|---|---|---|"]
     for r in sorted(results, key=lambda r: -abs(r["impact"]["central"])):
         L.append(f"| {_what_text(r)} | {_price_text(r)} | {r['chance']:.0%} | {fmt_money(r['impact']['central'])} "
                  f"({fmt_money(r['impact']['low'])} to {fmt_money(r['impact']['high'])}) | "
-                 f"{r['impact_pct']['central']:+.1%} | {r['election_swing']:.2f} | {'yes' if r['meaningful'] else 'no'} |")
+                 f"{r['impact_pct']['central']:+.1%} | {swing_text(r)} | {'yes' if r['meaningful'] else 'no'} |")
     L += ["", "Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = "
-          "how much the chance moves with who wins (chances are upper bounds from historical rates)."]
+          "how much the chance moves with who wins, and toward whom (chances are upper bounds from historical "
+          "rates)."]
     notes = mf.get("notes") or {}
     if notes.get("locked_in"):
         L += ["", "**Locked in regardless:**"] + [f"- {x}" for x in notes["locked_in"]]
@@ -223,14 +348,17 @@ def run(ws) -> dict:
     as_of = sorted({q["as_of"] for r in results for q in _quotes(r) if q.get("as_of")})
     heads = headlines(results)
     by_id = {r["id"]: r for r in results}
-    out = {"company": mf["company"], "denominator": mf["denominator"], "notes": mf.get("notes") or {},
+    notes = mf.get("notes") or {}
+    flags = red_team(results)
+    out = {"company": mf["company"], "denominator": mf["denominator"], "notes": notes,
            "results": results, "gaps": gaps, "prices_as_of": as_of, "generated_at": now_iso(),
+           "board": board(results, len(flags) + len(notes.get("weak_links") or []), mf["company"]["short"]),
            "headlines": {k: {"id": v, "text": headline_text(by_id[v], mf["company"]["short"])} if v else None
                          for k, v in heads.items()},
-           "red_team": red_team(results), "book": book.info(),
+           "red_team": flags, "book": book.info(),
            "structure": (ws / "structure.md").exists(), "disclaimer": DISCLAIMER, "repo": REPO_URL}
     save_json(ws / "results" / "all.json", out)
-    (ws / "summary.md").write_text(summary_markdown(mf, results, gaps, out["headlines"], out["book"]),
+    (ws / "summary.md").write_text(summary_markdown(mf, results, gaps, out["board"], out["book"]),
                                    encoding="utf-8")
     return out
 
