@@ -14,7 +14,7 @@ import urllib.error
 import urllib.parse
 
 from . import rerank
-from .util import Blocked, cache_dir, fnum, http_json, load_json, log, now_iso, save_json, today
+from .util import Blocked, cache_dir, fnum, http_json, load_json, log, now_iso, out_root, save_json, today
 
 KALSHI = "https://api.elections.kalshi.com/trade-api/v2"
 GAMMA = "https://gamma-api.polymarket.com"
@@ -185,12 +185,33 @@ def _pm_index() -> list[dict]:
     return sorted(seen.values(), key=lambda e: -e["volume"])
 
 
+def _from_pull(venue: str) -> list[dict] | None:
+    """Every open event of today's `markets pull` (before its filter), so search needs no second download."""
+    path = out_root() / "_markets" / "raw.json"
+    if not path.exists():
+        return None
+    raw = load_json(path)
+    if raw.get("as_of_date") != today():
+        return None
+    prefix = "kalshi:" if venue == "Kalshi" else "polymarket:"
+    rows = []
+    for e in raw["events"]:
+        if e["id"].startswith(prefix):
+            title, _, sub = e["title"].partition(" | ")
+            rows.append({"event": e["id"][len(prefix):], "title": title, "sub_title": sub,
+                         "volume": sum(o["volume"] for o in e["outcomes"])})
+    return rows or None
+
+
 def load_index(venue: str, refresh: bool = False) -> dict:
     path = cache_dir() / f"{venue.lower()}_index.json"
     if not refresh and path.exists():
         idx = load_json(path)
         if idx.get("built") == today():
             return idx
+    pulled = _from_pull(venue) if not refresh else None
+    if pulled:
+        return {"built": today(), "events": pulled}
     log(f"Building today's {venue} index (pages through open events; a few minutes)...")
     idx = {"built": today(), "events": _kalshi_index() if venue == "Kalshi" else _pm_index()}
     save_json(path, idx)

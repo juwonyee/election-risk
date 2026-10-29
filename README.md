@@ -7,6 +7,9 @@ candidate would do, and every Kalshi and Polymarket market that can move it. A R
 with a small engine, a Red Team flags the weak numbers, and every run ends in two verdicts, with sources.
 Works in Claude Code, Codex, Cursor, Gemini and any agent that reads [Agent Skills](https://agentskills.io).
 
+**See it without installing:** live reports for [Ford](https://juwonyee.github.io/election-risk/examples/F/report.html), [PG&E](https://juwonyee.github.io/election-risk/examples/PCG/report.html),
+[Coinbase](https://juwonyee.github.io/election-risk/examples/COIN/report.html) and [DraftKings](https://juwonyee.github.io/election-risk/examples/DKNG/report.html).
+
 <p align="center"><img src="assets/desk.svg" width="860" alt="A company goes to three analysts (exposure, policy, market), then the Risk Officer and the Red Team, and ends in two verdicts: election risk and policy risk"></p>
 
 ## Try it
@@ -19,7 +22,7 @@ What does Nov 3 mean for Ford?
 
 ## What you get
 
-The desk board, in the chat and at the top of a local web report (Ford, prices of Oct 28):
+The desk board, in the chat and at the top of a local web report ([Ford's](https://juwonyee.github.io/election-risk/examples/F/report.html), prices of Oct 28):
 
 | Analyst | Signal | Why |
 |---|---|---|

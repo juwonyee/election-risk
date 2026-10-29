@@ -4,7 +4,7 @@ description: Works like a sell-side risk desk on one listed company - starts fro
 license: MIT
 metadata:
   author: juwonyee
-  version: "2.0.4"
+  version: "2.0.5"
 ---
 
 # Election risk for a company
@@ -67,7 +67,9 @@ If another skill is not installed, follow the same steps with the `erisk` comman
 base, where profit comes from, and what a government can move, with an issue tag per line.
 
 **2. Markets.** `erisk markets pull` writes the full lists. Read `elections.md` (contests) and `policy.md`
-(direct policy markets) in full; do not search for markets.
+(direct policy markets) in full. Then, as a check, run `erisk markets search` once per movable line with its
+plainest words (`USMCA`, `"data center"`): search covers every open market, unfiltered, and catches what the
+lists' filter missed.
 
 **3. Links (at most 8, biggest first).** For each movable line:
 - Find the book rows: `erisk book find --tag <tag> --state <ST>` (federal rows come with every state); add

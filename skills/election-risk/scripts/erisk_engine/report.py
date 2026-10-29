@@ -75,9 +75,13 @@ def _status(s: str) -> str:
     return f'<span class="chip {"ver" if s == "verified" else "est"}">{e(s)}</span>'
 
 
+def _link(url: str, text: str) -> str:
+    """A link for a web address; plain text for anything else (a policy-book file name)."""
+    return f'<a href="{e(url)}">{e(text)}</a>' if url.startswith(("http://", "https://")) else e(text if text != "source" else url)
+
+
 def _sources(srcs: list[dict]) -> str:
-    return "<ul>" + "".join(f'<li><a href="{e(s["url"])}">{e(s.get("title") or s["url"])}</a></li>'
-                            for s in srcs) + "</ul>"
+    return "<ul>" + "".join(f'<li>{_link(s["url"], s.get("title") or s["url"])}</li>' for s in srcs) + "</ul>"
 
 
 def _card(r: dict, den_label: str) -> str:
@@ -101,7 +105,7 @@ def _card(r: dict, den_label: str) -> str:
             f'<div style="margin-top:6px">If they win: <b>{o["p_policy"]:.0%}</b> chance it happens</div>'
             f'<div class="sub" style="font-size:13px">{e(o["stance"])}'
             f'{(" · " + e(o["route"])) if o.get("route") else ""}'
-            f'{(" · <a href=" + chr(34) + e(o["source"]) + chr(34) + ">source</a>") if o.get("source") else ""}'
+            f'{(" · " + _link(o["source"], "source")) if o.get("source") else ""}'
             f'</div></div>'
             for o in r["outcomes"])
         body = (f'{impact}<div class="label" style="margin-top:14px">Who wins '

@@ -173,6 +173,42 @@ class Universe(unittest.TestCase):
                                     category="Elections")))
         self.assertIsNone(c(self.ev("kalshi:Z", "Tiny race", "2027-11-03", volume=10, category="Elections")))
 
+    def test_no_control_characters_in_engine_sources(self):
+        # A \b typed into a non-raw string once became a literal backspace and silently disabled 32 patterns.
+        for f in (ROOT / "engine" / "erisk_engine").glob("*.py"):
+            self.assertNotIn(b"\x08", f.read_bytes(), f.name)
+
+    def test_policy_words_match_whole_words_only(self):
+        c = universe.classify
+        pol = lambda t, cat="Politics": c(self.ev("kalshi:P", t, "2027-01-04", category=cat))
+        self.assertEqual(pol("Will the SAVE Act become law?"), "policy")
+        self.assertEqual(pol("Will the FDA approve retatrutide?"), "policy")
+        self.assertEqual(pol("Will Trump eliminate capital gains taxes on crypto?"), "policy")
+        self.assertEqual(pol("US-Iran nuclear deal?"), "policy")
+        self.assertEqual(pol("How many reconciliation bills will become law in 2026?"), "policy")
+        self.assertIsNone(pol("Brentford vs Nottingham Forest", "Sports"))
+        self.assertIsNone(pol("NHL: EDM Oilers Total Points", "Sports"))
+        self.assertIsNone(pol("Sunderland vs Brentford"))
+        self.assertIsNone(pol("Will Macron call a referendum?"))
+        self.assertEqual(c(self.ev("polymarket:i", "Indiana enacts data center moratorium by...?", "2026-12-31",
+                                   tags=("politics",))), "policy")
+        self.assertEqual(c(self.ev("polymarket:w", "Weed rescheduled by...?", "2026-12-31",
+                                   tags=("pop-culture", "politics"))), "policy")
+        self.assertIsNone(c(self.ev("polymarket:b", "Bill Belichick fired?", "2026-12-31", tags=("sports",))))
+
+    def test_us_contests_with_odd_tags_or_close_dates_are_elections(self):
+        c = universe.classify
+        self.assertEqual(c(self.ev("kalshi:GOVPARTYNM-26", "New Mexico Governor winner? | In 2026", "2027-01-01",
+                                   category="Elections")), "election")
+        self.assertEqual(c(self.ev("kalshi:KXMAYORLA-26", "Los Angeles Mayor winner? | In 2026", "2027-06-02",
+                                   category="Elections")), "election")
+        self.assertIsNone(c(self.ev("kalshi:T", "Toronto Mayor winner? | In 2026", "2027-06-02",
+                                    category="Elections")))
+        self.assertEqual(c(self.ev("polymarket:h", "Which party will win the House in 2026?", "2026-11-03",
+                                   tags=("midterms", "global-elections"))), "election")
+        self.assertIsNone(c(self.ev("polymarket:r", "Peggy Flanagan runs behind Amy Klobuchar by...?", "2026-11-03",
+                                    tags=("midterms",))))
+
     def test_leaving_a_trade_deal_is_policy_leaving_a_seat_is_not(self):
         c = universe.classify
         self.assertEqual(c(self.ev("kalshi:KXUSMCA-26", "Will Trump try to leave the USMCA?", "2027-01-01",

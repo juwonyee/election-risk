@@ -23,39 +23,64 @@ PM_TAGS = ["midterms", "politics", "economy", "business", "tech"]
 # or a year out on 2027-11-02..04. Foreign elections close on other dates.
 PM_ELECTION_TAGS = {"midterms", "nov-4-elections", "house-elections", "senate-midterms", "governor-midterms"}
 KALSHI_CLOSE = (("2026-11-03", "2026-11-10"), ("2027-01-01", "2027-02-01"), ("2027-11-02", "2027-11-04"))
+# Side markets on a contest (margins, turnout, mentions...). Applied to election events only: a policy title can
+# say "how many", "announce" or "switch" ("How many reconciliation bills become law?", "AI kill switch law").
 SIDE = re.compile(r"margin|vote percent|vote share|share of|turnout|drop out|how many|seats|run for|nominee|"
-                  r"primary|recount|concede|be called|debate|endorse|popular vote|combo|closest|2nd place|"
-                  r"mention|say|tweet|approval rating|poll|by county|county winner|"
-                  r"flip|which states|sweep|split ticket|first called|pending|leave office|wave|tsunami|odds hit|resign|"
+                  r"primary(?![- ]home| energy)|recount|concede|be called|debate|endorse|popular vote|combo|closest|"
+                  r"2nd place|\bmention|\bsay\b|tweet|approval rating|\bpoll|by county|county winner|"
+                  r"flip|which states(?! will (democrats|republicans) win a trifecta)|sweep|split ticket|first called|"
+                  r"\bpending\b|leave office|wave|tsunami|odds hit|resign|"
                   r"bluest|reddest|within \d|switch|underperform|exit poll|matters most|voters\?|ridership|"
                   r"secretary-general|greenland|exact outcome|governorships|lose the house majority|map used|"
                   r"announce|pull the| & |party (will )?wins? (white|latino|young|black|women|men|independ)|"
                   r"favorite on|closer senate|number of rounds|ap call|outright|tossup|safe republican|biden-trump|"
                   r"minority leader|number of republican|core four|any statewide|on a federal|on-time|"
-                  r"independent or 3rd|worst|best tossup|citizenship|leave (the )?(race|house|senate|party|democratic|republican|office|cabinet|administration|ballot)|"
+                  r"independent or 3rd|worst|best tossup|citizenship(?! to vote)|"
+                  r"leave (the )?(race|house|senate|party|democratic|republican|office|cabinet|administration|ballot)|"
                   r"change parties|trickle|senate seat on|"
-                  r"supermajorit|premier|older (wo)?men|silver|trump\+|rally|closer governor", re.I)
+                  r"supermajorit|premier|older (wo)?men|silver|trump\+|\brally\b|closer governor", re.I)
 # Direct policy markets: the Yes is a law, rule, tariff, regulator or court action, or a government deal.
-POLICY = re.compile(r"tariff|tax|bill|act|law|legislat|regulat|ban|banned|moratorium|"
-                    r"fda|ftc|fcc|sec|doj|epa|antitrust|merger|block(s|ed)? the|"
-                    r"subsid|minimum wage|medicaid|medicare|aca|obamacare|health insurance|drug pric|"
+# Short words need \b on both sides: "rent" is in Brentford, "oil" in Oilers, "sec" in second.
+POLICY = re.compile(r"tariff|\btax|\bbill\b|\bact\b|\blaw\b|legislat|regulat(?!ion time)|\bban\b|banned|moratorium|"
+                    r"\bfda\b|\bftc\b|\bfcc\b|\bsec\b|\bdoj\b|\bepa\b|antitrust|merger|block(s|ed)? the|"
+                    r"subsid|minimum wage|medicaid|medicare|\baca\b|obamacare|health insurance|drug pric|"
                     r"sanction|usmca|trade (deal|agreement)|executive order|shutdown|reconciliation|"
-                    r"budget|price (cap|control)|data ?center|nuclear|drilling|pipeline|ev|tax credit|"
+                    r"budget|price (cap|control)|data ?center|nuclear|drilling|pipeline|\bev\b|tax credit|"
                     r"stablecoin|clarity|genius act|prediction market|sports? betting|gambling|casino|"
-                    r"cannabis|marijuana|rate cap|credit card|student loan|rent|zoning|export control|"
-                    r"tiktok|section 230|privacy|kids online|supreme court|court rule|ruling|lawsuit|"
-                    r"settle|stake in|government stake|nationali[sz]|ballot measure|proposition|referendum|"
-                    r"electricity|utility|ratepayer|wildfire|insurance|offshore|lng|oil|coal|solar|wind",
-                    re.I)
+                    r"cannabis|marijuana|\bweed\b|reschedul|rate cap|credit card|student loan|\brents?\b|zoning|"
+                    r"export control|tiktok|section 230|privacy|kids online|supreme court|court rule|ruling|lawsuit|"
+                    r"\bsettle|stake in|government stake|nationali[sz]|ballot measure|proposition|referendum|"
+                    r"electricity|utility|ratepayer|wildfire|insurance|offshore|\blng\b|\boil\b|coal|solar|"
+                    r"\bwind\b(?!-)", re.I)
+# Price levels and data series, not policy. Keep this list to what is surely noise: a wrong drop is invisible.
 NOISE = re.compile(r"spend in|card spend|price on|price \(|oil price|production per day|volume sold|capacity at|"
-                   r"ad spend|moneyline|budget balance|rental price|market cap|ipo|stock price|earnings|"
-                   r"cost growth|which counties|won outright|happen on time", re.I)
-NOT_US = re.compile(r"canad(a|ian)(?! tariff)|mexic|brazil|argentin|colombia|peru|chile|venezuel|ecuador|"
-                    r"uk|britain|british|england|scotland|germany|german|france|french|spain|spanish|"
-                    r"italy|ital|nether|poland|polish|hungar|bulgari|romania|ukrain|russia|israel|netanyahu|"
-                    r"knesset|iran|india|japan|korea|china|chinese|taiwan|australia|new south wales|kenya|"
-                    r"nigeria|south africa|el salvador|navajo|saxony|scottish|poilievre|honduras|philippin|turkey|turkish|saudi|imran khan|"
-                    r"pakistan|eu|european", re.I)
+                   r"ad spend|moneyline|budget balance|rental price|market cap|\bipos?\b|stock price|earnings|"
+                   r"cost growth|which counties|won outright|happen on time|how (high|low) will|up or down|"
+                   r"annual return|crude oil production|oil rigs|number of (us )?data centers|data centers? revenue|"
+                   r"asking rent|equivalent rent|delinquency rate|policies in force|capacity installed|"
+                   r"runs (behind|ahead)|divorce", re.I)
+NOT_US = re.compile(r"canad(a|ian)(?! tariff)|(?<!new )mexic|brazil|argentin|colombia|peru|chile|venezuel|ecuador|"
+                    r"\buk\b|britain|british|england|scotland|ireland|germany|german|france|french|macron|"
+                    r"spain|spanish|\bital(y|ian)\b|nether|swiss|switzerland|poland|polish|hungar|bulgari|romania|"
+                    r"ukrain|russia|israel|netanyahu|knesset|iran|india(?!na)|japan|korea|china|chinese|taiwan|"
+                    r"lai ching|australia|new south wales|new zealand|kenya|nigeria|south africa|el salvador|navajo|saxony|"
+                    r"scottish|quebec|alberta|poilievre|honduras|philippin|turkey|turkish|saudi|imran khan|"
+                    r"pakistan|\blula\b|\beu\b|european", re.I)
+# US policy toward another country is still US policy ("US-Iran nuclear deal", "tariffs on China").
+US_TRADE = re.compile(r"tariff|sanction|trade (deal|agreement)|free trade|"
+                      r"\b(us|u\.s\.|united states)\b[- ]?(x )?\w+ (nuclear )?(deal|agreement)", re.I)
+# Words that make a sports or pop-culture tagged Polymarket event a policy market anyway.
+POLICY_ANYWAY = re.compile(r"\b(law|act|enacts?|tax|taxe[sd]|bans?|banned|reschedul\w*|regulat\w*|fda|ftc|fcc|doj|"
+                           r"tariffs?)\b", re.I)
+KALSHI_SKIP = {"Sports", "Entertainment", "Social", "Mentions", "Crypto"}
+PM_SKIP = {"sports", "crypto-prices", "weather", "pop-culture", "global-elections", "world-elections"}
+US_STATES = ("alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|hawaii|"
+             "idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|"
+             "minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|"
+             "north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|"
+             "south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming")
+US_PLACE = re.compile(rf"\b({US_STATES}|los angeles)\b", re.I)
+LATER_YEAR = re.compile(r"\b20(2[7-9]|3\d)\b")
 HOUSE_DISTRICT = re.compile(r"\b[A-Z]{2}-\d{1,2}\b")
 
 
@@ -124,26 +149,39 @@ def _list(v) -> list:
     return v if isinstance(v, list) else json.loads(v or "[]")
 
 
-def classify(ev: dict) -> str | None:
-    """'election', 'policy' or None (dropped)."""
+def _is_election(ev: dict) -> bool:
+    """A US Nov 3 contest. Kalshi: Elections category closing on a Nov 3 settle date, or (close dates vary:
+    LA mayor 2027-06, Maine Senate 2027-07) naming a US state or LA with no later year in the title.
+    Polymarket: a midterm tag (US headline races also carry 'global-elections', so that tag is not a veto)."""
     title = ev["title"]
-    if sum(o["volume"] for o in ev["outcomes"]) < MIN_VOLUME or SIDE.search(title) or NOISE.search(title):
-        return None
-    closes = [o["close"] for o in ev["outcomes"] if o["close"]]
     if ev["id"].startswith("kalshi:"):
-        if ev["category"] == "Elections":
-            us_nov3 = any(lo <= c <= hi for c in closes for lo, hi in KALSHI_CLOSE)
-            return "election" if us_nov3 and not NOT_US.search(title) else None
-        is_election = False
-    else:
-        tags = set(ev["tags"])
-        is_election = (bool(tags & PM_ELECTION_TAGS) or any(t.endswith("-midterm") for t in tags)
-                       or "referendums-midterms" in tags) and "global-elections" not in tags
-        if is_election:
-            return "election" if not NOT_US.search(title) else None
-        if tags & {"sports", "crypto-prices", "weather", "pop-culture", "global-elections", "world-elections"}:
+        if ev["category"] != "Elections":
+            return False
+        closes = [o["close"] for o in ev["outcomes"] if o["close"]]
+        if any(lo <= c <= hi for c in closes for lo, hi in KALSHI_CLOSE):
+            return True
+        return (bool(closes) and min(closes) >= "2026-11-03" and bool(US_PLACE.search(title))
+                and not LATER_YEAR.search(title))
+    tags = set(ev["tags"])
+    return bool(tags & PM_ELECTION_TAGS) or any(t.endswith("-midterm") for t in tags) or "referendums-midterms" in tags
+
+
+def classify(ev: dict) -> str | None:
+    """'election', 'policy' or None (dropped). Only surely irrelevant events are dropped: a dropped market is
+    invisible to the analysis, while an extra line costs a few tokens."""
+    title = ev["title"]
+    if sum(o["volume"] for o in ev["outcomes"]) < MIN_VOLUME or NOISE.search(title):
+        return None
+    if _is_election(ev):
+        return None if SIDE.search(title) or NOT_US.search(title) else "election"
+    if ev["id"].startswith("kalshi:"):
+        if ev["category"] in KALSHI_SKIP:
             return None
-    return "policy" if POLICY.search(title) and not NOT_US.search(title) else None
+    elif set(ev["tags"]) & PM_SKIP and not POLICY_ANYWAY.search(title):
+        return None
+    if not POLICY.search(title):
+        return None
+    return None if NOT_US.search(title) and not US_TRADE.search(title) else "policy"
 
 
 def _line(ev: dict) -> str:

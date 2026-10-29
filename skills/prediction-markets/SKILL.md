@@ -4,7 +4,7 @@ description: Lists and prices every open Kalshi and Polymarket market for the No
 license: MIT
 metadata:
   author: juwonyee
-  version: "2.0.4"
+  version: "2.0.5"
 ---
 
 # Prediction markets
@@ -15,7 +15,7 @@ or get around a venue's regional restrictions.
 `erisk` below means `python3 <skill-dir>/scripts/erisk.py` (`${CLAUDE_SKILL_DIR}` in Claude Code). Run it from
 the user's working directory; output goes to `./election-risk-out/`. Python 3.10+, standard library only.
 
-## The full list (read it, don't search it)
+## The full list (read it, then search as a check)
 
 ```bash
 erisk markets pull            # about 6 minutes the first time each day; then cached
@@ -29,9 +29,14 @@ Writes two plain lists, one line per event (`venue:event | title | volume | clos
 - `election-risk-out/_markets/policy.md`: markets whose Yes is a policy (bill, tariff, regulator, moratorium,
   court ruling, government deal).
 
-Each list can be read whole. Read the relevant one in full instead of guessing search words: the
-titles are terse and the same thing is often priced under a name you would not search for. The filter is
-keyword-based, so a few off-topic lines get in; skip them.
+Each list can be read whole. Read the relevant one in full first: the titles are terse and the same thing is
+often priced under a name you would not search for. The filter keeps anything that might matter, so off-topic
+lines get in; skip them.
+
+**Then search as a check.** The lists come from a keyword filter, and a market it misses is invisible. For each
+issue you are looking for, run `erisk markets search` with its one or two plainest words (`USMCA`,
+`"data center"`, `"minimum wage"`, a company or agency name). Search covers every open market on both venues,
+unfiltered. Add anything it finds that the lists missed.
 
 ## One market in detail
 
