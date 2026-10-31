@@ -14,15 +14,15 @@ Base: FY2025 adjusted EBIT $6.78B (verified).
 **Risk Officer:** Election risk LOW · Policy risk MEDIUM
 
 - **Election risk LOW:** Nothing passes the bar. Biggest: +$1.00B a year (+14.7% of profit) if Congress repeals the Section 232 auto and metals tariffs, but only 5% even if Democrats win.
-- **Policy risk MEDIUM:** Kalshi puts 6% on: the US gives notice to leave USMCA before 2027. For Ford: −$1.30B a year (−19.2% of profit).
+- **Policy risk MEDIUM:** Kalshi puts 5% on: the US gives notice to leave USMCA before 2027. For Ford: −$1.30B a year (−19.2% of profit).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
 | Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
-| the US gives notice to leave USMCA before 2027 (`KXUSMCA-26`) | 6% Kalshi | 6% | −$1.30B (−$700M to −$2.50B) | -19.2% | 0.00 | yes |
-| Congress repeals the Section 232 auto and metals tariffs: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | +$1.00B (+$500M to +$2.00B) | +14.7% | +0.05 if Democrats win | no |
-| California relaxes its 2035 gas-car rule: 5% if Becerra wins, 0% if Hilton wins (`KXGOVCA-26`) | Becerra 96% / Hilton 4% Kalshi · 95% / 3% Polymarket | 5% | +$100M ($0 to +$200M) | +1.5% | +0.05 if Becerra wins | no |
+| the US gives notice to leave USMCA before 2027 (`KXUSMCA-26`) | 5% Kalshi | 5% | −$1.30B (−$700M to −$2.50B) | -19.2% | 0.00 | yes |
+| Congress repeals the Section 232 auto and metals tariffs: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 94% / Republicans 6% Kalshi | 5% | +$1.00B (+$500M to +$2.00B) | +14.7% | +0.05 if Democrats win | no |
+| California relaxes its 2035 gas-car rule: 5% if Becerra wins, 0% if Hilton wins (`KXGOVCA-26`) | Becerra 97% / Hilton 3% Kalshi · 96% / 2% Polymarket | 5% | +$100M ($0 to +$200M) | +1.5% | +0.05 if Becerra wins | no |
 
 Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
 

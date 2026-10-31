@@ -107,15 +107,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "CONTROLH-2026-D",
-            "prob": 0.9026,
-            "yes_bid": 0.903,
-            "yes_ask": 0.904,
+            "prob": 0.9385,
+            "yes_bid": 0.938,
+            "yes_ask": 0.939,
             "quote": "mid",
-            "volume": 22804383.98,
+            "volume": 25411484.61,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/controlh",
-            "as_of": "2026-10-27T03:27:05+00:00"
+            "as_of": "2026-10-31T16:00:12+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.05
@@ -131,24 +131,24 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "CONTROLH-2026-R",
-            "prob": 0.0974,
-            "yes_bid": 0.097,
-            "yes_ask": 0.098,
+            "prob": 0.0615,
+            "yes_bid": 0.061,
+            "yes_ask": 0.062,
             "quote": "mid",
-            "volume": 50472412.93,
+            "volume": 61882323.41,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/controlh",
-            "as_of": "2026-10-27T03:27:05+00:00"
+            "as_of": "2026-10-31T16:00:12+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.0
         }
       ],
-      "chance_policy_overall": 0.04513,
-      "chance": 0.04513,
+      "chance_policy_overall": 0.046925,
+      "chance": 0.046925,
       "election_swing": 0.05,
-      "volume": 73276796.91,
+      "volume": 87293808.02,
       "meaningful": false
     },
     {
@@ -230,15 +230,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "CONTROLH-2026-D",
-            "prob": 0.9026,
-            "yes_bid": 0.903,
-            "yes_ask": 0.904,
+            "prob": 0.9385,
+            "yes_bid": 0.938,
+            "yes_ask": 0.939,
             "quote": "mid",
-            "volume": 22804383.98,
+            "volume": 25411484.61,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/controlh",
-            "as_of": "2026-10-27T03:27:05+00:00"
+            "as_of": "2026-10-31T16:00:12+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.05
@@ -254,24 +254,24 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "CONTROLH-2026-R",
-            "prob": 0.0974,
-            "yes_bid": 0.097,
-            "yes_ask": 0.098,
+            "prob": 0.0615,
+            "yes_bid": 0.061,
+            "yes_ask": 0.062,
             "quote": "mid",
-            "volume": 50472412.93,
+            "volume": 61882323.41,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/controlh",
-            "as_of": "2026-10-27T03:27:05+00:00"
+            "as_of": "2026-10-31T16:00:12+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.0
         }
       ],
-      "chance_policy_overall": 0.04513,
-      "chance": 0.04513,
+      "chance_policy_overall": 0.046925,
+      "chance": 0.046925,
       "election_swing": 0.05,
-      "volume": 73276796.91,
+      "volume": 87293808.02,
       "meaningful": false
     },
     {
@@ -350,15 +350,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYWI-26-D",
-            "prob": 0.785,
-            "yes_bid": 0.78,
-            "yes_ask": 0.79,
+            "prob": 0.8333,
+            "yes_bid": 0.82,
+            "yes_ask": 0.83,
             "quote": "mid",
-            "volume": 553344.57,
+            "volume": 639463.1,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartywi",
-            "as_of": "2026-10-27T03:27:05+00:00"
+            "as_of": "2026-10-31T16:00:12+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.25
@@ -375,24 +375,24 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYWI-26-R",
-            "prob": 0.215,
-            "yes_bid": 0.21,
-            "yes_ask": 0.22,
+            "prob": 0.1667,
+            "yes_bid": 0.16,
+            "yes_ask": 0.17,
             "quote": "mid",
-            "volume": 943128.44,
+            "volume": 1166933.84,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartywi",
-            "as_of": "2026-10-27T03:27:05+00:00"
+            "as_of": "2026-10-31T16:00:12+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.07
         }
       ],
-      "chance_policy_overall": 0.21130000000000002,
-      "chance": 0.21130000000000002,
+      "chance_policy_overall": 0.21999400000000002,
+      "chance": 0.21999400000000002,
       "election_swing": 0.18,
-      "volume": 1496473.01,
+      "volume": 1806396.94,
       "meaningful": false
     },
     {
@@ -450,15 +450,15 @@
       "price": {
         "venue": "Kalshi",
         "ticker": "KXNYCMINWAGE-27JAN01",
-        "prob": 0.075,
+        "prob": 0.0735,
         "yes_bid": 0.051,
-        "yes_ask": 0.099,
+        "yes_ask": 0.096,
         "quote": "mid",
-        "volume": 21069.72,
+        "volume": 21104.69,
         "volume_unit": "contracts",
         "low_liquidity": false,
         "event_url": "https://kalshi.com/markets/kxnycminwage",
-        "as_of": "2026-10-27T03:27:05+00:00"
+        "as_of": "2026-10-31T16:00:12+00:00"
       },
       "cross_check": {
         "venue": "Polymarket",
@@ -467,23 +467,24 @@
         "yes_bid": 0.1,
         "yes_ask": 0.11,
         "quote": "mid",
-        "volume": 24847.84,
+        "volume": 25014.5,
         "volume_unit": "USD",
         "low_liquidity": false,
         "event_url": "https://polymarket.com/event/will-mamdani-raise-the-minimum-wage-to-30-before-2027",
-        "as_of": "2026-10-27T03:27:05+00:00"
+        "as_of": "2026-10-31T16:00:13+00:00"
       },
-      "chance": 0.075,
-      "volume": 21069.72,
+      "chance": 0.0735,
+      "volume": 21104.69,
       "election_swing": 0.0,
       "meaningful": true
     }
   ],
   "gaps": [],
   "prices_as_of": [
-    "2026-10-27T03:27:05+00:00"
+    "2026-10-31T16:00:12+00:00",
+    "2026-10-31T16:00:13+00:00"
   ],
-  "generated_at": "2026-10-27T03:28:39+00:00",
+  "generated_at": "2026-10-31T16:00:13+00:00",
   "board": {
     "signals": [
       {
@@ -517,8 +518,8 @@
     "policy": {
       "level": "low",
       "id": "sbux-nyc-30-wage",
-      "score": 0.0015323843901110126,
-      "text": "Kalshi puts 8% on: New York City enacts a $30 minimum wage by 2030. For Starbucks: −$60.0M a year (−2.0% of profit)."
+      "score": 0.0015017367023087923,
+      "text": "Kalshi puts 7% on: New York City enacts a $30 minimum wage by 2030. For Starbucks: −$60.0M a year (−2.0% of profit)."
     },
     "card": "policy"
   },
@@ -526,16 +527,21 @@
     "election": null,
     "policy": {
       "id": "sbux-nyc-30-wage",
-      "text": "Kalshi puts 8% on: New York City enacts a $30 minimum wage by 2030. For Starbucks: −$60.0M a year (−2.0% of profit)."
+      "text": "Kalshi puts 7% on: New York City enacts a $30 minimum wage by 2030. For Starbucks: −$60.0M a year (−2.0% of profit)."
     }
   },
   "red_team": [
     "New York City enacts a $30 minimum wage by 2030: the impact is an estimate, not a reported number."
   ],
   "book": {
-    "source": "built here",
-    "downloaded_at": null,
-    "built_by": null,
+    "source": "downloaded",
+    "downloaded_at": "2026-10-31T15:59:43+00:00",
+    "built_by": {
+      "built_by": "election-risk maintainers",
+      "built_on": "2026-10-27",
+      "contests": 197,
+      "fingerprint": "f97e319e0772"
+    },
     "last_edit": "2026-10-27",
     "files": 197,
     "fingerprint": "f97e319e0772"

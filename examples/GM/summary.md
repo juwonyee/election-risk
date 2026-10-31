@@ -14,14 +14,14 @@ Base: FY2025 EBIT-adjusted $12.7B (verified).
 **Risk Officer:** Election risk LOW · Policy risk MEDIUM
 
 - **Election risk LOW:** Nothing passes the bar. Biggest: +$3.00B a year (+23.5% of profit) if Congress passes a law overturning the President's tariffs, but only 5% even if Democrats win.
-- **Policy risk MEDIUM:** Kalshi puts 8% on: the US sends notice to leave USMCA. For GM: −$1.70B a year (−13.3% of profit).
+- **Policy risk MEDIUM:** Kalshi puts 5% on: the US sends notice to leave USMCA. For GM: −$1.70B a year (−13.3% of profit).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
 | Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
-| Congress passes a law overturning the President's tariffs: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | +$3.00B (+$1.50B to +$3.50B) | +23.5% | +0.05 if Democrats win | no |
-| the US sends notice to leave USMCA (`KXUSMCA-26`) | 8% Kalshi | 8% | −$1.70B (−$1.00B to −$3.50B) | -13.3% | 0.00 | yes |
+| Congress passes a law overturning the President's tariffs: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 94% / Republicans 6% Kalshi | 5% | +$3.00B (+$1.50B to +$3.50B) | +23.5% | +0.05 if Democrats win | no |
+| the US sends notice to leave USMCA (`KXUSMCA-26`) | 5% Kalshi | 5% | −$1.70B (−$1.00B to −$3.50B) | -13.3% | 0.00 | yes |
 
 Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
 
@@ -39,10 +39,10 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - Book row doubt (MI-governor.md): Benson 'subnational agreements with Canada' is 'make: alone' p 0.45 although the row itself says its effect on federal tariffs is unclear; a governor has no tariff lever, so it is not linked.
 
 **Red Team:**
-- Policy risk MEDIUM would be HIGH at the high end (−$3.50B) of the impact range for: the US sends notice to leave USMCA. Read how the impact was built.
+- Policy risk MEDIUM would be LOW at the low end (−$1.00B) of the impact range for: the US sends notice to leave USMCA. Read how the impact was built.
 - the US sends notice to leave USMCA: the impact is an estimate, not a reported number.
 
-Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
+Policy book: downloaded, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
 
 Markets are shown as information only, not as a suggestion to trade.
 

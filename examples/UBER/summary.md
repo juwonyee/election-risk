@@ -20,11 +20,11 @@ High = share of profit x chance (policy) or x election swing (election) of at le
 
 | Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
-| the PRO Act becomes law and app drivers can bargain collectively nationwide: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 90% / Republicans 10% Kalshi | 5% | −$400M (−$250M to −$750M) | -7.2% | +0.05 if Democrats win | no |
+| the PRO Act becomes law and app drivers can bargain collectively nationwide: 5% if Democrats win, 0% if Republicans win (`CONTROLH-2026`) | Democrats 94% / Republicans 6% Kalshi | 5% | −$400M (−$250M to −$750M) | -7.2% | +0.05 if Democrats win | no |
 | California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: 70% if Bonta wins, 0% if Gates wins (`KXCAATTORNEYGENERAL-26`) | Bonta 97% / Gates 3% Kalshi | 68% | −$170M (−$100M to −$270M) | -3.1% | +0.11 if Bonta wins | yes |
-| a federal 'significant control' contractor test becomes law: 5% if Republicans win, 0% if Democrats win (`CONTROLH-2026`) | Republicans 10% / Democrats 90% Kalshi | 0% | +$50.0M ($0 to +$150M) | +0.9% | +0.05 if Republicans win | no |
-| Florida rolls back its 2022-23 tort reforms: 15% if Jolly wins, 7% if Donalds wins (`GOVPARTYFL-26`) | Jolly 20% / Donalds 80% Kalshi | 9% | −$30.0M (−$15.0M to −$60.0M) | -0.5% | +0.08 if Jolly wins | no |
-| California bans automated deactivation of app drivers: 15% if Hilton wins, 0% if Becerra wins (`KXGOVCA-26`) | Hilton 4% / Becerra 96% Kalshi | 1% | −$15.0M (−$7.0M to −$40.0M) | -0.3% | +0.15 if Hilton wins | no |
+| a federal 'significant control' contractor test becomes law: 5% if Republicans win, 0% if Democrats win (`CONTROLH-2026`) | Republicans 6% / Democrats 94% Kalshi | 0% | +$50.0M ($0 to +$150M) | +0.9% | +0.05 if Republicans win | no |
+| Florida rolls back its 2022-23 tort reforms: 15% if Jolly wins, 7% if Donalds wins (`GOVPARTYFL-26`) | Jolly 36% / Donalds 64% Kalshi | 10% | −$30.0M (−$15.0M to −$60.0M) | -0.5% | +0.08 if Jolly wins | no |
+| California bans automated deactivation of app drivers: 15% if Hilton wins, 0% if Becerra wins (`KXGOVCA-26`) | Hilton 3% / Becerra 97% Kalshi | 0% | −$15.0M (−$7.0M to −$40.0M) | -0.3% | +0.15 if Hilton wins | no |
 | Oregon sets a per-minute and per-mile minimum pay for rideshare drivers: 35% if Democrats win, 0% if Republicans win (`KXSTATELEG-ORHOUS26`) | Democrats 98% / Republicans 2% Kalshi | 34% | −$15.0M (−$5.0M to −$25.0M) | -0.3% | +0.35 if Democrats win | no |
 
 Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
@@ -50,7 +50,7 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: research finds an attorney general's party changes suits against companies by only 3-11 points, so the election swing is capped at 0.11.
 - California's misclassification suit against Uber ends in a Lyft-sized settlement scaled to Uber: the impact is an estimate, not a reported number.
 
-Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
+Policy book: downloaded, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
 
 Markets are shown as information only, not as a suggestion to trade.
 

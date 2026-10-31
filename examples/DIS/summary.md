@@ -14,14 +14,14 @@ Base: FY2025 segment operating income $17.6B (verified).
 **Risk Officer:** Election risk NO MARKET · Policy risk MEDIUM
 
 - **Election risk NO MARKET:** No Nov 3 contest was linked to Disney in this run.
-- **Policy risk MEDIUM:** Kalshi puts 26% on: a federal film and TV production tax credit becomes law. For Disney: +$400M a year (+2.3% of profit).
+- **Policy risk MEDIUM:** Kalshi puts 28% on: a federal film and TV production tax credit becomes law. For Disney: +$400M a year (+2.3% of profit).
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
 | Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
-| a federal film and TV production tax credit becomes law (`KXFILMTAXCREDIT-26SEP`) | 26% Kalshi | 26% | +$400M (+$200M to +$700M) | +2.3% | 0.00 | yes |
-| Florida voters pass Amendment 3 (5% cap on commercial assessment growth) (`KXFLPROPERTYTAX-26NOV03`) | 37% Kalshi | 37% | +$10.0M ($0 to +$25.0M) | +0.1% | 0.00 | no |
+| a federal film and TV production tax credit becomes law (`KXFILMTAXCREDIT-26SEP`) | 28% Kalshi | 28% | +$400M (+$200M to +$700M) | +2.3% | 0.00 | yes |
+| Florida voters pass Amendment 3 (5% cap on commercial assessment growth) (`KXFLPROPERTYTAX-26NOV03`) | 32% Kalshi | 32% | +$10.0M ($0 to +$25.0M) | +0.1% | 0.00 | no |
 
 Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
 
@@ -42,7 +42,7 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - Policy risk MEDIUM would be LOW at the low end (+$200M) of the impact range for: a federal film and TV production tax credit becomes law. Read how the impact was built.
 - a federal film and TV production tax credit becomes law: the impact is an estimate, not a reported number.
 
-Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
+Policy book: downloaded, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
 
 Markets are shown as information only, not as a suggestion to trade.
 

@@ -22,7 +22,7 @@ What does Nov 3 mean for Ford?
 
 ## What you get
 
-The desk board, in the chat and at the top of a local web report ([Ford's](https://juwonyee.github.io/election-risk/examples/F/report.html), prices of Oct 28):
+The desk board, in the chat and at the top of a local web report ([Ford's](https://juwonyee.github.io/election-risk/examples/F/report.html), prices of Nov 1):
 
 | Analyst | Signal | Why |
 |---|---|---|
@@ -35,30 +35,30 @@ The desk board, in the chat and at the top of a local web report ([Ford's](https
 
 - **Election risk LOW:** nothing passes the bar. The biggest is +$1.00B a year if Congress repeals the
   Section 232 auto and metals tariffs, but only 5% even if Democrats win.
-- **Policy risk MEDIUM:** Kalshi puts 6% on the US giving notice to leave USMCA before 2027. For Ford:
+- **Policy risk MEDIUM:** Kalshi puts 5% on the US giving notice to leave USMCA before 2027. For Ford:
   −$1.30B a year (−19.2% of profit).
 - **Red Team:** the USMCA impact is an estimate, and at the high end of its range (−$2.50B) policy risk would
   be HIGH.
 
 And a card to share (the report saves it as PNG):
 
-<p align="center"><img src="examples/F/card.svg" width="720" alt="Ford, policy risk medium: −$1.30B a year if the US gives notice to leave USMCA before 2027; Kalshi 6%"></p>
+<p align="center"><img src="examples/F/card.svg" width="720" alt="Ford, policy risk medium: −$1.30B a year if the US gives notice to leave USMCA before 2027; Kalshi 5%"></p>
 
-## What it found (Oct 27–28, 2026)
+## What it found (prices of Nov 1, 2026)
 
-Eight household names, run end to end (Ford on Oct 28 prices, the rest on Oct 27). Each links to its full
+Eight household names, run end to end (research Oct 27–28, prices refreshed Nov 1). Each links to its full
 summary, profit structure and sources.
 
 | Company | Election risk | Policy risk | Biggest risk | Market | Profit, per year |
 |---|---|---|---|---|---|
-| [PG&E](examples/PCG/summary.md) | **High** | none | Becerra wins (96%) → 30% chance of a rate freeze, vs 0% under Hilton | Kalshi | **−$600M** (−12.6%) |
+| [PG&E](examples/PCG/summary.md) | **High** | none | Becerra wins (97%) → 30% chance of a rate freeze, vs 0% under Hilton | Kalshi | **−$600M** (−12.6%) |
 | [DraftKings](examples/DKNG/summary.md) | Medium | **High** | Congress bans sports contracts on prediction markets in 2026 | Polymarket 18% | **+$150M** (+24.2%) |
-| [Coinbase](examples/COIN/summary.md) | Low | **High** | Clarity Act (crypto market structure) becomes law before 2028 | Kalshi 21% | **+$370M** (+25.8%) |
-| [Ford](examples/F/summary.md) | Low | Medium | US gives notice to leave USMCA before 2027 | Kalshi 6% | **−$1.3B** (−19.2%) |
-| [GM](examples/GM/summary.md) | Low | Medium | Same USMCA notice | Kalshi 8% | **−$1.7B** (−13.3%) |
-| [Disney](examples/DIS/summary.md) | none | Medium | Federal film and TV production tax credit becomes law | Kalshi 26% | **+$400M** (+2.3%) |
+| [Coinbase](examples/COIN/summary.md) | Low | **High** | Clarity Act (crypto market structure) becomes law before 2028 | Kalshi 28% | **+$370M** (+25.8%) |
+| [Ford](examples/F/summary.md) | Low | Medium | US gives notice to leave USMCA before 2027 | Kalshi 5% | **−$1.3B** (−19.2%) |
+| [GM](examples/GM/summary.md) | Low | Medium | Same USMCA notice | Kalshi 5% | **−$1.7B** (−13.3%) |
+| [Disney](examples/DIS/summary.md) | none | Medium | Federal film and TV production tax credit becomes law | Kalshi 28% | **+$400M** (+2.3%) |
 | [Uber](examples/UBER/summary.md) | Low | none | California AG suit ends in a Lyft-sized settlement: 70%, and who wins moves it at most 11 points | Kalshi | **−$170M** (−3.1%) |
-| [Starbucks](examples/SBUX/summary.md) | Low | Low | New York City enacts a $30 minimum wage by 2030 | Kalshi 8% | **−$60M** (−2.0%) |
+| [Starbucks](examples/SBUX/summary.md) | Low | Low | New York City enacts a $30 minimum wage by 2030 | Kalshi 7% | **−$60M** (−2.0%) |
 
 "none" means no market was linked to the company on that side.
 
@@ -158,7 +158,7 @@ Every report prints which book it used (built or downloaded, date, fingerprint) 
   doubts as weak links.
 - **Only priced risks.** A risk with no Kalshi or Polymarket market is left out. Unreachable sources are
   listed, never worked around.
-- **Prices move.** The examples use Oct 27 prices. Raw price snapshots are not kept in this repo (venue terms).
+- **Prices move.** The examples use Nov 1 prices. Raw price snapshots are not kept in this repo (venue terms).
 
 It won't recommend trades, size positions, help open market accounts, or work around a venue's regional
 restrictions. It names no small businesses (franchised chains are discussed as "a typical store").

@@ -76,15 +76,15 @@
         "yes_bid": 0.12,
         "yes_ask": 0.25,
         "quote": "mid",
-        "volume": 21034.21,
+        "volume": 21039.76,
         "volume_unit": "USD",
         "low_liquidity": false,
         "event_url": "https://polymarket.com/event/law-banning-sports-prediction-markets-enacted-in-2026",
-        "as_of": "2026-10-27T03:27:45+00:00"
+        "as_of": "2026-10-31T16:00:05+00:00"
       },
       "cross_check": null,
       "chance": 0.185,
-      "volume": 21034.21,
+      "volume": 21039.76,
       "election_swing": 0.0,
       "meaningful": true
     },
@@ -132,19 +132,19 @@
       "price": {
         "venue": "Kalshi",
         "ticker": "KXGAMBLINGREPEAL-26JAN-27",
-        "prob": 0.19,
+        "prob": 0.195,
         "yes_bid": 0.18,
-        "yes_ask": 0.2,
+        "yes_ask": 0.21,
         "quote": "mid",
-        "volume": 377674.27,
+        "volume": 377867.25,
         "volume_unit": "contracts",
         "low_liquidity": false,
         "event_url": "https://kalshi.com/markets/kxgamblingrepeal",
-        "as_of": "2026-10-27T03:27:44+00:00"
+        "as_of": "2026-10-31T16:00:04+00:00"
       },
       "cross_check": null,
-      "chance": 0.19,
-      "volume": 416285.89,
+      "chance": 0.195,
+      "volume": 416478.87,
       "election_swing": 0.0,
       "meaningful": true
     },
@@ -192,19 +192,19 @@
       "price": {
         "venue": "Kalshi",
         "ticker": "KXSTATEBALLOTMEASURE-NE26-OSWR",
-        "prob": 0.635,
-        "yes_bid": 0.59,
-        "yes_ask": 0.68,
+        "prob": 0.625,
+        "yes_bid": 0.58,
+        "yes_ask": 0.67,
         "quote": "mid",
-        "volume": 382.74,
+        "volume": 564.85,
         "volume_unit": "contracts",
         "low_liquidity": true,
         "event_url": "https://kalshi.com/markets/kxstateballotmeasure",
-        "as_of": "2026-10-27T03:27:44+00:00"
+        "as_of": "2026-10-31T16:00:04+00:00"
       },
       "cross_check": null,
-      "chance": 0.635,
-      "volume": 3166.17,
+      "chance": 0.625,
+      "volume": 3365.18,
       "election_swing": 0.0,
       "meaningful": false
     },
@@ -281,15 +281,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYNY-26-D",
-            "prob": 0.9387,
-            "yes_bid": 0.94,
-            "yes_ask": 0.942,
+            "prob": 0.9621,
+            "yes_bid": 0.961,
+            "yes_ask": 0.966,
             "quote": "mid",
-            "volume": 1104080.74,
+            "volume": 1366303.05,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartyny",
-            "as_of": "2026-10-27T03:27:44+00:00"
+            "as_of": "2026-10-31T16:00:04+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.05
@@ -306,15 +306,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYNY-26-R",
-            "prob": 0.0613,
-            "yes_bid": 0.061,
-            "yes_ask": 0.062,
+            "prob": 0.0379,
+            "yes_bid": 0.037,
+            "yes_ask": 0.039,
             "quote": "mid",
-            "volume": 3975085.83,
+            "volume": 5123684.94,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartyny",
-            "as_of": "2026-10-27T03:27:44+00:00"
+            "as_of": "2026-10-31T16:00:04+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.05
@@ -323,7 +323,7 @@
       "chance_policy_overall": 0.05,
       "chance": 0.05,
       "election_swing": 0.0,
-      "volume": 5079166.57,
+      "volume": 6489987.99,
       "meaningful": true
     },
     {
@@ -398,15 +398,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYOH-26-D",
-            "prob": 0.815,
-            "yes_bid": 0.81,
-            "yes_ask": 0.82,
+            "prob": 0.795,
+            "yes_bid": 0.79,
+            "yes_ask": 0.8,
             "quote": "mid",
-            "volume": 1839641.74,
+            "volume": 2269781.06,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartyoh",
-            "as_of": "2026-10-27T03:27:44+00:00"
+            "as_of": "2026-10-31T16:00:04+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.05
@@ -422,24 +422,24 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYOH-26-R",
-            "prob": 0.185,
-            "yes_bid": 0.18,
-            "yes_ask": 0.19,
+            "prob": 0.205,
+            "yes_bid": 0.2,
+            "yes_ask": 0.21,
             "quote": "mid",
-            "volume": 3063995.81,
+            "volume": 4562460.11,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartyoh",
-            "as_of": "2026-10-27T03:27:44+00:00"
+            "as_of": "2026-10-31T16:00:04+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.0
         }
       ],
-      "chance_policy_overall": 0.04075,
-      "chance": 0.04075,
+      "chance_policy_overall": 0.03975000000000001,
+      "chance": 0.03975000000000001,
       "election_swing": 0.05,
-      "volume": 4903637.55,
+      "volume": 6832241.17,
       "meaningful": false
     },
     {
@@ -514,15 +514,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYMA-26-D",
-            "prob": 0.9502,
-            "yes_bid": 0.952,
-            "yes_ask": 0.955,
+            "prob": 0.9715,
+            "yes_bid": 0.972,
+            "yes_ask": 0.974,
             "quote": "mid",
-            "volume": 523467.05,
+            "volume": 701380.72,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartyma",
-            "as_of": "2026-10-27T03:27:44+00:00"
+            "as_of": "2026-10-31T16:00:04+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.07
@@ -538,24 +538,24 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYMA-26-R",
-            "prob": 0.0498,
-            "yes_bid": 0.048,
-            "yes_ask": 0.052,
+            "prob": 0.0285,
+            "yes_bid": 0.027,
+            "yes_ask": 0.03,
             "quote": "mid",
-            "volume": 1948059.53,
+            "volume": 2588788.07,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartyma",
-            "as_of": "2026-10-27T03:27:44+00:00"
+            "as_of": "2026-10-31T16:00:04+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.0
         }
       ],
-      "chance_policy_overall": 0.066514,
-      "chance": 0.066514,
+      "chance_policy_overall": 0.06800500000000001,
+      "chance": 0.06800500000000001,
       "election_swing": 0.07,
-      "volume": 2471526.58,
+      "volume": 3290168.79,
       "meaningful": true
     },
     {
@@ -630,15 +630,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYNY-26-D",
-            "prob": 0.9387,
-            "yes_bid": 0.94,
-            "yes_ask": 0.942,
+            "prob": 0.9621,
+            "yes_bid": 0.961,
+            "yes_ask": 0.966,
             "quote": "mid",
-            "volume": 1104080.74,
+            "volume": 1366303.05,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartyny",
-            "as_of": "2026-10-27T03:27:44+00:00"
+            "as_of": "2026-10-31T16:00:04+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.45
@@ -654,33 +654,33 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "GOVPARTYNY-26-R",
-            "prob": 0.0613,
-            "yes_bid": 0.061,
-            "yes_ask": 0.062,
+            "prob": 0.0379,
+            "yes_bid": 0.037,
+            "yes_ask": 0.039,
             "quote": "mid",
-            "volume": 3975085.83,
+            "volume": 5123684.94,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/govpartyny",
-            "as_of": "2026-10-27T03:27:44+00:00"
+            "as_of": "2026-10-31T16:00:04+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.0
         }
       ],
-      "chance_policy_overall": 0.422415,
-      "chance": 0.422415,
+      "chance_policy_overall": 0.43294499999999997,
+      "chance": 0.43294499999999997,
       "election_swing": 0.45,
-      "volume": 5079166.57,
+      "volume": 6489987.99,
       "meaningful": false
     }
   ],
   "gaps": [],
   "prices_as_of": [
-    "2026-10-27T03:27:44+00:00",
-    "2026-10-27T03:27:45+00:00"
+    "2026-10-31T16:00:04+00:00",
+    "2026-10-31T16:00:05+00:00"
   ],
-  "generated_at": "2026-10-27T03:28:39+00:00",
+  "generated_at": "2026-10-31T16:00:05+00:00",
   "board": {
     "signals": [
       {
@@ -708,7 +708,7 @@
       "level": "medium",
       "id": "dkng-ma-igaming",
       "score": 0.00903225806451613,
-      "text": "If Healey wins (95% on Kalshi), the chance that Massachusetts legalizes online casino games is 7%, vs 0% if Minogue wins. For DraftKings: +$80.0M a year (+12.9% of profit)."
+      "text": "If Healey wins (97% on Kalshi), the chance that Massachusetts legalizes online casino games is 7%, vs 0% if Minogue wins. For DraftKings: +$80.0M a year (+12.9% of profit)."
     },
     "policy": {
       "level": "high",
@@ -730,14 +730,19 @@
     "Policy risk HIGH would be MEDIUM at the low end (+$50.0M) of the impact range for: Congress bans sports contracts on CFTC-regulated prediction markets in 2026. Read how the impact was built.",
     "Congress bans sports contracts on CFTC-regulated prediction markets in 2026: the impact is an estimate, not a reported number.",
     "Congress changes or removes the 90% cap on gambling-loss deductions before 2027: the impact is an estimate, not a reported number.",
-    "Nebraska voters legalize online sports betting: thin market (3,166); one trader can move the price.",
+    "Nebraska voters legalize online sports betting: thin market (3,365); one trader can move the price.",
     "New York legalizes online casino games: the impact is an estimate, not a reported number.",
     "Massachusetts legalizes online casino games: the impact is an estimate, not a reported number."
   ],
   "book": {
-    "source": "built here",
-    "downloaded_at": null,
-    "built_by": null,
+    "source": "downloaded",
+    "downloaded_at": "2026-10-31T15:59:43+00:00",
+    "built_by": {
+      "built_by": "election-risk maintainers",
+      "built_on": "2026-10-27",
+      "contests": 197,
+      "fingerprint": "f97e319e0772"
+    },
     "last_edit": "2026-10-27",
     "files": 197,
     "fingerprint": "f97e319e0772"

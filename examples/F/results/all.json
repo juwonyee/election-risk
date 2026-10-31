@@ -85,18 +85,18 @@
       "price": {
         "venue": "Kalshi",
         "ticker": "KXUSMCA-26-27",
-        "prob": 0.0565,
-        "yes_bid": 0.024,
-        "yes_ask": 0.089,
+        "prob": 0.0545,
+        "yes_bid": 0.03,
+        "yes_ask": 0.079,
         "quote": "mid",
         "volume": 15458.85,
         "volume_unit": "contracts",
         "low_liquidity": false,
         "event_url": "https://kalshi.com/markets/kxusmca",
-        "as_of": "2026-10-28T10:50:05+00:00"
+        "as_of": "2026-10-31T16:00:07+00:00"
       },
       "cross_check": null,
-      "chance": 0.0565,
+      "chance": 0.0545,
       "volume": 15458.85,
       "election_swing": 0.0,
       "meaningful": true
@@ -173,15 +173,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "CONTROLH-2026-D",
-            "prob": 0.9037,
-            "yes_bid": 0.905,
-            "yes_ask": 0.906,
+            "prob": 0.9385,
+            "yes_bid": 0.938,
+            "yes_ask": 0.939,
             "quote": "mid",
-            "volume": 23177648.2,
+            "volume": 25411484.61,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/controlh",
-            "as_of": "2026-10-28T10:50:05+00:00"
+            "as_of": "2026-10-31T16:00:07+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.05
@@ -198,24 +198,24 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "CONTROLH-2026-R",
-            "prob": 0.0963,
-            "yes_bid": 0.096,
-            "yes_ask": 0.097,
+            "prob": 0.0615,
+            "yes_bid": 0.061,
+            "yes_ask": 0.062,
             "quote": "mid",
-            "volume": 52433132.03,
+            "volume": 61882323.41,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/controlh",
-            "as_of": "2026-10-28T10:50:05+00:00"
+            "as_of": "2026-10-31T16:00:07+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.0
         }
       ],
-      "chance_policy_overall": 0.045185,
-      "chance": 0.045185,
+      "chance_policy_overall": 0.046925,
+      "chance": 0.046925,
       "election_swing": 0.05,
-      "volume": 75610780.23,
+      "volume": 87293808.02,
       "meaningful": false
     },
     {
@@ -297,28 +297,28 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "KXGOVCA-26-XBEC",
-            "prob": 0.9615,
-            "yes_bid": 0.96,
-            "yes_ask": 0.962,
+            "prob": 0.9745,
+            "yes_bid": 0.975,
+            "yes_ask": 0.977,
             "quote": "mid",
-            "volume": 6960378.04,
+            "volume": 7574757.07,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/kxgovca",
-            "as_of": "2026-10-28T10:50:05+00:00"
+            "as_of": "2026-10-31T16:00:07+00:00"
           },
           "cross_check": {
             "venue": "Polymarket",
             "ticker": "will-xavier-becerra-win-the-california-governor-election-in-2026",
-            "prob": 0.951,
-            "yes_bid": 0.967,
-            "yes_ask": 0.974,
+            "prob": 0.9613,
+            "yes_bid": 0.981,
+            "yes_ask": 0.982,
             "quote": "mid",
-            "volume": 2508014.0,
+            "volume": 2902942.75,
             "volume_unit": "USD",
             "low_liquidity": false,
             "event_url": "https://polymarket.com/event/california-governor-election-2026",
-            "as_of": "2026-10-28T10:50:06+00:00"
+            "as_of": "2026-10-31T16:00:07+00:00"
           },
           "if_wins_chance": 0.05
         },
@@ -333,45 +333,44 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "KXGOVCA-26-SHIL",
-            "prob": 0.0385,
-            "yes_bid": 0.037,
-            "yes_ask": 0.04,
+            "prob": 0.0255,
+            "yes_bid": 0.024,
+            "yes_ask": 0.027,
             "quote": "mid",
-            "volume": 15945919.45,
+            "volume": 18795319.66,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/kxgovca",
-            "as_of": "2026-10-28T10:50:05+00:00"
+            "as_of": "2026-10-31T16:00:07+00:00"
           },
           "cross_check": {
             "venue": "Polymarket",
             "ticker": "will-steve-hilton-win-the-california-governor-election-in-2026",
-            "prob": 0.0284,
-            "yes_bid": 0.027,
-            "yes_ask": 0.031,
+            "prob": 0.0181,
+            "yes_bid": 0.018,
+            "yes_ask": 0.019,
             "quote": "mid",
-            "volume": 3825012.45,
+            "volume": 4264114.05,
             "volume_unit": "USD",
             "low_liquidity": false,
             "event_url": "https://polymarket.com/event/california-governor-election-2026",
-            "as_of": "2026-10-28T10:50:06+00:00"
+            "as_of": "2026-10-31T16:00:07+00:00"
           },
           "if_wins_chance": 0.0
         }
       ],
-      "chance_policy_overall": 0.04807500000000001,
-      "chance": 0.04807500000000001,
+      "chance_policy_overall": 0.048725000000000004,
+      "chance": 0.048725000000000004,
       "election_swing": 0.05,
-      "volume": 22906297.49,
+      "volume": 26370076.73,
       "meaningful": false
     }
   ],
   "gaps": [],
   "prices_as_of": [
-    "2026-10-28T10:50:05+00:00",
-    "2026-10-28T10:50:06+00:00"
+    "2026-10-31T16:00:07+00:00"
   ],
-  "generated_at": "2026-10-28T10:50:09+00:00",
+  "generated_at": "2026-10-31T16:00:07+00:00",
   "board": {
     "signals": [
       {
@@ -405,8 +404,8 @@
     "policy": {
       "level": "medium",
       "id": "f-usmca-notice",
-      "score": 0.010833333333333334,
-      "text": "Kalshi puts 6% on: the US gives notice to leave USMCA before 2027. For Ford: −$1.30B a year (−19.2% of profit)."
+      "score": 0.010449852507374633,
+      "text": "Kalshi puts 5% on: the US gives notice to leave USMCA before 2027. For Ford: −$1.30B a year (−19.2% of profit)."
     },
     "card": "policy"
   },
@@ -414,7 +413,7 @@
     "election": null,
     "policy": {
       "id": "f-usmca-notice",
-      "text": "Kalshi puts 6% on: the US gives notice to leave USMCA before 2027. For Ford: −$1.30B a year (−19.2% of profit)."
+      "text": "Kalshi puts 5% on: the US gives notice to leave USMCA before 2027. For Ford: −$1.30B a year (−19.2% of profit)."
     }
   },
   "red_team": [
@@ -423,7 +422,7 @@
   ],
   "book": {
     "source": "downloaded",
-    "downloaded_at": "2026-10-28T10:38:09+00:00",
+    "downloaded_at": "2026-10-31T15:59:43+00:00",
     "built_by": {
       "built_by": "election-risk maintainers",
       "built_on": "2026-10-27",

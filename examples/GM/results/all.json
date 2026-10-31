@@ -74,19 +74,19 @@
       "price": {
         "venue": "Kalshi",
         "ticker": "KXUSMCA-26-27",
-        "prob": 0.0845,
-        "yes_bid": 0.083,
-        "yes_ask": 0.086,
+        "prob": 0.0545,
+        "yes_bid": 0.03,
+        "yes_ask": 0.079,
         "quote": "mid",
-        "volume": 15448.85,
+        "volume": 15458.85,
         "volume_unit": "contracts",
         "low_liquidity": false,
         "event_url": "https://kalshi.com/markets/kxusmca",
-        "as_of": "2026-10-27T03:07:54+00:00"
+        "as_of": "2026-10-31T16:00:09+00:00"
       },
       "cross_check": null,
-      "chance": 0.0845,
-      "volume": 15448.85,
+      "chance": 0.0545,
+      "volume": 15458.85,
       "election_swing": 0.0,
       "meaningful": true
     },
@@ -161,15 +161,15 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "CONTROLH-2026-D",
-            "prob": 0.904,
-            "yes_bid": 0.903,
-            "yes_ask": 0.904,
+            "prob": 0.9385,
+            "yes_bid": 0.938,
+            "yes_ask": 0.939,
             "quote": "mid",
-            "volume": 22802850.34,
+            "volume": 25411484.61,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/controlh",
-            "as_of": "2026-10-27T03:07:54+00:00"
+            "as_of": "2026-10-31T16:00:09+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.05
@@ -185,32 +185,32 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "CONTROLH-2026-R",
-            "prob": 0.096,
-            "yes_bid": 0.095,
-            "yes_ask": 0.097,
+            "prob": 0.0615,
+            "yes_bid": 0.061,
+            "yes_ask": 0.062,
             "quote": "mid",
-            "volume": 50453746.18,
+            "volume": 61882323.41,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/controlh",
-            "as_of": "2026-10-27T03:07:54+00:00"
+            "as_of": "2026-10-31T16:00:09+00:00"
           },
           "cross_check": null,
           "if_wins_chance": 0.0
         }
       ],
-      "chance_policy_overall": 0.045200000000000004,
-      "chance": 0.045200000000000004,
+      "chance_policy_overall": 0.046925,
+      "chance": 0.046925,
       "election_swing": 0.05,
-      "volume": 73256596.52,
+      "volume": 87293808.02,
       "meaningful": false
     }
   ],
   "gaps": [],
   "prices_as_of": [
-    "2026-10-27T03:07:54+00:00"
+    "2026-10-31T16:00:09+00:00"
   ],
-  "generated_at": "2026-10-27T03:28:37+00:00",
+  "generated_at": "2026-10-31T16:00:09+00:00",
   "board": {
     "signals": [
       {
@@ -244,8 +244,8 @@
     "policy": {
       "level": "medium",
       "id": "gm-usmca-exit",
-      "score": 0.011269318270965719,
-      "text": "Kalshi puts 8% on: the US sends notice to leave USMCA. For GM: −$1.70B a year (−13.3% of profit)."
+      "score": 0.007268376872989724,
+      "text": "Kalshi puts 5% on: the US sends notice to leave USMCA. For GM: −$1.70B a year (−13.3% of profit)."
     },
     "card": "policy"
   },
@@ -253,17 +253,22 @@
     "election": null,
     "policy": {
       "id": "gm-usmca-exit",
-      "text": "Kalshi puts 8% on: the US sends notice to leave USMCA. For GM: −$1.70B a year (−13.3% of profit)."
+      "text": "Kalshi puts 5% on: the US sends notice to leave USMCA. For GM: −$1.70B a year (−13.3% of profit)."
     }
   },
   "red_team": [
-    "Policy risk MEDIUM would be HIGH at the high end (−$3.50B) of the impact range for: the US sends notice to leave USMCA. Read how the impact was built.",
+    "Policy risk MEDIUM would be LOW at the low end (−$1.00B) of the impact range for: the US sends notice to leave USMCA. Read how the impact was built.",
     "the US sends notice to leave USMCA: the impact is an estimate, not a reported number."
   ],
   "book": {
-    "source": "built here",
-    "downloaded_at": null,
-    "built_by": null,
+    "source": "downloaded",
+    "downloaded_at": "2026-10-31T15:59:43+00:00",
+    "built_by": {
+      "built_by": "election-risk maintainers",
+      "built_on": "2026-10-27",
+      "contests": 197,
+      "fingerprint": "f97e319e0772"
+    },
     "last_edit": "2026-10-27",
     "files": 197,
     "fingerprint": "f97e319e0772"

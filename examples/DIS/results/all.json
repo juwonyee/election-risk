@@ -78,19 +78,19 @@
       "price": {
         "venue": "Kalshi",
         "ticker": "KXFILMTAXCREDIT-26SEP",
-        "prob": 0.26,
-        "yes_bid": 0.23,
+        "prob": 0.28,
+        "yes_bid": 0.27,
         "yes_ask": 0.29,
         "quote": "mid",
-        "volume": 13640.26,
+        "volume": 13987.65,
         "volume_unit": "contracts",
         "low_liquidity": false,
         "event_url": "https://kalshi.com/markets/kxfilmtaxcredit",
-        "as_of": "2026-10-27T03:10:29+00:00"
+        "as_of": "2026-10-31T16:00:01+00:00"
       },
       "cross_check": null,
-      "chance": 0.26,
-      "volume": 14040.26,
+      "chance": 0.28,
+      "volume": 14387.65,
       "election_swing": 0.0,
       "meaningful": true
     },
@@ -138,28 +138,28 @@
       "price": {
         "venue": "Kalshi",
         "ticker": "KXFLPROPERTYTAX-26NOV03",
-        "prob": 0.37,
-        "yes_bid": 0.36,
-        "yes_ask": 0.38,
+        "prob": 0.315,
+        "yes_bid": 0.31,
+        "yes_ask": 0.32,
         "quote": "mid",
-        "volume": 56064.52,
+        "volume": 79951.23,
         "volume_unit": "contracts",
         "low_liquidity": false,
         "event_url": "https://kalshi.com/markets/kxflpropertytax",
-        "as_of": "2026-10-27T03:10:29+00:00"
+        "as_of": "2026-10-31T16:00:01+00:00"
       },
       "cross_check": null,
-      "chance": 0.37,
-      "volume": 56064.52,
+      "chance": 0.315,
+      "volume": 79951.23,
       "election_swing": 0.0,
       "meaningful": false
     }
   ],
   "gaps": [],
   "prices_as_of": [
-    "2026-10-27T03:10:29+00:00"
+    "2026-10-31T16:00:01+00:00"
   ],
-  "generated_at": "2026-10-27T03:28:38+00:00",
+  "generated_at": "2026-10-31T16:00:01+00:00",
   "board": {
     "signals": [
       {
@@ -192,8 +192,8 @@
     "policy": {
       "level": "medium",
       "id": "dis-federal-film-credit",
-      "score": 0.005925588285567774,
-      "text": "Kalshi puts 26% on: a federal film and TV production tax credit becomes law. For Disney: +$400M a year (+2.3% of profit)."
+      "score": 0.006381402769072988,
+      "text": "Kalshi puts 28% on: a federal film and TV production tax credit becomes law. For Disney: +$400M a year (+2.3% of profit)."
     },
     "card": "policy"
   },
@@ -201,7 +201,7 @@
     "election": null,
     "policy": {
       "id": "dis-federal-film-credit",
-      "text": "Kalshi puts 26% on: a federal film and TV production tax credit becomes law. For Disney: +$400M a year (+2.3% of profit)."
+      "text": "Kalshi puts 28% on: a federal film and TV production tax credit becomes law. For Disney: +$400M a year (+2.3% of profit)."
     }
   },
   "red_team": [
@@ -209,9 +209,14 @@
     "a federal film and TV production tax credit becomes law: the impact is an estimate, not a reported number."
   ],
   "book": {
-    "source": "built here",
-    "downloaded_at": null,
-    "built_by": null,
+    "source": "downloaded",
+    "downloaded_at": "2026-10-31T15:59:43+00:00",
+    "built_by": {
+      "built_by": "election-risk maintainers",
+      "built_on": "2026-10-27",
+      "contests": 197,
+      "fingerprint": "f97e319e0772"
+    },
     "last_edit": "2026-10-27",
     "files": 197,
     "fingerprint": "f97e319e0772"

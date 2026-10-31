@@ -13,15 +13,15 @@ Base: FY2025 operating profit $4.75B (verified).
 
 **Risk Officer:** Election risk HIGH · Policy risk NO MARKET
 
-- **Election risk HIGH:** If Becerra wins (96% on Kalshi), the chance that California freezes PG&E's rates for a year is 30%, vs 0% if Hilton wins. For PG&E: −$600M a year (−12.6% of profit).
+- **Election risk HIGH:** If Becerra wins (97% on Kalshi), the chance that California freezes PG&E's rates for a year is 30%, vs 0% if Hilton wins. For PG&E: −$600M a year (−12.6% of profit).
 - **Policy risk NO MARKET:** No direct policy market was linked to PG&E in this run.
 
 High = share of profit x chance (policy) or x election swing (election) of at least 2% of profit; Medium at least 0.5%. Only results that pass the bar count.
 
 | Market (what resolves) | Price | Chance | If it happens, per year (or once) | Share of profit | Election swing | Meaningful |
 |---|---|---|---|---|---|---|
-| California breaks up PG&E into locally owned utilities: 0% if Becerra wins, 15% if Hilton wins (`KXGOVCA-26`) | Becerra 96% / Hilton 4% Kalshi · 95% / 3% Polymarket | 1% | −$1.00B (−$400M to −$2.00B) | -21.1% | +0.15 if Hilton wins | no |
-| California freezes PG&E's rates for a year: 30% if Becerra wins, 0% if Hilton wins (`KXGOVCA-26`) | Becerra 96% / Hilton 4% Kalshi · 95% / 3% Polymarket | 29% | −$600M (−$400M to −$1.00B) | -12.6% | +0.30 if Becerra wins | yes |
+| California breaks up PG&E into locally owned utilities: 0% if Becerra wins, 15% if Hilton wins (`KXGOVCA-26`) | Becerra 97% / Hilton 3% Kalshi · 96% / 2% Polymarket | 0% | −$1.00B (−$400M to −$2.00B) | -21.1% | +0.15 if Hilton wins | no |
+| California freezes PG&E's rates for a year: 30% if Becerra wins, 0% if Hilton wins (`KXGOVCA-26`) | Becerra 97% / Hilton 3% Kalshi · 96% / 2% Polymarket | 29% | −$600M (−$400M to −$1.00B) | -12.6% | +0.30 if Becerra wins | yes |
 
 Meaningful = at least 1% of profit, market volume at least 10,000, chance at least 5%. Election swing = how much the chance moves with who wins, and toward whom (chances are upper bounds from historical rates).
 
@@ -41,7 +41,7 @@ Meaningful = at least 1% of profit, market volume at least 10,000, chance at lea
 - California freezes PG&E's rates for a year: research finds a new commission majority moves allowed returns by about 0.15 percentage points; check the impact is sized on that, not on a promised freeze or cut.
 - California freezes PG&E's rates for a year: the impact is an estimate, not a reported number.
 
-Policy book: built here, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
+Policy book: downloaded, last edited 2026-10-27, 197 contests, fingerprint f97e319e0772.
 
 Markets are shown as information only, not as a suggestion to trade.
 

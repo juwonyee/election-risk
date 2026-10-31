@@ -75,19 +75,19 @@
       "price": {
         "venue": "Kalshi",
         "ticker": "KXCRYPTOSTRUCTURE-27JAN-28",
-        "prob": 0.21,
-        "yes_bid": 0.2,
-        "yes_ask": 0.22,
+        "prob": 0.285,
+        "yes_bid": 0.27,
+        "yes_ask": 0.3,
         "quote": "mid",
-        "volume": 135650.7,
+        "volume": 139215.23,
         "volume_unit": "contracts",
         "low_liquidity": false,
         "event_url": "https://kalshi.com/markets/kxcryptostructure",
-        "as_of": "2026-10-27T03:08:21+00:00"
+        "as_of": "2026-10-31T15:59:58+00:00"
       },
       "cross_check": null,
-      "chance": 0.21,
-      "volume": 7276838.06,
+      "chance": 0.285,
+      "volume": 7304523.49,
       "election_swing": 0.05,
       "meaningful": true
     },
@@ -139,19 +139,19 @@
       "price": {
         "venue": "Polymarket",
         "ticker": "law-banning-sports-prediction-markets-enacted-in-2026",
-        "prob": 0.175,
-        "yes_bid": 0.1,
+        "prob": 0.185,
+        "yes_bid": 0.12,
         "yes_ask": 0.25,
         "quote": "mid",
-        "volume": 21034.21,
+        "volume": 21039.76,
         "volume_unit": "USD",
         "low_liquidity": false,
         "event_url": "https://polymarket.com/event/law-banning-sports-prediction-markets-enacted-in-2026",
-        "as_of": "2026-10-27T03:08:22+00:00"
+        "as_of": "2026-10-31T16:00:00+00:00"
       },
       "cross_check": null,
-      "chance": 0.175,
-      "volume": 21034.21,
+      "chance": 0.185,
+      "volume": 21039.76,
       "election_swing": 0.0,
       "meaningful": true
     },
@@ -239,28 +239,28 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "KXLTGOVTX-26-GOP",
-            "prob": 0.7079,
-            "yes_bid": 0.71,
-            "yes_ask": 0.72,
+            "prob": 0.7143,
+            "yes_bid": 0.72,
+            "yes_ask": 0.73,
             "quote": "mid",
-            "volume": 23825.4,
+            "volume": 34392.86,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/kxltgovtx",
-            "as_of": "2026-10-27T03:08:21+00:00"
+            "as_of": "2026-10-31T15:59:58+00:00"
           },
           "cross_check": {
             "venue": "Polymarket",
             "ticker": "will-the-republican-party-candidate-win-the-2026-texas-lieutenant-governor-election",
-            "prob": 0.715,
+            "prob": 0.7222,
             "yes_bid": 0.7,
             "yes_ask": 0.73,
             "quote": "mid",
-            "volume": 8999.43,
+            "volume": 12423.89,
             "volume_unit": "USD",
-            "low_liquidity": true,
+            "low_liquidity": false,
             "event_url": "https://polymarket.com/event/texas-lieutenant-governor-election-winner-2026",
-            "as_of": "2026-10-27T03:08:22+00:00"
+            "as_of": "2026-10-31T16:00:00+00:00"
           },
           "if_wins_chance": 0.35
         },
@@ -275,45 +275,45 @@
           "price": {
             "venue": "Kalshi",
             "ticker": "KXLTGOVTX-26-DEM",
-            "prob": 0.2921,
-            "yes_bid": 0.29,
+            "prob": 0.2857,
+            "yes_bid": 0.28,
             "yes_ask": 0.3,
             "quote": "mid",
-            "volume": 24910.53,
+            "volume": 33195.69,
             "volume_unit": "contracts",
             "low_liquidity": false,
             "event_url": "https://kalshi.com/markets/kxltgovtx",
-            "as_of": "2026-10-27T03:08:21+00:00"
+            "as_of": "2026-10-31T15:59:58+00:00"
           },
           "cross_check": {
             "venue": "Polymarket",
             "ticker": "will-the-democratic-party-candidate-win-the-2026-texas-lieutenant-governor-election",
-            "prob": 0.285,
-            "yes_bid": 0.27,
-            "yes_ask": 0.3,
+            "prob": 0.2778,
+            "yes_bid": 0.26,
+            "yes_ask": 0.29,
             "quote": "mid",
-            "volume": 12139.91,
+            "volume": 14368.21,
             "volume_unit": "USD",
             "low_liquidity": false,
             "event_url": "https://polymarket.com/event/texas-lieutenant-governor-election-winner-2026",
-            "as_of": "2026-10-27T03:08:22+00:00"
+            "as_of": "2026-10-31T16:00:00+00:00"
           },
           "if_wins_chance": 0.0
         }
       ],
-      "chance_policy_overall": 0.24776499999999999,
-      "chance": 0.24776499999999999,
+      "chance_policy_overall": 0.250005,
+      "chance": 0.250005,
       "election_swing": 0.35,
-      "volume": 48735.93,
+      "volume": 67588.55,
       "meaningful": false
     }
   ],
   "gaps": [],
   "prices_as_of": [
-    "2026-10-27T03:08:21+00:00",
-    "2026-10-27T03:08:22+00:00"
+    "2026-10-31T15:59:58+00:00",
+    "2026-10-31T16:00:00+00:00"
   ],
-  "generated_at": "2026-10-27T03:28:37+00:00",
+  "generated_at": "2026-10-31T16:00:00+00:00",
   "board": {
     "signals": [
       {
@@ -347,8 +347,8 @@
     "policy": {
       "level": "high",
       "id": "coin-clarity-act",
-      "score": 0.054131252612512185,
-      "text": "Kalshi puts 21% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit)."
+      "score": 0.07346384283126653,
+      "text": "Kalshi puts 28% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit)."
     },
     "card": "policy"
   },
@@ -356,7 +356,7 @@
     "election": null,
     "policy": {
       "id": "coin-clarity-act",
-      "text": "Kalshi puts 21% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit)."
+      "text": "Kalshi puts 28% on: the Clarity Act (crypto market-structure law) becomes law before 2028. For Coinbase: +$370M a year (+25.8% of profit)."
     }
   },
   "red_team": [
@@ -365,9 +365,14 @@
     "a federal law bans sports contracts on CFTC-regulated prediction markets in 2026: the impact is an estimate, not a reported number."
   ],
   "book": {
-    "source": "built here",
-    "downloaded_at": null,
-    "built_by": null,
+    "source": "downloaded",
+    "downloaded_at": "2026-10-31T15:59:43+00:00",
+    "built_by": {
+      "built_by": "election-risk maintainers",
+      "built_on": "2026-10-27",
+      "contests": 197,
+      "fingerprint": "f97e319e0772"
+    },
     "last_edit": "2026-10-27",
     "files": 197,
     "fingerprint": "f97e319e0772"
